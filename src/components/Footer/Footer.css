@@ -1,0 +1,29 @@
+.footer{
+background-color: #0C131B;
+
+}
+
+.footer h5{
+    
+    color: white;
+}
+.footer a,p{
+    color: #8A8A8A;
+
+}
+.footer_link{
+    display: inline-block;
+}
+.footer_link img{
+    width: 20px;
+
+}
+.copyright{
+    color: #8A8A8A;
+    text-align: center;
+}
+.border{
+    width: 30%;
+    background-color: #C9C9C9;
+    margin: 0 auto;
+}
