@@ -1,3 +1,15 @@
 .me-auto{
     margin-left: 200px;
 }
+.me-auto a{
+    margin-left: 50px;
+    color: #00d4ff !important;
+   
+    padding: 5px 20px !important;
+    border-radius: 10px;
+}
+#Active{
+    background-image: linear-gradient(#8DFFFF,#00d4ff);
+    color: white !important;
+}
+

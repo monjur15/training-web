@@ -7,13 +7,9 @@ import Navigation from './components/Navigation/Navigation';
 
 function App() {
   return (
-    <div className="App">
 
-      <Navigation></Navigation>
+    <Navigation></Navigation>
 
-
-
-    </div>
   );
 }
 
