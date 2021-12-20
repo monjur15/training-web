@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, FormControl, InputGroup, Nav, NavLink } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee, faUser, faAddressBook, faIgloo } from '@fortawesome/free-solid-svg-icons';
 import { } from './Footer.css';
 
 const Footer = () => {
+    const userIcon = <FontAwesomeIcon icon={faIgloo} />
     return (
         <div className=' footer '>
             <div className='container'>
@@ -56,10 +59,10 @@ const Footer = () => {
                                 <Nav.Link href="/facebook"><img src="../../images/facebook.png" alt="" /></Nav.Link>
                             </div>
                             <div>
-                                <Nav.Link className='bg-dark' href="/instagram"><img src="../../images/Group 38.svg" alt="" /></Nav.Link>
+                                <Nav.Link className='bg-dark' href="/instagram">{userIcon}</Nav.Link>
                             </div>
                             <div>
-                                <NavLink href="/linkedin"><img src="../../images/linkedin.png" alt="" /></NavLink>
+                                <NavLink className='bg-dark done' href="/linkedin"><img src="../../images/bg1.png" alt="" /></NavLink>
                             </div>
                         </div>
 

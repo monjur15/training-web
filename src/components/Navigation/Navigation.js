@@ -10,8 +10,9 @@ const Navigation = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="#home" >
                         <img
+                            className='me-lg-4 me-md-0'
                             src="../../images/Training logo.svg"
                             width="100"
                             height="30"
@@ -22,7 +23,7 @@ const Navigation = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto ms-lg-4 me-md-0">
                             <Nav.Link id='Active' href="#home">Home</Nav.Link>
                             <Nav.Link href="#about">About</Nav.Link>
                             <Nav.Link href="#cources">Cources</Nav.Link>
