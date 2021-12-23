@@ -1,12 +1,12 @@
 import React from 'react';
 import { } from './Home.css';
-import slider1 from '../../images/1.png';
-import { Carousel } from 'react-bootstrap';
+import slider1 from '../../images/1.svg';
+import { Carousel, Form } from 'react-bootstrap';
 
 const Home = () => {
     return (
         <div>
-            <Carousel>
+            {/*  <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
@@ -29,11 +29,11 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
-                    {/*   <img
+                    <img
                         className="d-block w-100"
                         src="holder.js/800x400?text=Second slide&bg=282c34"
                         alt="Second slide"
-                    /> */}
+                    />
                     <h1>Hello 2</h1>
                     <Carousel.Caption>
                         <h3>Second slide label</h3>
@@ -41,18 +41,36 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    {/*   <img
+                    <img
                         className="d-block w-100"
                         src="holder.js/800x400?text=Third slide&bg=20232a"
                         alt="Third slide"
-                    /> */}
+                    />
                     <h1>Hello 3</h1>
                     <Carousel.Caption>
                         <h3>Third slide label</h3>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
+
+            <div className='container'>
+
+                <div className='row slider1_div bg-info'>
+                    <div className='col-lg-6 col-sm-12 slider1_img p-4'>
+                        <img className='img-fluid' src={slider1} alt="" />
+
+                    </div>
+                    <div className='col-lg-6 col-sm-12 slider1_content  bg-danger mt-lg-4 p-4'>
+                        <h3>Are You Ready To</h3>
+                        <h1>Lead The Way</h1>
+                        <div className='input_field w-75 mb-sm-4'><input className='w-100 p-lg-2 ' type="text"></input></div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
     );
