@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <Carousel>
-                <Carousel.Item interval={10000}>
+                <Carousel.Item interval={5000}>
                     <div className='container slider_main'>
 
                         <div className='row slider1_div '>
@@ -102,6 +102,10 @@ const Home = () => {
                 </div>
 
             </div> */}
+
+            <div className=''>
+
+            </div>
 
         </div>
     );

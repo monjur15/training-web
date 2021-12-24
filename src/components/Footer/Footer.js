@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, FormControl, InputGroup, Nav, NavLink } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faUser, faAddressBook, faIgloo } from '@fortawesome/free-solid-svg-icons';
+import facebook from '../../images/facebook.svg';
+import insta from '../../images/instagram.svg';
+import linkedin from '../../images/linkedin.svg';
 import { } from './Footer.css';
 
 const Footer = () => {
@@ -55,15 +58,15 @@ const Footer = () => {
                             </Button>
                         </InputGroup>
                         <div className='footer_link row'>
-                            <div>
-                                <Nav.Link href="/facebook"><img src="../../images/facebook.png" alt="" /></Nav.Link>
-                            </div>
-                            <div>
-                                <Nav.Link className='bg-dark' href="/instagram">{userIcon}</Nav.Link>
-                            </div>
-                            <div>
-                                <NavLink className='bg-dark done' href="/linkedin"><img src="../../images/bg1.png" alt="" /></NavLink>
-                            </div>
+
+                            <Nav.Link href="/facebook"><img src={facebook} alt="" /></Nav.Link>
+
+
+                            <Nav.Link href="/instagram"><img src={insta} alt="" /></Nav.Link>
+
+
+                            <Nav.Link href="/linkedin"><img src={linkedin} alt="" /></Nav.Link>
+
                         </div>
 
 

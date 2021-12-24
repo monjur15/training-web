@@ -12,10 +12,16 @@ background-color: #0C131B;
 
 }
 .footer_link{
-    display: inline-block;
+   
+    background-color:chartreuse;
+}
+.footer_link a{
+    display: block;
 }
 .footer_link img{
     width: 20px;
+    background-color: aqua;
+  
 
 }
 .copyright{
