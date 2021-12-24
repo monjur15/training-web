@@ -1,9 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { } from './Home.css';
 import slider1 from '../../images/1.svg';
-import { Carousel, Form } from 'react-bootstrap';
+import { Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
+    const searchIcon = <FontAwesomeIcon icon={faSearch} />
     return (
         <div>
             {/*  <Carousel>
@@ -54,17 +57,18 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel> */}
 
-            <div className='container'>
+            <div className='container slider_main'>
 
-                <div className='row slider1_div bg-info'>
+                <div className='row slider1_div '>
                     <div className='col-lg-6 col-sm-12 slider1_img p-4'>
                         <img className='img-fluid' src={slider1} alt="" />
 
                     </div>
-                    <div className='col-lg-6 col-sm-12 slider1_content  bg-danger mt-lg-4 p-4'>
+                    <div className='col-lg-6 col-sm-12 slider1_content   mt-lg-4 p-4'>
                         <h3>Are You Ready To</h3>
-                        <h1>Lead The Way</h1>
+                        <h1 className='mb-lg-5'>Lead The Way</h1>
                         <div className='input_field w-75 mb-sm-4'><input className='w-100 p-lg-2 ' type="text"></input></div>
+                        <span className='search'><Nav.Link href="/search">{searchIcon}</Nav.Link></span>
 
                     </div>
 
