@@ -54,7 +54,7 @@ font-size: 400;
 /*who we are */
 .we_div{
     position: relative;
-    /* background-color: brown; */
+    background-color: #F7F7F7;
 }
 .we_img{
     /* background-color: brown; */
@@ -71,6 +71,17 @@ font-size: 400;
     border: 2px solid #94E5FF;
     background-color: #94E5FF;
     width: 20%;
+}
+.btn_info button{
+    padding: 10px 50px;
+    border-radius: 50px;
+    background-color: white !important;
+    font-weight: bold;
+
+}
+.btn_info button:hover{
+    background-color: #94E5FF !important;
+    color: white;
 }
 
 
@@ -119,5 +130,8 @@ font-size: 400;
     .we_content{
         padding: 10px !important;
     }
+    .btn_info{
+        text-align: center;
+    } 
 
 }

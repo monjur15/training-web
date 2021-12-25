@@ -4,7 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { } from './Home.css';
 import slider1 from '../../images/1.svg';
 import weimg from '../../images/agency.jpg';
-import { Carousel, Form, Nav } from 'react-bootstrap';
+import { Button, Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
     const searchIcon = <FontAwesomeIcon icon={faSearch} />
@@ -101,10 +101,12 @@ const Home = () => {
                             environments which makes them uniquely capable to conduct the training
                             programs in a manner where candidates become prepared for the production
                             environment.</p>
+                        <div className='btn_info'><Button variant="outline-info">Our Blogs</Button>{' '}</div>
+
 
                     </div>
                     <div className="col-lg-5 we_img  mt-5">
-                        <img className='img-fluid w-75' src={weimg} alt="" />
+                        <img className='img-fluid w-90' src={weimg} alt="" />
                     </div>
                 </div>
 
