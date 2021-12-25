@@ -51,6 +51,29 @@ color: white;
 font-size: 400;
 }
 
+/*who we are */
+.we_div{
+    position: relative;
+    /* background-color: brown; */
+}
+.we_img{
+    /* background-color: brown; */
+    text-align: center;
+}
+.we_img img{
+    border-radius: 30px;
+
+}
+.we_content h1{
+    color: #94E5FF ;
+}
+.down_border{
+    border: 2px solid #94E5FF;
+    background-color: #94E5FF;
+    width: 20%;
+}
+
+
 
 
 
@@ -87,4 +110,14 @@ font-size: 400;
        
         
     }
+}
+@media screen and (max-width : 600px){
+    .we_img{
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+    }
+    .we_content{
+        padding: 10px !important;
+    }
+
 }
