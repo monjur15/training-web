@@ -70,7 +70,7 @@ font-size: 400;
 .down_border{
     border: 2px solid #94E5FF;
     background-color: #94E5FF;
-    width: 20%;
+    width: 10%;
 }
 .btn_info button{
     padding: 10px 50px;
@@ -82,6 +82,30 @@ font-size: 400;
 .btn_info button:hover{
     background-color: #94E5FF !important;
     color: white;
+}
+
+/* Popular cources part*/
+.man_popular_div{
+    background-color: #E4F8FF;
+}
+.man_popular_div h1{
+    color: #013161;
+}
+.popular_cources{
+    text-align: center;
+    background-color: #E4F8FF;
+    height: 400px;
+}
+.popular_cources img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+ 
+}
+.down_border2{
+    border: 2px solid #013161;
+    background-color: #013161;
+    width: 10%;
 }
 
 
@@ -133,5 +157,20 @@ font-size: 400;
     .btn_info{
         text-align: center;
     } 
+
+}
+/* Popular cources*/
+@media screen and (max-width : 600px){
+    .popular_cources{
+        text-align: center;
+    }
+    .popular_cources img{
+      
+        /* height: 50px;
+        width: 50px;
+        border-radius: 20px; */
+     
+    }
+    
 
 }

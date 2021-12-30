@@ -4,6 +4,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { } from './Home.css';
 import slider1 from '../../images/1.svg';
 import weimg from '../../images/agency.jpg';
+import csharp from '../../images/csharp.jpg';
+import network from '../../images/network-engineering.jpg';
+import docker from '../../images/docker.jpg';
+import android from '../../images/android.jpg';
 import { Button, Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
@@ -113,7 +117,146 @@ const Home = () => {
 
             </div>
 
-        </div>
+            {/* Popular cources */}
+
+            <Carousel fade>
+                <Carousel.Item>
+                    <div className='container man_popular_div'>
+                        <h1>Popular Cources</h1>
+                        <div className='down_border2 mb-lg-4'></div>
+
+
+                        <div className='row popular_cources'>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={csharp} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={network} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={docker} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={android} alt="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <Carousel.Caption>
+                        {/* <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className='container man_popular_div'>
+                        <h1>Popular Cources</h1>
+                        <div className='down_border2 mb-lg-4'></div>
+
+
+                        <div className='row popular_cources'>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={csharp} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={network} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={docker} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={android} alt="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <Carousel.Caption>
+                        {/* <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className='container man_popular_div'>
+                        <h1>Popular Cources</h1>
+                        <div className='down_border2 mb-lg-4'></div>
+
+
+                        <div className='row popular_cources'>
+                            <div className='col-3 '>
+                                <img className='img-fluid' src={csharp} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={network} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={docker} alt="" />
+
+                            </div>
+                            <div className='col-3'>
+                                <img className='img-fluid' src={android} alt="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <Carousel.Caption>
+                        {/* <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+
+            {/*         <div className='container man_popular_div'>
+                <h1>Popular Cources</h1>
+                <div className='down_border2 mb-lg-4'></div>
+
+
+                <div className='row popular_cources'>
+                    <div className='col-3'>
+                        <img className='img-fluid' src={csharp} alt="" />
+
+                    </div>
+                    <div className='col-3'>
+                        <img className='img-fluid' src={network} alt="" />
+
+                    </div>
+                    <div className='col-3'>
+                        <img className='img-fluid' src={docker} alt="" />
+
+                    </div>
+                    <div className='col-3'>
+                        <img className='img-fluid' src={android} alt="" />
+
+                    </div>
+
+                </div>
+
+        </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+        </div >
     );
 };
 
