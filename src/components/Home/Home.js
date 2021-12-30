@@ -121,7 +121,9 @@ const Home = () => {
 
             <Carousel fade>
                 <Carousel.Item>
+
                     <div className='container man_popular_div'>
+                        <div className='down_border3 mb-lg-4'></div>
                         <h1>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
@@ -154,6 +156,7 @@ const Home = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div className='container man_popular_div'>
+                        <div className='down_border3 mb-lg-4'></div>
                         <h1>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
@@ -186,6 +189,7 @@ const Home = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div className='container man_popular_div'>
+                        <div className='down_border3 mb-lg-4'></div>
                         <h1>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
