@@ -8,6 +8,7 @@ import csharp from '../../images/csharp.jpg';
 import network from '../../images/network-engineering.jpg';
 import docker from '../../images/docker.jpg';
 import android from '../../images/android.jpg';
+import laptop from '../../images/lapjpg.jpg';
 import { Button, Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
@@ -248,6 +249,44 @@ const Home = () => {
                 </div>
 
         </div> */}
+
+
+
+            {/* Category section */}
+
+            <div className='container'>
+                <div className="py-lg-3 category_head">
+                    <h1>Category</h1>
+                    <div className='down_border mb-2'></div>
+                </div>
+
+                <div>
+                    <div className=" category_div  ">
+                        <div className="row p-lg-4">
+                            <div className=" category col-6 ">
+                                <div className="col-9 ">
+                                    <img className='img-fluid' src={laptop} alt="" />
+                                </div>
+                                <div className="col-9 mt-5 ">
+                                    <img className='img-fluid' src={laptop} alt="" />
+                                </div>
+                            </div>
+
+                            <div className=" category col-6 ">
+                                <div className="col-9 mt-5">
+                                    <img className='img-fluid' src={laptop} alt="" />
+                                </div>
+                                <div className="col-9 mt-5">
+                                    <img className='img-fluid' src={laptop} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='down_border3 mt-1'></div>
+                    </div>
+
+                </div>
+
+            </div>
 
 
 

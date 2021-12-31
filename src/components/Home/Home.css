@@ -117,6 +117,21 @@ font-size: 400;
     margin: 0 auto;
 }
 
+/*Category part*/
+.category_div{
+    background-color: #DFF1FF;
+ 
+}
+.category_head{
+    
+    color: #94E5FF;
+}
+.category img{
+    border-radius: 15px;
+
+    
+}
+
 
 
 
