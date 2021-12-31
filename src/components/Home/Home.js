@@ -294,6 +294,20 @@ const Home = () => {
 
 
 
+            {/* Our Instructor Section  */}
+
+            <div className='container'>
+                <h1>Our Istructor</h1>
+                <div className='down_border2'></div>
+
+            </div>
+
+
+
+
+
+
+
 
 
 
