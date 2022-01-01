@@ -125,7 +125,7 @@ const Home = () => {
 
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
-                        <h1>Popular Cources</h1>
+                        <h1 className='mt-5 mb-3'>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
 
@@ -158,7 +158,7 @@ const Home = () => {
                 <Carousel.Item>
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
-                        <h1>Popular Cources</h1>
+                        <h1 className='mt-5 mb-3'>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
 
@@ -191,7 +191,7 @@ const Home = () => {
                 <Carousel.Item>
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
-                        <h1>Popular Cources</h1>
+                        <h1 className='mt-5 mb-3'>Popular Cources</h1>
                         <div className='down_border2 mb-lg-4'></div>
 
 
@@ -254,7 +254,7 @@ const Home = () => {
 
             {/* Category section */}
 
-            <div className='container'>
+            <div className='container '>
                 <div className="py-lg-3 category_head">
                     <h1>Category</h1>
                     <div className='down_border mb-2'></div>
@@ -296,9 +296,14 @@ const Home = () => {
 
             {/* Our Instructor Section  */}
 
-            <div className='container'>
-                <h1>Our Istructor</h1>
+            <div className='container '>
+                <h1 className='mt-5'>Our Istructor</h1>
                 <div className='down_border2'></div>
+                <div>
+                    <div className="col-4">
+
+                    </div>
+                </div>
 
             </div>
 
