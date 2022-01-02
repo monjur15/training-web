@@ -132,6 +132,31 @@ font-size: 400;
     
 }
 
+/* instructor section */
+.instructor_main_div img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    text-align: center;
+
+}
+.instructor_main_div .card{
+    text-align: center !important;
+
+}
+
+.instructor_main_div{
+    text-align: center;
+}
+.card_body{
+    background-color: #D8FCFF;
+    border-radius: 80px 10px 80px 10px;
+}
+.ins_img{
+    position: relative;
+    bottom: 75px;
+}
+
 
 
 
@@ -195,6 +220,16 @@ font-size: 400;
         border-radius: 20px; */
      
     }
+    
+
+}
+
+/* Instructor Detailes */
+@media screen and (max-width : 600px){
+    .ins_card{
+        margin-top: 55px;
+    }
+    
     
 
 }

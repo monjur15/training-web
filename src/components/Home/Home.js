@@ -301,14 +301,14 @@ const Home = () => {
 
             <div className='container '>
                 <h1 className='mt-5'>Our Istructor</h1>
-                <div className='down_border2'></div>
+                <div className='down_border2 mb-5'></div>
                 <div>
-                    <div className="row">
-                        <div className="col-4">
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={t1img} />
+                    <div className="row instructor_main_div py-lg-5">
+                        <div className="col-lg-4 col-md-12 mb-4 ins_card">
+                            <Card className=' card_body' style={{ width: '100%' }}>
+                                <div className='ins_img'><Card.Img variant="top" src={t1img} /></div>
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Title>Instructor Title</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -318,11 +318,11 @@ const Home = () => {
                             </Card>
 
                         </div>
-                        <div className="col-4">
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={t2img} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                        <div className="col-lg-4 col-md-12 mb-4 ins_card">
+                            <Card className=' card_body' style={{ width: '100%' }}>
+                                <div className='ins_img'><Card.Img variant="top" src={t2img} /></div>
+                                <Card.Body className=''>
+                                    <Card.Title>Instructor Title</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -333,11 +333,11 @@ const Home = () => {
 
                         </div>
 
-                        <div className="col-4">
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={t3img} />
+                        <div className="col-lg-4 col-md-12 mb-4 ins_card">
+                            <Card className=' card_body' style={{ width: '100%' }}>
+                                <div className='ins_img'> <Card.Img variant="top" src={t3img} /></div>
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Title>Instructor Title</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
