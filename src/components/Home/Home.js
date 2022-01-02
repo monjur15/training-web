@@ -9,7 +9,10 @@ import network from '../../images/network-engineering.jpg';
 import docker from '../../images/docker.jpg';
 import android from '../../images/android.jpg';
 import laptop from '../../images/lapjpg.jpg';
-import { Button, Carousel, Form, Nav } from 'react-bootstrap';
+import t1img from '../../images/t1.jpg';
+import t2img from '../../images/t2.jpg';
+import t3img from '../../images/t3.png';
+import { Button, Card, Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
     const searchIcon = <FontAwesomeIcon icon={faSearch} />
@@ -300,9 +303,52 @@ const Home = () => {
                 <h1 className='mt-5'>Our Istructor</h1>
                 <div className='down_border2'></div>
                 <div>
-                    <div className="col-4">
+                    <div className="row">
+                        <div className="col-4">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={t1img} />
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
+                                    <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
 
+                        </div>
+                        <div className="col-4">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={t2img} />
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
+                                    <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+
+                        </div>
+
+                        <div className="col-4">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={t3img} />
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
+                                    <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+
+                        </div>
                     </div>
+
                 </div>
 
             </div>
