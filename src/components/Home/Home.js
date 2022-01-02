@@ -12,6 +12,9 @@ import laptop from '../../images/lapjpg.jpg';
 import t1img from '../../images/t1.jpg';
 import t2img from '../../images/t2.jpg';
 import t3img from '../../images/t3.png';
+import review1 from '../../images/review1.jfif';
+import review2 from '../../images/review3.jpg';
+import review3 from '../../images/review3.webp';
 import { Button, Card, Carousel, Form, Nav } from 'react-bootstrap';
 
 const Home = () => {
@@ -129,26 +132,19 @@ const Home = () => {
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
                         <h1 className='mt-5 mb-3'>Popular Cources</h1>
-                        <div className='down_border2 mb-lg-4'></div>
+                        <div className='down_border2 mb-4'></div>
 
 
                         <div className='row popular_cources'>
-                            <div className='col-3'>
+                            <div className='col-6'>
                                 <img className='img-fluid' src={csharp} alt="" />
 
                             </div>
-                            <div className='col-3'>
+                            <div className='col-6'>
                                 <img className='img-fluid' src={network} alt="" />
 
                             </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={docker} alt="" />
 
-                            </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={android} alt="" />
-
-                            </div>
 
                         </div>
 
@@ -162,26 +158,19 @@ const Home = () => {
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
                         <h1 className='mt-5 mb-3'>Popular Cources</h1>
-                        <div className='down_border2 mb-lg-4'></div>
+                        <div className='down_border2 mb-4'></div>
 
 
                         <div className='row popular_cources'>
-                            <div className='col-3'>
+                            <div className='col-6'>
                                 <img className='img-fluid' src={csharp} alt="" />
 
                             </div>
-                            <div className='col-3'>
+                            <div className='col-6'>
                                 <img className='img-fluid' src={network} alt="" />
 
                             </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={docker} alt="" />
 
-                            </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={android} alt="" />
-
-                            </div>
 
                         </div>
 
@@ -195,26 +184,19 @@ const Home = () => {
                     <div className='container man_popular_div'>
                         <div className='down_border3 mb-lg-4'></div>
                         <h1 className='mt-5 mb-3'>Popular Cources</h1>
-                        <div className='down_border2 mb-lg-4'></div>
+                        <div className='down_border2 mb-4'></div>
 
 
                         <div className='row popular_cources'>
-                            <div className='col-3 '>
+                            <div className='col-6 '>
                                 <img className='img-fluid' src={csharp} alt="" />
 
                             </div>
-                            <div className='col-3'>
+                            <div className='col-6'>
                                 <img className='img-fluid' src={network} alt="" />
 
                             </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={docker} alt="" />
 
-                            </div>
-                            <div className='col-3'>
-                                <img className='img-fluid' src={android} alt="" />
-
-                            </div>
 
                         </div>
 
@@ -350,6 +332,86 @@ const Home = () => {
                     </div>
 
                 </div>
+
+            </div>
+
+
+
+            {/* Reviews Sections */}
+
+            <div className='container review_container'>
+                <h1 className='category_head pt-lg-5'>Reviews</h1>
+                <div className="down_border mb-5"></div>
+
+                <Carousel fade>
+                    <Carousel.Item className=''>
+                        <div className="row review_main  py-5">
+                            <div className=' review_div  py-5'>
+                                <Card className='card_review' style={{ width: '18rem' }}>
+                                    <div className='review_img'><Card.Img variant="top" src={review1} /></div>
+                                    <Card.Body className=''>
+                                        <Card.Title>Reviewer Title</Card.Title>
+                                        <Card.Text>
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.
+                                        </Card.Text>
+
+                                    </Card.Body>
+                                </Card>
+                            </div>
+
+                        </div>
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <div className="row review_main  py-5">
+                            <div className=' review_div  py-5'>
+                                <Card className='card_review' style={{ width: '18rem' }}>
+                                    <div className='review_img'><Card.Img variant="top" src={review3} /></div>
+                                    <Card.Body className=''>
+                                        <Card.Title>Reviewer Title</Card.Title>
+                                        <Card.Text>
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.
+                                        </Card.Text>
+
+                                    </Card.Body>
+                                </Card>
+                            </div>
+
+                        </div>
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <div className="row review_main  py-5">
+                            <div className=' review_div  py-5'>
+                                <Card className='card_review' style={{ width: '18rem' }}>
+                                    <div className='review_img'><Card.Img variant="top" src={review2} /></div>
+                                    <Card.Body className=''>
+                                        <Card.Title>Reviewer Title</Card.Title>
+                                        <Card.Text>
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.
+                                        </Card.Text>
+
+                                    </Card.Body>
+                                </Card>
+                            </div>
+
+                        </div>
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+
+
 
             </div>
 

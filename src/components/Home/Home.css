@@ -158,6 +158,37 @@ font-size: 400;
 }
 
 
+/*Review image*/
+
+.review_container{
+    background-image: linear-gradient(#FFFFFF, #DFFBFF,#82D9FF,#5ACCFF);
+}
+
+.review_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review_div {
+    text-align: center; 
+}
+.card_review{
+    margin: 0 auto;
+
+}
+.review_div img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+  
+}
+.review_img{
+    position: relative;
+    bottom: 75px;
+
+}
+
+
 
 
 
