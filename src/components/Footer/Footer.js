@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, FormControl, InputGroup, Nav, NavLink } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faUser, faAddressBook, faIgloo } from '@fortawesome/free-solid-svg-icons';
+import { Button, FormControl, InputGroup, Nav } from 'react-bootstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faIgloo } from '@fortawesome/free-solid-svg-icons';
 import facebook from '../../images/facebook.svg';
 import insta from '../../images/instagram.svg';
 import linkedin from '../../images/linkedin.svg';
 import { } from './Footer.css';
 
 const Footer = () => {
-    const userIcon = <FontAwesomeIcon icon={faIgloo} />
+    // const userIcon = <FontAwesomeIcon icon={faIgloo} />
     return (
         <div className=' footer '>
             <div className='container'>

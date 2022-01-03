@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { } from './Navigation.css';
 
 const Navigation = () => {
@@ -24,12 +25,13 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto ms-lg-4 me-md-0">
-                            <Nav.Link id='Active' href="#home">Home</Nav.Link>
-                            <Nav.Link href="#about">About</Nav.Link>
-                            <Nav.Link href="#cources">Cources</Nav.Link>
-                            <Nav.Link href="#gallery">Gallery</Nav.Link>
-                            <Nav.Link href="#contact">Contact</Nav.Link>
-                            <Nav.Link href="#user">{userIcon}</Nav.Link>
+                            <Nav.Link id='Active' href="/home">Home</Nav.Link>
+                            <Nav.Link href="/about">About</Nav.Link>
+                            <Nav.Link href="/courses">Cources</Nav.Link>
+
+                            <Nav.Link href="/gallery">Gallery</Nav.Link>
+                            <Nav.Link href="/contact">Contact</Nav.Link>
+                            <Nav.Link href="/user">{userIcon}</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
