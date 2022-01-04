@@ -1,0 +1,45 @@
+.course{
+    color: #60D3FF;
+    font-weight: bold;
+
+}
+.course_number{
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    text-align: center;
+  
+}
+.course_number h1{
+    font-weight: bold;
+}
+.course_cap{
+    display: flex;
+}
+.course_title h1{
+    font-size: 170px;
+    background-color: blue;
+   
+}
+.course_btn{
+    
+}
+
+.btn{
+    padding: 0px 30px;
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+
+
+
+
+@media screen and (max-width : 600px){
+    .course_title h1{
+        font-size: 60px;
+        background-color: blue;
+       
+    }
+
+}

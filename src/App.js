@@ -10,6 +10,7 @@ import Nav from './components/Navigation/Navigation';
 
 
 
+
 function App() {
   return (
     <>
@@ -20,10 +21,14 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/courses" element={<Courses />} />
+          {/* <Route exact path="" element={<Footer />} /> */}
+
 
 
         </Routes>
+        <Footer></Footer>
       </Router>
+
 
       {/* <Navigation></Navigation>
       <Home></Home>
