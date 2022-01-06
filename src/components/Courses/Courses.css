@@ -1,27 +1,40 @@
+body a{
+    list-style: none;
+    text-decoration: none;
+}
+.courses_container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+}
 .course{
     color: #60D3FF;
     font-weight: bold;
 
 }
 .course_number{
-    height: 80px;
-    width: 80px;
-    background-color: blue;
+    height: 100px;
+    width: 100px;
+    background-color: #88E3FF;
     text-align: center;
   
 }
 .course_number h1{
     font-weight: bold;
+color: white;   
+    font-size: 75px;
 }
 .course_cap{
     display: flex;
 }
 .course_title h1{
     font-size: 170px;
-    background-color: blue;
+    color: #40D8FF;
+    /* background-color: blue; */
    
 }
-.course_btn{
+.course_btn Button{
+    color: #00B1FF;
+    background-color: #B4F7FF !important;
     
 }
 
@@ -31,15 +44,48 @@
     margin-left: 50px;
 }
 
+.course_img{
+    margin-top: 50px;
+   
+
+    /* background-color: brown; */
+}
+.course_img img{
+    border-radius: 50px;
+}
+.sub_title h5{
+    color: #01A9D5;
+    font-weight: bolder;
+}
+.know a{
+    color: black;
+
+}
+
 
 
 
 
 @media screen and (max-width : 600px){
+    .courses_container{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+    }
     .course_title h1{
-        font-size: 60px;
-        background-color: blue;
+        font-size: 85px;
+      
+    }
+    .course_number{
+        height: 70px;
+        width: 70px;
        
+        text-align: center;
+      
+    }
+    .course_number h1{
+        font-weight: bold;
+       
+        font-size: 55px;
     }
 
 }
