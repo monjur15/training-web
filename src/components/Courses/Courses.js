@@ -34,7 +34,8 @@ const Courses = () => {
 
                         </div>
                         <div className=' ms-5 my-3 know'>
-                            <Link to={Home}>Know more -></Link >
+
+                            <Link to="/coursesDetail">Know more</Link>
                         </div>
 
 

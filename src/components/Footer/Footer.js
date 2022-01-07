@@ -57,7 +57,7 @@ const Footer = () => {
                                 Subscribe
                             </Button>
                         </InputGroup>
-                        <div className='footer_link row'>
+                        <div className='footer_link '>
 
                             <Nav.Link href="/facebook"><img src={facebook} alt="" /></Nav.Link>
 

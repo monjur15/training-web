@@ -1,0 +1,41 @@
+.course_card{
+    width: 500px;
+    background-image: linear-gradient(#B8F2FE, #60C5FF);
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.course_img{
+   
+    text-align: center;
+}
+.course_description p{
+    color: white;
+}
+.related_course h3{
+    color: #0582CB;
+    margin-left: 20px;
+}
+.related_course{
+    /* background-color: yellow; */
+    /* text-align: center; */
+}
+.course_title h5{
+    color: white;
+}
+.course_title Button{
+    margin-left: 0px;
+    color: #04D1F2;
+    font-weight: bold;
+}
+.r_courses_card{
+    border-radius: 10px;
+    width: 80%;
+    background-image: linear-gradient(#B8F2FE, #60C5FF);
+    
+}
+.r_courses_card img{
+    height: 55px;
+    width: 55px;
+    border-radius: 100px;
+}
