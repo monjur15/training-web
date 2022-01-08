@@ -39,7 +39,7 @@ function App() {
 
         </Routes>
         <Footer></Footer>
-        <Login></Login>
+
       </Router>
 
 
