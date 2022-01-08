@@ -31,7 +31,8 @@ const Navigation = () => {
 
                             <Nav.Link href="/gallery">Gallery</Nav.Link>
                             <Nav.Link href="/contact">Contact</Nav.Link>
-                            <Nav.Link href="/user">{userIcon}</Nav.Link>
+                            <Nav.Link href="/blogs">Blogs</Nav.Link>
+                            <Nav.Link href="/login">{userIcon}</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

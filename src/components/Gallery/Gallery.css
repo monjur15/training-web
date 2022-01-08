@@ -1,0 +1,37 @@
+.gallery h1{
+    color: white;
+}
+.gallery{
+    background-image: linear-gradient(to bottom right,#78C4FF, #A7E3FF,#70B6DE,#CEEBFF);
+}
+.gallery .down_border{
+    color: white;
+    background-color: white;
+    border: 1px solid white;
+}
+.aws h2{
+    text-align: center;
+    color: white;
+
+}
+.python h2{
+    text-align: center;
+    color: white
+
+}
+.system h2{
+    text-align: center;
+    color: white
+
+}
+
+
+
+
+@media screen and (max-width : 600px){
+    .python{
+        margin-top: 50px;
+       
+    }
+   
+}

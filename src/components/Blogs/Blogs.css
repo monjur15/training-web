@@ -1,0 +1,26 @@
+.blogs_container h1{
+    color: #60D3FF;
+}
+.blog_img img{
+    width: 400px;
+}
+.mid_border{
+    height: 30px;
+    /* margin-left: 10px; */
+    width: 1px;
+    background-color: gray;
+    border: 1px solid gary;
+}
+.blog_react{
+    display: flex;
+    
+}
+.blog_react img{
+    height: 30px;
+}
+.gray_border{
+    height: 1px;
+    width: 100%;
+    background-color: #707070;
+    
+}

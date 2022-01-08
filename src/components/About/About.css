@@ -1,0 +1,19 @@
+.about_sec h1{
+    color: #04D1F2;
+}
+.mission_img img{
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mission_des h3{
+    color: #04D1F2;
+    text-align: end;
+}
+.vission_img img{
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.vission_des h3{
+    color: #04D1F2;
+    
+}
