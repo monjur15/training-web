@@ -24,3 +24,11 @@
     background-color: #707070;
     
 }
+.blogs_btn{
+    text-align: center;
+
+}
+.blogs_btn .blue_btn{
+    background-image: linear-gradient(to right, #73CBFE , #7ADFFF);
+    margin-top: 0px;
+}

@@ -5,6 +5,7 @@ import blog4 from '../../images/blog 4.jpg';
 import share from '../../images/share.png';
 import love from '../../images/love.png';
 import { Link } from 'react-router-dom';
+import { Button } from 'bootstrap';
 
 const Blogs = () => {
     return (
@@ -80,8 +81,16 @@ const Blogs = () => {
 
                     <div className="blog_img col-lg-4 ">
                         <img className='img-fluid ' src={blog4} alt="" />
+
                     </div>
 
+
+
+                </div>
+            </div>
+            <div className='container'>
+                <div className='blogs_btn py-4'>
+                    <button className='blue_btn'>Read More</button>
                 </div>
             </div>
 

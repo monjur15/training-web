@@ -11,7 +11,7 @@ const Navigation = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home" >
+                    <Navbar.Brand href="/home" >
                         <img
                             className='me-lg-4 me-md-0'
                             src="../../images/Training logo.svg"

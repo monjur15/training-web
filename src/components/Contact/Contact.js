@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import React from 'react';
 import { } from './Contact.css';
 
@@ -5,6 +6,7 @@ const Contact = () => {
     return (
         <div>
             <div className='container contact_container p-3'>
+
                 <h1>Contact</h1>
                 <div className='down_border'></div>
                 <div className="row">
@@ -20,7 +22,14 @@ const Contact = () => {
                                 <textarea class="contact-form-text" placeholder="Description"></textarea>
                             </div>
                         </div>
+                        <div className='container'>
+                            <div className='contact_btn py-3'>
+                                <button className='blue_btn'>Send Us</button>
+                            </div>
+                        </div>
+
                     </div>
+                    <div className="col-lg-6"></div>
                 </div>
 
             </div>
