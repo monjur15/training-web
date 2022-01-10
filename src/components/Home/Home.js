@@ -21,9 +21,11 @@ const Home = () => {
     const searchIcon = <FontAwesomeIcon icon={faSearch} />
     return (
         <div>
+
+            {/* slider carasoul  */}
             <Carousel>
                 <Carousel.Item interval={5000}>
-                    <div className='container slider_main'>
+                    <div className='p-5 slider_main'>
 
                         <div className='row slider1_div '>
                             <div className='col-lg-6 col-sm-12 slider1_img p-4'>
@@ -47,7 +49,7 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
-                    <div className='container slider_main'>
+                    <div className='p-5 slider_main'>
 
                         <div className='row slider1_div '>
                             <div className='col-lg-6 col-sm-12 slider1_img p-4'>
@@ -71,7 +73,7 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div className='container slider_main'>
+                    <div className='p-5 slider_main'>
 
                         <div className='row slider1_div '>
                             <div className='col-lg-6 col-sm-12 slider1_img p-4'>
@@ -97,13 +99,14 @@ const Home = () => {
             </Carousel>
 
 
+            {/* Who we are section */}
 
-            <div className='container'>
-                <div className='row we_div'>
-                    <div className="col-lg-7 we_content p-5">
+            <div className='container '>
+                <div className='row we_div p-lg-5 '>
+                    <div className="col-lg-7  mt-5 we_content p-5">
                         <h1>Who We Are</h1>
-                        <div className='down_border mb-lg-4'></div>
-                        <p>We are the fastest growing IT Training institute in Bangladesh.
+                        <div className='down_border mb-5'></div>
+                        <p className=''>We are the fastest growing IT Training institute in Bangladesh.
                             All our classes are currently online (Live Interactive) with students
                             attending from all around the world. We are the first in Bangladesh
                             to introduce online lab facility “KloudLab”, from basic concept
@@ -112,12 +115,12 @@ const Home = () => {
                             environments which makes them uniquely capable to conduct the training
                             programs in a manner where candidates become prepared for the production
                             environment.</p>
-                        <div className='btn_info'><Button variant="outline-info">Our Blogs</Button>{' '}</div>
+                        <div className='btn_info '><Button variant="outline-info">Our Blogs</Button>{' '}</div>
 
 
                     </div>
-                    <div className="col-lg-5 we_img  mt-5">
-                        <img className='img-fluid w-90' src={weimg} alt="" />
+                    <div className="col-lg-5 we_img  my-5">
+                        <img className='img-fluid w-90 p-3 mt-lg-5' src={weimg} alt="" />
                     </div>
                 </div>
 
@@ -281,10 +284,12 @@ const Home = () => {
 
             {/* Our Instructor Section  */}
 
-            <div className='container '>
-                <h1 className='mt-5'>Our Istructor</h1>
+            <div className='container'>
+                <div className='mt-5 inst_h1'>
+                    <h1 >Our Istructor</h1>
+                </div>
                 <div className='down_border2 mb-5'></div>
-                <div>
+                <div className='mt-5'>
                     <div className="row instructor_main_div py-lg-5">
                         <div className="col-lg-4 col-md-12 mb-4 ins_card">
                             <Card className=' card_body' style={{ width: '100%' }}>
@@ -295,7 +300,7 @@ const Home = () => {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <div className="ins_btn_cls"><Button variant="primary">Go somewhere</Button></div>
                                 </Card.Body>
                             </Card>
 
@@ -309,7 +314,7 @@ const Home = () => {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <div className="ins_btn_cls"><Button variant="primary">Go somewhere</Button></div>
                                 </Card.Body>
                             </Card>
 
@@ -324,7 +329,7 @@ const Home = () => {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <div className="ins_btn_cls"><Button variant="primary">Go somewhere</Button></div>
                                 </Card.Body>
                             </Card>
 
