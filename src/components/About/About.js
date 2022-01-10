@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <div className='container'>
                 <div className='p-2 about_sec'>
-                    <h1>About</h1>
+                    <div className='mt-5'><h1>About</h1></div>
                     <div className='down_border mb-5'></div>
                     <p>Tecognize Training is the training wing of Tecognize Solutions Limited where we operate provide online courses
                         spanning from fundamentals to cutting-edge technology.
@@ -18,7 +18,7 @@ const About = () => {
                         courses on different subjects to anyone, anywhere.</p>
                 </div>
 
-                <div className=' mt-5'>
+                <div className=' mt-5 mission_div'>
                     <div className="row">
                         <div className="mission_img p-3  col-lg-6 col-md-12 ">
                             <img className='img-fluid' src={agency} alt="" />
@@ -48,7 +48,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className=' mt-5'>
+                <div className=' my-5 vission_div'>
                     <div className="row">
                         <div className="vission_des p-3 col-lg-6 col-md-12 ">
                             <h3>Our Vission</h3>

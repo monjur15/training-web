@@ -17,3 +17,25 @@
     color: #04D1F2;
     
 }
+.vission_div{
+    margin-top: 150px !important;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width : 600px){
+    .vission_img{
+       padding: 35px !important;
+     
+    }
+    .mission_img{
+        padding: 35px !important;
+      
+     }
+     .vission_div{
+        margin-top: 80px !important;
+    }
+
+}
