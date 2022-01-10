@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { } from './Courses.css';
 import devOps from '../../images/devopss.jpg';
 import { Link } from 'react-router-dom';
 import Home from '../Home/Home';
 
 const Courses = () => {
+    const rightArrow = <FontAwesomeIcon icon={faArrowCircleRight} />
     return (
         <div>
             <div className="container courses_container">
@@ -33,9 +36,9 @@ const Courses = () => {
                             <Button variant="info">Course Outline</Button>{''}
 
                         </div>
-                        <div className=' ms-5 my-3 know'>
-
-                            <Link to="/coursesDetail">Know more</Link>
+                        <div className=' my-3 know'>
+                            <Button variant="info">Know more {rightArrow}</Button>{''}
+                            {/* <Link to="/coursesDetail">Know more</Link> */}
                         </div>
 
 

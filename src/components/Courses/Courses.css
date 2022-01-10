@@ -35,7 +35,12 @@ color: white;
 .course_btn Button{
     color: #00B1FF;
     background-color: #B4F7FF !important;
+    font-weight: bold;
     
+}
+.course_btn Button:hover{
+    background-color: white !important;
+    color: #00B1FF !important;
 }
 
 .btn{
@@ -61,6 +66,17 @@ color: white;
     color: black;
 
 }
+
+.know button{
+    background-color: white;
+    font-weight: bold;
+}
+.know button:hover{
+    background-color: #40D8FF;
+    color: white;
+    
+}
+
 
 
 
