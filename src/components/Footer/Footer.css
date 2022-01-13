@@ -12,7 +12,7 @@ background-color: #0C131B;
 
 }
 .footer_link{
-   
+   display: inline-block;
    
 }
 .footer_link a{

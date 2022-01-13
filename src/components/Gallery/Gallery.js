@@ -9,22 +9,22 @@ const Gallery = () => {
                 <h1>Gallery</h1>
                 <div className='down_border mb-lg-5'></div>
                 <div className="row p-3">
-                    <div className="aws mt-lg-5 col-lg-4">
+                    <div className="aws zoom  mt-lg-4 col-lg-4">
                         <h2>AWS</h2>
                         <div>
                             <img className='img-fluid' src={lap} alt="" />
                         </div>
                     </div>
 
-                    <div className="python col-lg-4 mb-lg-5 ">
+                    <div className="python zoom  col-lg-4 mt-4 mb-4 ">
+                        <h2>Python</h2>
 
                         <div>
                             <img className='img-fluid' src={lap} alt="" />
                         </div>
-                        <h2>Python</h2>
                     </div>
 
-                    <div className="system mt-5 col-lg-4 mb-5">
+                    <div className="system zoom mt-lg-4 col-lg-4 mb-5">
                         <h2>System Design</h2>
                         <div>
                             <img className='img-fluid' src={lap} alt="" />

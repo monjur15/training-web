@@ -24,13 +24,21 @@
     color: white
 
 }
+.zoom{
+    transition: 3s;
+}
+.zoom:hover{
+    opacity: 1;
+	transform: scale(1.2);
+
+}
 
 
 
 
 @media screen and (max-width : 600px){
     .python{
-        margin-top: 50px;
+        /* margin-top: 50px; */
        
     }
    

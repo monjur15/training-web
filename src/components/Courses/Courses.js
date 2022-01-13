@@ -37,7 +37,11 @@ const Courses = () => {
 
                         </div>
                         <div className=' my-3 know'>
-                            <Button variant="info">Know more {rightArrow}</Button>{''}
+                            <Button onClick={"/coursesDetail"} variant="info">Know more {rightArrow}</Button>{''}
+                            <button onclick="activateLasers()">
+                                Activate Lasers
+                            </button>
+                            {/* onClick={() => navigate("")} */}
                             {/* <Link to="/coursesDetail">Know more</Link> */}
                         </div>
 
@@ -58,6 +62,8 @@ const Courses = () => {
 
                 </div>
             </div>
+
+
 
         </div >
     );
