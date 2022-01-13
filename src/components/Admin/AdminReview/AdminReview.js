@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { } from './AdminReview.css';
 
 const AdminReview = () => {
@@ -19,6 +20,7 @@ const AdminReview = () => {
 
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*"></input>
+                    <div className='admin_btn mt-3'><Button variant="primary">Post</Button>{' '}</div>
                 </form>
             </div>
         </div>

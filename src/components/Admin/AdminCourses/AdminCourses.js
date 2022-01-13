@@ -71,6 +71,7 @@ const AdminCourses = () => {
                             <Dropdown.Item href="#">Separated link</Dropdown.Item>
                         </DropdownButton>
                     </div>
+                    <div className='admin_btn mt-5'><Button variant="primary">Post</Button>{' '}</div>
 
 
 

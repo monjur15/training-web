@@ -1,10 +1,11 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { } from './AdminBlog.css';
 
 const AdminBlog = () => {
     return (
         <div>
-            <div className="container">
+            <div className="container py-5">
                 <h1 className='py-5'>Admin Blog</h1>
                 <form action="">
                     <label for="fname">Title:</label>
@@ -24,6 +25,7 @@ const AdminBlog = () => {
 
                     <label for="fname">Publish Time:</label>
                     <input type="date" id="time" name="time"></input>
+                    <div className='admin_btn mt-3'><Button variant="primary">Post</Button>{' '}</div>
 
 
                 </form>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
+import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 
 const AdminCategory = () => {
     return (
@@ -22,6 +22,7 @@ const AdminCategory = () => {
                         <Dropdown.Divider />
                         <Dropdown.Item href="#">Separated link</Dropdown.Item>
                     </DropdownButton>
+                    <div className='admin_btn mt-5'><Button variant="primary">Post</Button>{' '}</div>
                 </div>
             </div>
         </div>
