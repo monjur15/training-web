@@ -37,12 +37,12 @@ const Courses = () => {
 
                         </div>
                         <div className=' my-3 know'>
-                            <Button onClick={"/coursesDetail"} variant="info">Know more {rightArrow}</Button>{''}
-                            <button onclick="activateLasers()">
+                            {/* <Button onClick={"/coursesDetail"} variant="info">Know more {rightArrow}</Button>{''} */}
+                            {/* <button onclick="activateLasers()">
                                 Activate Lasers
-                            </button>
+                            </button> */}
                             {/* onClick={() => navigate("")} */}
-                            {/* <Link to="/coursesDetail">Know more</Link> */}
+                            <Link className='ms-5' to="/coursesDetail">Know more</Link>
                         </div>
 
 

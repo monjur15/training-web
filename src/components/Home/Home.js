@@ -244,12 +244,12 @@ const Home = () => {
 
             <div className='container '>
                 <div className="py-lg-3 category_head">
-                    <h1>Category</h1>
+                    <h1 className='mt-5'>Category</h1>
                     <div className='down_border mb-2'></div>
                 </div>
 
                 <div>
-                    <div className=" category_div  ">
+                    <div className=" category_div p-3">
                         <div className="row p-lg-4">
                             <div className=" category col-6 ">
                                 <div className="col-9 ">

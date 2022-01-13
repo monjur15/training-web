@@ -13,6 +13,12 @@ import Gallery from './components/Gallery/Gallery';
 import Contact from './components/Contact/Contact';
 import Blogs from './components/Blogs/Blogs';
 import Login from './components/Login/Login';
+import AdminGallery from './components/Admin/AdminGallery/AdminGallery';
+import AdminCourses from './components/Admin/AdminCourses/AdminCourses';
+import AdminCategory from './components/Admin/AdminCategory/AdminCategory';
+import AdminBlog from './components/Admin/AdminBlog/AdminBlog';
+import AdminInstructor from './components/Admin/AdminInstructor/AdminInstructor';
+import AdminReview from './components/Admin/AdminReview/AdminReview';
 
 
 
@@ -33,6 +39,12 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/blogs" element={<Blogs />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/admingallery" element={<AdminGallery />} />
+          <Route exact path="/admincourses" element={<AdminCourses />} />
+          <Route exact path="/admincategory" element={<AdminCategory />} />
+          <Route exact path="/adminblog" element={<AdminBlog />} />
+          <Route exact path="/adminconstructor" element={<AdminInstructor />} />
+          <Route exact path="/adminreview" element={<AdminReview />} />
           {/* <Route exact path="" element={<Footer />} /> */}
 
 

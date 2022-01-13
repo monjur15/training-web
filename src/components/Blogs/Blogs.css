@@ -31,4 +31,5 @@
 .blogs_btn .blue_btn{
     background-image: linear-gradient(to right, #73CBFE , #7ADFFF);
     margin-top: 0px;
+    padding: 3px 15px;
 }

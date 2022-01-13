@@ -129,8 +129,12 @@ font-size: 400;
     
     color: #94E5FF;
 }
+.category{
+    text-align: center;
+}
 .category img{
     border-radius: 15px;
+    margin: 0 auto;
 
     
 }

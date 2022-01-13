@@ -5,6 +5,8 @@ import { Button, FormControl, InputGroup, Nav } from 'react-bootstrap';
 import facebook from '../../images/facebook.svg';
 import insta from '../../images/instagram.svg';
 import linkedin from '../../images/linkedin.svg';
+import { FaBeer, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+
 import { } from './Footer.css';
 
 const Footer = () => {
@@ -59,13 +61,13 @@ const Footer = () => {
                         </InputGroup>
                         <div className='footer_link '>
 
-                            <Nav.Link href="/facebook"><img src={facebook} alt="" /></Nav.Link>
+                            <Nav.Link href="/facebook"><FaFacebook /></Nav.Link>
 
 
-                            <Nav.Link href="/instagram"><img src={insta} alt="" /></Nav.Link>
+                            <Nav.Link href="/instagram"><FaTwitter /></Nav.Link>
 
 
-                            <Nav.Link href="/linkedin"><img src={linkedin} alt="" /></Nav.Link>
+                            <Nav.Link href="/linkedin"><FaLinkedin /></Nav.Link>
 
                         </div>
 

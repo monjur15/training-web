@@ -10,7 +10,7 @@ const CourseDetail = () => {
             <div className="container ">
 
                 <div className="row">
-                    <div className="col-lg-6 col-md-12   row">
+                    <div className="col-lg-6 col-md-12 p-5  row">
 
                         <div className='course_card'>
 
@@ -36,7 +36,7 @@ const CourseDetail = () => {
 
 
                     </div>
-                    <div className='col-lg-6  col-md-12 '>
+                    <div className='col-lg-6 p-5 col-md-12 '>
                         <div className='related_course row'>
                             <h3>Related Courses</h3>
                             <div className='p-5'>
