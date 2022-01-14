@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Routes, Route, Link } from "react-router-dom";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { } from './Home.css';
 import slider1 from '../../images/1.svg';
@@ -251,21 +252,22 @@ const Home = () => {
                 <div>
                     <div className=" category_div p-3">
                         <div className="row p-lg-4">
-                            <div className=" category col-6 ">
-                                <div className="col-9 ">
-                                    <img className='img-fluid' src={laptop} alt="" />
+                            <div className=" category col-6  ">
+                                <div className="col-9 cat_img">
+                                    <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+
                                 </div>
-                                <div className="col-9 mt-5 ">
-                                    <img className='img-fluid' src={laptop} alt="" />
+                                <div className="col-9 mt-5 cat_img">
+                                    <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
                                 </div>
                             </div>
 
                             <div className=" category col-6 ">
-                                <div className="col-9 mt-5">
-                                    <img className='img-fluid' src={laptop} alt="" />
+                                <div className="col-9 cat_img">
+                                    <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
                                 </div>
-                                <div className="col-9 mt-5">
-                                    <img className='img-fluid' src={laptop} alt="" />
+                                <div className="col-9 cat_img mt-5">
+                                    <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
                                 </div>
                             </div>
                         </div>
