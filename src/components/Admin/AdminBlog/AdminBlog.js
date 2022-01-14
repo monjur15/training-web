@@ -3,6 +3,9 @@ import { Button } from 'react-bootstrap';
 import { } from './AdminBlog.css';
 
 const AdminBlog = () => {
+    function myFunction() {
+        alert("Done!");
+    }
     return (
         <div>
             <div className="container py-5">
@@ -25,12 +28,12 @@ const AdminBlog = () => {
 
                     <label for="fname">Publish Time:</label>
                     <input type="date" id="time" name="time"></input>
-                    <div className='admin_btn mt-3'><Button variant="primary">Post</Button>{' '}</div>
+                    <div className='admin_btn mt-3'><Button onClick={() => myFunction()} variant="primary">Post</Button>{' '}</div>
 
 
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

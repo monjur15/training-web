@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 
 const AdminCategory = () => {
+    function myFunction() {
+        alert("Done!");
+    }
     return (
         <div>
             <div className="container py-5">
@@ -22,7 +25,7 @@ const AdminCategory = () => {
                         <Dropdown.Divider />
                         <Dropdown.Item href="#">Separated link</Dropdown.Item>
                     </DropdownButton>
-                    <div className='admin_btn mt-5'><Button variant="primary">Post</Button>{' '}</div>
+                    <div className='admin_btn mt-5'><Button onClick={() => myFunction()} variant="primary">Post</Button>{' '}</div>
                 </div>
             </div>
         </div>

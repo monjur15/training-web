@@ -5,6 +5,9 @@ import keyboard from '../../images/keyboard.jpg';
 import { Button, Carousel } from 'react-bootstrap';
 
 const CourseDetail = () => {
+    function myFunction() {
+        alert("Done!");
+    }
     return (
         <div>
             <div className="container ">

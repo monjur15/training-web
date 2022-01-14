@@ -3,6 +3,9 @@ import { Button } from 'react-bootstrap';
 import { } from './AdminReview.css';
 
 const AdminReview = () => {
+    function myFunction() {
+        alert("Done!");
+    }
     return (
         <div>
             <div className="container py-5">
@@ -20,7 +23,7 @@ const AdminReview = () => {
 
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*"></input>
-                    <div className='admin_btn mt-3'><Button variant="primary">Post</Button>{' '}</div>
+                    <div className='admin_btn mt-3'><Button onClick={() => myFunction()} variant="primary">Post</Button>{' '}</div>
                 </form>
             </div>
         </div>

@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/admincourses" element={<AdminCourses />} />
           <Route exact path="/admincategory" element={<AdminCategory />} />
           <Route exact path="/adminblog" element={<AdminBlog />} />
-          <Route exact path="/adminconstructor" element={<AdminInstructor />} />
+          <Route exact path="/admininstructor" element={<AdminInstructor />} />
           <Route exact path="/adminreview" element={<AdminReview />} />
           {/* <Route exact path="" element={<Footer />} /> */}
 
