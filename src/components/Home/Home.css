@@ -139,6 +139,11 @@ font-size: 400;
 }
 .cat_img{
     margin: 0 auto;
+    transition: 2s;
+}
+.cat_img:hover{
+    opacity: 1;
+	transform: scale(1.2);
 }
 
 /* instructor section */
