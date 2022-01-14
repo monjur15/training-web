@@ -30,12 +30,24 @@
 }
 .r_courses_card{
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     background-image: linear-gradient(#B8F2FE, #60C5FF);
     
 }
 .r_courses_card img{
-    height: 55px;
-    width: 55px;
-    border-radius: 100px;
+    /* height: 55px; */
+    /* width: 55px; */
+    border-radius: 10px;
+}
+.related_course_main{
+   
+}
+.course_det{
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width : 600px){
+    
 }

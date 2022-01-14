@@ -2,7 +2,7 @@ import React from 'react';
 import { } from './CourseDetail.css';
 import docker from '../../images/docker.png';
 import keyboard from '../../images/keyboard.jpg';
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 
 const CourseDetail = () => {
     return (
@@ -10,9 +10,9 @@ const CourseDetail = () => {
             <div className="container ">
 
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 p-5  row">
+                    <div className="col-lg-6 col-md-12  course_det  row">
 
-                        <div className='course_card'>
+                        <div className='course_card p-3 my-5'>
 
                             <div className='course_img'>
                                 <img src={docker} alt="img" />
@@ -36,55 +36,165 @@ const CourseDetail = () => {
 
 
                     </div>
-                    <div className='col-lg-6 p-5 col-md-12 '>
-                        <div className='related_course row'>
+
+
+
+
+                    {/* related courses */}
+                    <div className='col-lg-6 p-5 related_course_main  col-md-12 '>
+                        <div className='related_course  row'>
                             <h3>Related Courses</h3>
-                            <div className='p-5'>
-                                <div className="r_courses_card p-3 row">
-                                    <div className="col-2 ">
-                                        <img className='img-fluid' src={keyboard} alt="" />
+                            <Carousel>
+                                <Carousel.Item>
+                                    <div className='py-5'>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
 
                                     </div>
-                                    <div className="course_title col-9 ">
-                                        <h5>KUBERNETES</h5>
+                                    <Carousel.Caption>
 
-                                        <Button variant="light">Buy</Button>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <div className='py-5'>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
 
                                     </div>
+                                    <Carousel.Caption>
 
-                                </div>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <div className='py-5'>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
 
-                                <div className="r_courses_card p-3 mt-5   row">
-                                    <div className="col-2 ">
-                                        <img className='img-fluid' src={keyboard} alt="" />
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
+                                        <div className="r_courses_card  my-4 p-3 row">
+                                            <div className="col-4 ">
+                                                <img className='img-fluid' src={keyboard} alt="" />
+
+                                            </div>
+                                            <div className="course_title col-8 ">
+                                                <h5>KUBERNETES</h5>
+
+                                                <Button variant="light">Buy</Button>
+
+                                            </div>
+
+                                        </div>
 
                                     </div>
-                                    <div className="course_title col-9 ">
-                                        <h5>KUBERNETES</h5>
+                                    <Carousel.Caption>
 
-                                        <Button variant="light">Buy</Button>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            </Carousel>
 
-                                    </div>
-
-                                </div>
-
-                                <div className="r_courses_card p-3 mt-5   row">
-                                    <div className="col-2 ">
-                                        <img className='img-fluid' src={keyboard} alt="" />
-
-                                    </div>
-                                    <div className="course_title col-9 ">
-                                        <h5>KUBERNETES</h5>
-
-                                        <Button variant="light">Buy</Button>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
                         </div>
                     </div>
+
+                    {/* related courses */}
                 </div>
             </div>
 
