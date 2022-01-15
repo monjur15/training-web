@@ -9,7 +9,7 @@ const AdminReview = () => {
     return (
         <div>
             <div className="container py-5">
-                <h1 className='my-5'>Admin Review</h1>
+                <h1 className='my-5'>Review</h1>
                 <form action="">
                     <label for="fname">Name:</label>
                     <input type="text" id="name" name="name"></input>

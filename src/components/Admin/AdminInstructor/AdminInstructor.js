@@ -8,7 +8,7 @@ const AdminInstructor = () => {
     return (
         <div>
             <div className="container py-5">
-                <h1 className='my-5'>Admin Constructor</h1>
+                <h1 className='my-5'>Instructor</h1>
                 <form action="">
                     <label for="fname">Name:</label>
                     <input type="text" id="name" name="name"></input>
