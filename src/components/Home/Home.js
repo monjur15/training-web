@@ -17,17 +17,31 @@ import review1 from "../../images/review1.jfif";
 import review2 from "../../images/review3.jpg";
 import review3 from "../../images/review3.webp";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
-import { fetchCourses } from "../../store/action";
+import {
+  fetchCourses,
+  fetchInstructors,
+  fetchCategories,
+  fetchReviews,
+  fetchPhotos,
+} from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
   const searchIcon = <FontAwesomeIcon icon={faSearch} />;
 
   const courses = useSelector((state: RootState) => state.courses);
+  const instructors = useSelector((state: RootState) => state.instructors);
+  const categories = useSelector((state: RootState) => state.categories);
+  const reviews = useSelector((state: RootState) => state.reviews);
+  const photos = useSelector((state: RootState) => state.photos);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCourses());
+    dispatch(fetchInstructors());
+    dispatch(fetchCategories());
+    dispatch(fetchReviews());
+    dispatch(fetchPhotos());
   }, []);
 
   return (
