@@ -30,16 +30,21 @@ const Courses = () => {
         <div className="down_border mb-5"></div>
         <div className="row">
           <div className="col-lg-7 col-md-12  ">
+            {/* courses.map(function(course) {
+              
+            }) */}
             <div className="course_cap w-100">
               <div className="course_number">
                 <h1>01</h1>
               </div>
               <div className="course_title">
                 <h1>DevOps</h1>
+                {/* <h1>{courses[1].course_title}</h1> */}
               </div>
             </div>
             <div className="sub_title">
               <h5>docker & kubernetes</h5>
+              {/* <h5>{courses[1].course_desc}</h5> */}
             </div>
 
             <div className="course_btn my-3 ">
@@ -62,6 +67,11 @@ const Courses = () => {
             <div className="row">
               <div className="course_img ">
                 <img className="img-fluid" src={devOps} alt="no" />
+                {/* <img
+                  className="img-fluid"
+                  src={courses[0].course_img.url}
+                  alt="no"
+                /> */}
               </div>
             </div>
           </div>

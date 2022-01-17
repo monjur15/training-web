@@ -9,10 +9,12 @@ export const fetchCourses = () => {
         for (let key in response.data) {
           fetchedCourses.push({ ...response.data[key] });
         }
+        console.log(fetchCourses);
         dispatch(fetchCoursesSuccess(fetchedCourses));
       })
       .catch((error) => {
         console.log(error);
+        dispatch(fetchCoursesFail(error));
       });
   };
 };
