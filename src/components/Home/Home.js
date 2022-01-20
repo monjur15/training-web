@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Routes, Route, Link } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import {} from "./Home.css";
+import { } from "./Home.css";
 import slider1 from "../../images/1.svg";
 import weimg from "../../images/agency.jpg";
 import csharp from "../../images/csharp.jpg";
@@ -36,6 +36,8 @@ const Home = () => {
   const photos = useSelector((state: RootState) => state.photos);
   const dispatch = useDispatch();
 
+
+
   useEffect(() => {
     dispatch(fetchCourses());
     dispatch(fetchInstructors());
@@ -45,6 +47,7 @@ const Home = () => {
   }, []);
 
   return (
+
     <div>
       {/* slider carasoul  */}
       <Carousel>
@@ -149,6 +152,7 @@ const Home = () => {
 
       {/* Popular cources */}
 
+
       <Carousel fade>
         <Carousel.Item>
           <div className="container man_popular_div">
@@ -158,7 +162,16 @@ const Home = () => {
 
             <div className="row popular_cources">
               <div className="col-6">
-                <img className="img-fluid" src={csharp} alt="" />
+                {/* <img className="img-fluid" src={csharp} alt="" /> */}
+
+                {/* {<div>
+                  {courses.map(courseInfo => {
+                    return <h1>{courseInfo.course_id}</h1>
+                  })}
+                </div>} */}
+                <h1>{courses[0].course_id}</h1>
+
+
               </div>
               <div className="col-6">
                 <img className="img-fluid" src={network} alt="" />
@@ -211,6 +224,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
 
       {/*         <div className='container man_popular_div'>
                 <h1>Popular Cources</h1>

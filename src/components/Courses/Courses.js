@@ -6,7 +6,7 @@ import { fetchCourses } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
-import {} from "./Courses.css";
+import { } from "./Courses.css";
 import devOps from "../../images/devopss.jpg";
 import { Link } from "react-router-dom";
 import Home from "../Home/Home";
@@ -29,7 +29,7 @@ const Courses = () => {
         <h1 className="course">Courses</h1>
         <div className="down_border mb-5"></div>
         <div className="row">
-          <div className="col-lg-7 col-md-12  ">
+          <div className="col-lg-7 col-12  ">
             {/* courses.map(function(course) {
               
             }) */}
@@ -63,7 +63,7 @@ const Courses = () => {
             </div>
           </div>
 
-          <div className="col-lg-5 col-md-12  p-2">
+          <div className="col-lg-5 col-12  p-2">
             <div className="row">
               <div className="course_img ">
                 <img className="img-fluid" src={devOps} alt="no" />
