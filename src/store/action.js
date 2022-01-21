@@ -33,6 +33,30 @@ export const fetchCoursesFail = (error) => {
   };
 };
 
+export const createInstructor = (instructor) => {
+  return (dispatch) => {
+    // Axios.post("api/instructors", instructor)
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    try {
+      Axios({
+        method: "post",
+        url: "api/instructors",
+        data: instructor,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
 export const fetchInstructors = () => {
   return (dispatch) => {
     let fetchedInstructors = [];

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Routes, Route, Link } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { } from "./Home.css";
+import {} from "./Home.css";
 import slider1 from "../../images/1.svg";
 import weimg from "../../images/agency.jpg";
 import csharp from "../../images/csharp.jpg";
@@ -28,15 +28,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
   const searchIcon = <FontAwesomeIcon icon={faSearch} />;
+  const url = "http://3.1.196.0";
 
-  const courses = useSelector((state: RootState) => state.courses);
-  const instructors = useSelector((state: RootState) => state.instructors);
-  const categories = useSelector((state: RootState) => state.categories);
-  const reviews = useSelector((state: RootState) => state.reviews);
-  const photos = useSelector((state: RootState) => state.photos);
+  const courses = useSelector((state) => state.courses);
+  const instructors = useSelector((state) => state.instructors);
+  const categories = useSelector((state) => state.categories);
+  const reviews = useSelector((state) => state.reviews);
+  const photos = useSelector((state) => state.photos);
   const dispatch = useDispatch();
-
-
 
   useEffect(() => {
     dispatch(fetchCourses());
@@ -47,7 +46,6 @@ const Home = () => {
   }, []);
 
   return (
-
     <div>
       {/* slider carasoul  */}
       <Carousel>
@@ -152,7 +150,6 @@ const Home = () => {
 
       {/* Popular cources */}
 
-
       <Carousel fade>
         <Carousel.Item>
           <div className="container man_popular_div">
@@ -161,22 +158,34 @@ const Home = () => {
             <div className="down_border2 mb-4"></div>
 
             <div className="row popular_cources">
-              <div className="col-6">
-                {/* <img className="img-fluid" src={csharp} alt="" /> */}
+              {/* <div className="col-6"> */}
+              {/* <img className="img-fluid" src={csharp} alt="" /> */}
 
-                {/* {<div>
+              {/* {<div>
                   {courses.map(courseInfo => {
                     return <h1>{courseInfo.course_id}</h1>
                   })}
                 </div>} */}
-                <h1>{courses[0].course_id}</h1>
-
-
-              </div>
-              <div className="col-6">
-                <img className="img-fluid" src={network} alt="" />
-              </div>
+              {/* <h1>
+                  {courses && courses.length ? courses[0].course_title : null}
+                </h1> */}
             </div>
+            {/* <div className="col-6"> */}
+            {/* <img className="img-fluid" src={network} alt="" /> */}
+            {courses && courses.length
+              ? courses.map((course) => (
+                  <div className="col-3" key={course.course_id}>
+                    <h1>{course.course_title}</h1>
+                    <img
+                      className="img-fluid"
+                      src={url + course.course_img}
+                      alt=""
+                    />
+                  </div>
+                ))
+              : null}
+            {/* </div> */}
+            {/* </div> */}
           </div>
           <Carousel.Caption>
             {/* <h3>First slide label</h3>
@@ -225,7 +234,6 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-
       {/*         <div className='container man_popular_div'>
                 <h1>Popular Cources</h1>
                 <div className='down_border2 mb-lg-4'></div>
@@ -264,8 +272,7 @@ const Home = () => {
         <div>
           <div className=" category_div p-3">
             <div className="row p-lg-4">
-              <div className=" category col-6  ">
-                <div className="col-9 cat_img">
+              {/* <div className="col-9 cat_img">
                   <Link to="/about">
                     <img className="img-fluid" src={laptop} alt="" />
                   </Link>
@@ -274,10 +281,21 @@ const Home = () => {
                   <Link to="/about">
                     <img className="img-fluid" src={laptop} alt="" />
                   </Link>
-                </div>
-              </div>
+                </div> */}
 
-              <div className=" category col-6 ">
+              {categories && categories.length
+                ? categories.map((category) => (
+                    <div className=" category col-6  " key={category.cat_id}>
+                      <div className="col-9 mt-5 cat_img">
+                        <Link to="/about">
+                          <h1>{category.category}</h1>
+                        </Link>
+                      </div>
+                    </div>
+                  ))
+                : null}
+
+              {/* <div className=" category col-6 ">
                 <div className="col-9 cat_img">
                   <Link to="/about">
                     <img className="img-fluid" src={laptop} alt="" />
@@ -288,7 +306,7 @@ const Home = () => {
                     <img className="img-fluid" src={laptop} alt="" />
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="down_border3 mt-1"></div>
           </div>
@@ -299,11 +317,11 @@ const Home = () => {
 
       <div className="container">
         <div className="mt-5 inst_h1">
-          <h1>Our Istructor</h1>
+          <h1>Our Instructors</h1>
         </div>
         <div className="down_border2 mb-5"></div>
         <div className="mt-5">
-          <div className="row instructor_main_div py-lg-5">
+          {/* <div className="row instructor_main_div py-lg-5">
             <div className="col-lg-4 col-md-12 mb-4 ins_card">
               <Card className=" card_body" style={{ width: "100%" }}>
                 <div className="ins_img">
@@ -357,6 +375,32 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </div>
+          </div> */}
+          <div className="row instructor_main_div py-lg-5">
+            {instructors && instructors.length
+              ? instructors.map((instructor) => (
+                  <div
+                    className="col-lg-4 col-md-12 mb-4 ins_card"
+                    key={instructor.inst_id}
+                  >
+                    <Card className=" card_body" style={{ width: "100%" }}>
+                      <div className="ins_img">
+                        <Card.Img
+                          variant="top"
+                          src={url + instructor.inst_img}
+                        />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>{instructor.inst_name}</Card.Title>
+                        <Card.Text>{instructor.inst_designation}</Card.Text>
+                        <div className="ins_btn_cls">
+                          <Button variant="primary">Go somewhere</Button>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                ))
+              : null}
           </div>
         </div>
       </div>
@@ -368,8 +412,7 @@ const Home = () => {
         <div className="down_border mb-5"></div>
 
         <Carousel fade>
-          <Carousel.Item className="">
-            <div className="row review_main  py-5">
+          {/* <div className="row review_main  py-5">
               <div className=" review_div  py-5">
                 <Card className="card_review" style={{ width: "18rem" }}>
                   <div className="review_img">
@@ -384,10 +427,30 @@ const Home = () => {
                   </Card.Body>
                 </Card>
               </div>
-            </div>
-            <Carousel.Caption></Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
+            </div> */}
+          {reviews && reviews.length
+            ? reviews.map((review) => (
+                <Carousel.Item key={review.id}>
+                  <div className="row review_main  py-5">
+                    <div className=" review_div  py-5">
+                      <Card className="card_review" style={{ width: "18rem" }}>
+                        <div className="review_img">
+                          <Card.Img
+                            variant="top"
+                            src={url + review.reviewer_img}
+                          />
+                        </div>
+                        <Card.Body className="">
+                          <Card.Title>{review.reviewer_name}</Card.Title>
+                          <Card.Text>{review.review}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              ))
+            : null}
+          {/* <Carousel.Item>
             <div className="row review_main  py-5">
               <div className=" review_div  py-5">
                 <Card className="card_review" style={{ width: "18rem" }}>
@@ -426,7 +489,7 @@ const Home = () => {
             </div>
 
             <Carousel.Caption></Carousel.Caption>
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
       </div>
     </div>
