@@ -13,7 +13,7 @@ import Home from "../Home/Home";
 
 const Courses = () => {
   const rightArrow = <FontAwesomeIcon icon={faArrowCircleRight} />;
-  const url = "http://3.1.196.0";
+  const url = "http://3.1.196.0/backend";
 
   const [courses1, setCourses] = useState(0);
 

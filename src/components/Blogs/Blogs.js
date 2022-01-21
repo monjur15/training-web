@@ -10,7 +10,7 @@ import { fetchBlogs } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 
 const Blogs = () => {
-  const url = "http://3.1.196.0";
+  const url = "http://3.1.196.0/backend";
   const blogs = useSelector((state) => state.blogs);
   const dispatch = useDispatch();
 
@@ -107,3 +107,10 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
+// root    /home/ubuntu/training_web/build;
+//         index   index.html index.htm;
+//         location / {
+//         root /home/ubuntu/training_web/build;
+//         try_files $uri /index.html;
+//       }

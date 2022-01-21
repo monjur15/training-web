@@ -5,7 +5,7 @@ import { fetchPhotos } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 
 const Gallery = () => {
-  const url = "http://3.1.196.0";
+  const url = "http://3.1.196.0/backend";
   const photos = useSelector((state) => state.photos);
   const dispatch = useDispatch();
 

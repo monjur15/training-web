@@ -28,7 +28,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
   const searchIcon = <FontAwesomeIcon icon={faSearch} />;
-  const url = "http://3.1.196.0";
+  const url = "http://3.1.196.0/backend";
 
   const courses = useSelector((state) => state.courses);
   const instructors = useSelector((state) => state.instructors);
