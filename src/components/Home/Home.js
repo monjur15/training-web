@@ -266,24 +266,9 @@ const Home = () => {
       <div className="container ">
         <div className="py-lg-3 category_head">
           <h1 className="mt-5">Category</h1>
-          <div className="down_border mb-2"></div>
+          <div className="down_border mb-3"></div>
         </div>
-
-        <div>
-          <div className=" category_div p-3">
-            <div className="row p-lg-4">
-              {/* <div className="col-9 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div>
-                <div className="col-9 mt-5 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div> */}
-
-              {categories && categories.length
+        {/*   {categories && categories.length
                 ? categories.map((category) => (
                   <div className=" category col-6  " key={category.cat_id}>
                     <div className="col-9 mt-5 cat_img">
@@ -293,24 +278,35 @@ const Home = () => {
                     </div>
                   </div>
                 ))
-                : null}
+                : null} */}
 
-              {/* <div className=" category col-6 ">
+        <div>
+          <div className=" category_div py-3 ">
+            <div className="row p-lg-4">
+              <div className=" category col-6  ">
                 <div className="col-9 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
+                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+
+                </div>
+                <div className="col-9 mt-5 cat_img">
+                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+                </div>
+              </div>
+
+              <div className=" category col-6 ">
+                <div className="col-9 cat_img">
+                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
                 </div>
                 <div className="col-9 cat_img mt-5">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
+                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
                 </div>
-              </div> */}
+              </div>
             </div>
-            <div className="down_border3 mt-1"></div>
+            <div className='down_border3 mt-5'></div>
           </div>
+
         </div>
+
       </div>
 
       {/* Our Instructor Section  */}

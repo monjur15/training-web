@@ -69,7 +69,12 @@ const Login = () => {
 
                             </div>
 
-                            <a href="#"><h5 className='py-3'>Create Account {arrowIcon}</h5></a>
+                            {/* <a href="#"><h5 className='py-3'>Create Account {arrowIcon}</h5></a> */}
+                            <div className="py-3">
+                                <Link to="/signup">
+                                    Sign Up {arrowIcon}
+                                </Link>
+                            </div>
 
 
                         </div>

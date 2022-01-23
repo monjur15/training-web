@@ -19,6 +19,7 @@ import AdminCategory from './components/Admin/AdminCategory/AdminCategory';
 import AdminBlog from './components/Admin/AdminBlog/AdminBlog';
 import AdminInstructor from './components/Admin/AdminInstructor/AdminInstructor';
 import AdminReview from './components/Admin/AdminReview/AdminReview';
+import Signup from './components/Signup/Signup'
 
 
 
@@ -45,6 +46,8 @@ function App() {
           <Route exact path="/adminblog" element={<AdminBlog />} />
           <Route exact path="/admininstructor" element={<AdminInstructor />} />
           <Route exact path="/adminreview" element={<AdminReview />} />
+          <Route exact path="/signup" element={<Signup />} />
+          {/* <Route exact path="/signup" element={<Signup />} /> */}
           {/* <Route exact path="" element={<Footer />} /> */}
 
 

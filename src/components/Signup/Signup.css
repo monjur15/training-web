@@ -1,103 +1,63 @@
-.signup_main{
-display: flex;
-}
-.signup_banner{
-    width: 40%;
-    background-image: url(../../images/bgSignup.jpg);
-    
-}
-.signup_pic img{
-    /* width: 60%; */
-}
-.ellipse1{
-    height: 300px;
-    /* background-color: chartreuse; */
-    position: relative;
+.signup_col1{
+    background-image: linear-gradient(to right, #FFFFFF , #6CF5F8);
+    text-align: center;
+    padding: 50px;
+
 }
 .bubble1{
     height: 60px;
     width: 60px;
-    background-color: #81FBFF;
-    border-radius: 100px;
-    position: absolute;
-    left: 50px;
-    top: 40px;
+    background-image: linear-gradient(to right, #81FBFF , #00B3D8);
+    border-radius: 50px;
 }
 .bubble2{
+    height: 30px;
+    width: 30px;
+    background-image: linear-gradient(to right, #81FBFF , #00B3D8);
+    border-radius: 50px;
     position: relative;
-    height: 40px;
-    width: 40px;
-    border-radius: 100px;
-    background-color: #81FBFF;
-    top: 200px;
-    left: 455px;
-
-}
-.ellipse3{
-    height: 329px;
-    position: relative;
+    top: 20%;
+    left: 80%;
 }
 .bubble3{
-    height: 85px;
-    width: 85px;
-    background-color: #81FBFF;
-    border-radius: 100px;
-    position: absolute;
-    left: 350px;
-    top: 85px;
-    
+    height: 80px;
+    width: 80px;
+    background-image: linear-gradient(to right, #81FBFF , #00B3D8);
+    border-radius: 50px;
+    position: relative;
+    top: 10%;
+    left: 50%;
 }
-.signup_pic{
+
+.signup_cap{
     text-align: center;
 }
-
-.signup_here{
-width: 60%;
-text-align: center;
-
-}
-.signup_here h1{
-    font-size: 70px;
-    color: #707070;
-}
 .signup_fields input{
-    width: 100%;
-    padding: 10px 10px;
-    border-radius: 50px;
-    
-   
+    width: 80%;
+    padding: 5px 20px;
+    border-radius: 20px;
     
 }
 .signup_fields{
-    position: relative;
-    width: 50%;
     margin: 0 auto;
-    margin-top: 35px;
-    
+    text-align: center;
 }
 .signup_fields span{
-    position: absolute;
-   top: 7px;
-   right: 0px;
-   color: #AEAEAE;
+    position: relative;
+    right: 30px;
     
 }
-.sign_up h3{
-    color: #2DBDFE;
-  font-size: 30px;
-  font-weight: 400;
-  margin-bottom: 10px solid #2DBDFE;
- 
-  
+.signup_fields span a{
+    color: grey;
 }
-.sign_up a{
-    text-decoration: none;
-   
+.sign_up{
+    text-align: center;
 }
 .bottom_bor{
     width: 5%;
     margin: 0 auto;
     height: 1.5px;
     background-color: #35D7E4;
-   margin-top: -20px;
+   margin-top: 0px;
 }
+
