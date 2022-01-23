@@ -25,12 +25,21 @@
 
 }
 .zoom{
-    transition: 3s;
+    transition: 0.90s;
 }
 .zoom:hover{
     opacity: 1;
 	transform: scale(1.2);
 
+}
+.gallery_img img{
+    width: 100%;
+    height: 350px;
+    background-color: blueviolet !important;
+    
+}
+.gallery_img img{
+    text-align: center;
 }
 
 

@@ -1,3 +1,92 @@
-.login_content{
+.login_content {
   text-align: center;
 }
+.login_header h1{
+  font-weight: 400;
+  color: #707070;
+}
+
+.email {
+  /* border: 2px solid blue; */
+  width: 100%;
+  padding: 30px;
+
+}
+.email .input_data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.email .input_data input{
+  width: 90%;
+  height: 100%;
+  border: none;
+  border-bottom: 2px solid gray;
+  font-size: 17px;
+  padding: 10px 10px;
+  
+}
+.input_data input:focus ~label,
+.input_data input:valid ~label{
+  transform: translateY(-35px);
+  font-size: 15px;
+}
+
+.email .input_data label{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  color: #2DBDFE;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  
+}
+.input_data span{
+  position: relative;
+  right: 22px;
+  
+}
+.input_data span a{
+  color: grey;
+}
+.forget a{
+margin-left: 0 auto;
+color: #2DBDFE;
+margin-right: 420px;
+}
+.google{
+  display: flex;
+  align-items: center;
+}
+
+
+.login_img img{
+margin-top: 150px;
+}
+.login_icons{
+
+}
+.sub_icon a{
+  font-size: 30px;
+}
+.google a{
+  /* text-align: center; */
+  align-items: center;
+  color: red;
+}
+.login_img{
+  background-color: #0DD4FF;
+}
+
+@media screen and (max-width : 600px){
+  .forget a{
+    margin-right: 150px;
+  }
+  .login_img img{
+    margin-top: 50px;
+    }
+
+}
+
+
+

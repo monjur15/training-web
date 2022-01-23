@@ -35,4 +35,14 @@ textarea.contact-form-text{
 .contact_btn button{
 	padding: 0px 30px;
 	margin-top: 0px;
+	padding: 10px 35px;
+	background-image: linear-gradient(to right, #73CBFE, #7ADFFF);
+	border-radius: 50px;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+.contact_btn button:hover{
+	
+	background-image: linear-gradient(to right, #7ADFFF, #73CBFE);
 }

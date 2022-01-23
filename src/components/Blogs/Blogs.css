@@ -29,7 +29,15 @@
 
 }
 .blogs_btn .blue_btn{
-    background-image: linear-gradient(to right, #73CBFE , #7ADFFF);
-    margin-top: 0px;
-    padding: 3px 15px;
+    padding: 0px 30px;
+	margin-top: 0px;
+	padding: 10px 35px;
+	background-image: linear-gradient(to right, #73CBFE, #7ADFFF);
+	border-radius: 50px;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+.blogs_btn .blue_btn:hover{
+    background-image: linear-gradient(to right, #7ADFFF, #73CBFE);
 }

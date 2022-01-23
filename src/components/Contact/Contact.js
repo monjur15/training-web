@@ -7,8 +7,8 @@ const Contact = () => {
         <div>
             <div className='container contact_container p-3'>
 
-                <h1>Contact</h1>
-                <div className='down_border'></div>
+                <h1 className='mt-5'>Contact</h1>
+                <div className='down_border mb-5'></div>
                 <div className="row">
                     <div className="col-lg-6 col-12">
                         <div className='inputs '>
