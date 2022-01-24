@@ -120,6 +120,7 @@ font-size: 400;
     margin: 0 auto;
 }
 
+
 /*Category part*/
 .category_div{
     background-color: #DFF1FF;
@@ -169,7 +170,9 @@ font-size: 400;
     border-radius: 80px 10px 80px 10px;
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin-top: 70px;
 }
+
 .ins_img{
     position: relative;
     bottom: 75px;

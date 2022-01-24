@@ -44,10 +44,146 @@ const CourseDetail = () => {
 
 
                     {/* related courses */}
-                    <div className='col-lg-6 p-5 related_course_main  col-md-12 '>
+                    <div className='col-lg-6 p-5 related_course_main  col-12 '>
                         <div className='related_course  row'>
                             <h3>Related Courses</h3>
-                            <Carousel>
+                            <div className="wrapper ">
+                                <div className='py-0'>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                {/* 2 */}
+                                <div className='py-0'>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                {/* 3 */}
+
+                                <div className='py-0'>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="r_courses_card  my-4 p-3 row">
+                                        <div className="col-4 ">
+                                            <img className='img-fluid' src={keyboard} alt="" />
+
+                                        </div>
+                                        <div className="course_title col-8 ">
+                                            <h5>KUBERNETES</h5>
+
+                                            <Button variant="light">Buy</Button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            {/*  <Carousel>
                                 <Carousel.Item>
                                     <div className='py-5'>
                                         <div className="r_courses_card  my-4 p-3 row">
@@ -192,7 +328,7 @@ const CourseDetail = () => {
 
                                     </Carousel.Caption>
                                 </Carousel.Item>
-                            </Carousel>
+                            </Carousel> */}
 
                         </div>
                     </div>

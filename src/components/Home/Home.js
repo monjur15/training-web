@@ -172,18 +172,20 @@ const Home = () => {
             </div>
             {/* <div className="col-6"> */}
             {/* <img className="img-fluid" src={network} alt="" /> */}
-            {courses && courses.length
-              ? courses.map((course) => (
-                <div className="col-3 bg-danger" key={course.course_id}>
-                  <h1>{course.course_title}</h1>
-                  <img
-                    className="img-fluid"
-                    src={url + course.course_img}
-                    alt=""
-                  />
-                </div>
-              ))
-              : null}
+            <div className="slide_1">
+              {courses && courses.length
+                ? courses.map((course) => (
+                  <div className="col-3 bg-danger" key={course.course_id}>
+                    <h1>{course.course_title}</h1>
+                    <img
+                      className="img-fluid"
+                      src={url + course.course_img}
+                      alt=""
+                    />
+                  </div>
+                ))
+                : null}
+            </div>
             {/* </div> */}
             {/* </div> */}
           </div>
@@ -372,6 +374,7 @@ const Home = () => {
               </Card>
             </div>
           </div> */}
+
           <div className="row instructor_main_div py-lg-5">
             {instructors && instructors.length
               ? instructors.map((instructor) => (
