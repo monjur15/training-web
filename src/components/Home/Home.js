@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Routes, Route, Link } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { } from "./Home.css";
+import {} from "./Home.css";
 import slider1 from "../../images/1.svg";
 import weimg from "../../images/agency.jpg";
 import csharp from "../../images/csharp.jpg";
@@ -124,8 +124,9 @@ const Home = () => {
 
       <div className="container ">
         <div className="row we_div p-lg-5 ">
-          <div className="col-lg-7  mt-5 we_content p-5">
-            <h1>Who We Are</h1>
+          {/* <div className="col-lg-7  mt-5 we_content p-5"> */}
+          <div className="col-lg-7  mt-5  p-5">
+            <h1 className="text-red-400">Who We Are</h1>
             <div className="down_border mb-5"></div>
             <p className="">
               We are the fastest growing IT Training institute in Bangladesh.
@@ -175,15 +176,15 @@ const Home = () => {
             <div className="slide_1">
               {courses && courses.length
                 ? courses.map((course) => (
-                  <div className="col-3 bg-danger" key={course.course_id}>
-                    <h1>{course.course_title}</h1>
-                    <img
-                      className="img-fluid"
-                      src={url + course.course_img}
-                      alt=""
-                    />
-                  </div>
-                ))
+                    <div className="col-3 bg-danger" key={course.course_id}>
+                      <h1>{course.course_title}</h1>
+                      <img
+                        className="img-fluid"
+                        src={url + course.course_img}
+                        alt=""
+                      />
+                    </div>
+                  ))
                 : null}
             </div>
             {/* </div> */}
@@ -287,28 +288,33 @@ const Home = () => {
             <div className="row p-lg-4">
               <div className=" category col-6  ">
                 <div className="col-9 cat_img">
-                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
-
+                  <Link to="/about">
+                    <img className="img-fluid" src={laptop} alt="" />
+                  </Link>
                 </div>
                 <div className="col-9 mt-5 cat_img">
-                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+                  <Link to="/about">
+                    <img className="img-fluid" src={laptop} alt="" />
+                  </Link>
                 </div>
               </div>
 
               <div className=" category col-6 ">
                 <div className="col-9 cat_img">
-                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+                  <Link to="/about">
+                    <img className="img-fluid" src={laptop} alt="" />
+                  </Link>
                 </div>
                 <div className="col-9 cat_img mt-5">
-                  <Link to="/about"><img className='img-fluid' src={laptop} alt="" /></Link>
+                  <Link to="/about">
+                    <img className="img-fluid" src={laptop} alt="" />
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className='down_border3 mt-5'></div>
+            <div className="down_border3 mt-5"></div>
           </div>
-
         </div>
-
       </div>
 
       {/* Our Instructor Section  */}
@@ -378,27 +384,27 @@ const Home = () => {
           <div className="row instructor_main_div py-lg-5">
             {instructors && instructors.length
               ? instructors.map((instructor) => (
-                <div
-                  className="col-lg-4 col-md-12 mb-4 ins_card"
-                  key={instructor.inst_id}
-                >
-                  <Card className=" card_body" style={{ width: "100%" }}>
-                    <div className="ins_img">
-                      <Card.Img
-                        variant="top"
-                        src={url + instructor.inst_img}
-                      />
-                    </div>
-                    <Card.Body>
-                      <Card.Title>{instructor.inst_name}</Card.Title>
-                      <Card.Text>{instructor.inst_designation}</Card.Text>
-                      <div className="ins_btn_cls">
-                        <Button variant="primary">Go somewhere</Button>
+                  <div
+                    className="col-lg-4 col-md-12 mb-4 ins_card"
+                    key={instructor.inst_id}
+                  >
+                    <Card className=" card_body" style={{ width: "100%" }}>
+                      <div className="ins_img">
+                        <Card.Img
+                          variant="top"
+                          src={url + instructor.inst_img}
+                        />
                       </div>
-                    </Card.Body>
-                  </Card>
-                </div>
-              ))
+                      <Card.Body>
+                        <Card.Title>{instructor.inst_name}</Card.Title>
+                        <Card.Text>{instructor.inst_designation}</Card.Text>
+                        <div className="ins_btn_cls">
+                          <Button variant="primary">Go somewhere</Button>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                ))
               : null}
           </div>
         </div>
@@ -429,25 +435,25 @@ const Home = () => {
             </div> */}
           {reviews && reviews.length
             ? reviews.map((review) => (
-              <Carousel.Item key={review.id}>
-                <div className="row review_main  py-5">
-                  <div className=" review_div  py-5">
-                    <Card className="card_review" style={{ width: "18rem" }}>
-                      <div className="review_img">
-                        <Card.Img
-                          variant="top"
-                          src={url + review.reviewer_img}
-                        />
-                      </div>
-                      <Card.Body className="">
-                        <Card.Title>{review.reviewer_name}</Card.Title>
-                        <Card.Text>{review.review}</Card.Text>
-                      </Card.Body>
-                    </Card>
+                <Carousel.Item key={review.id}>
+                  <div className="row review_main  py-5">
+                    <div className=" review_div  py-5">
+                      <Card className="card_review" style={{ width: "18rem" }}>
+                        <div className="review_img">
+                          <Card.Img
+                            variant="top"
+                            src={url + review.reviewer_img}
+                          />
+                        </div>
+                        <Card.Body className="">
+                          <Card.Title>{review.reviewer_name}</Card.Title>
+                          <Card.Text>{review.review}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
                   </div>
-                </div>
-              </Carousel.Item>
-            ))
+                </Carousel.Item>
+              ))
             : null}
           {/* <Carousel.Item>
             <div className="row review_main  py-5">

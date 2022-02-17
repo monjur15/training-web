@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { } from "./Blogs.css";
+import {} from "./Blogs.css";
 import blog3 from "../../images/blog 3.jpg";
 import blog4 from "../../images/blog 4.jpg";
 import share from "../../images/share.png";
@@ -26,35 +26,35 @@ const Blogs = () => {
 
         {blogs && blogs.length
           ? blogs.map((blog) => (
-            <div className="row" key={blog.blog_id}>
-              <div className="blog_img col-lg-4 ">
-                <img
-                  className="img-fluid "
-                  src={url + blog.blog_img}
-                  alt=""
-                />
-              </div>
-              <div className="col-lg-7 p-3">
-                <p>{blog.blog}</p>
-                <Link to="/lern">Learn more...</Link>
-                <br />
-                <div className="blog_react mt-4">
-                  <div>
-                    <Link to="/love">
-                      <img src={love} alt="" />
-                    </Link>
-                  </div>
-                  <div className="mid_border mx-3"></div>
-                  <div>
-                    <Link to="/love">
-                      <img src={share} alt="" />
-                    </Link>
+              <div className="row" key={blog.blog_id}>
+                <div className="blog_img col-lg-4 ">
+                  <img
+                    className="img-fluid "
+                    src={url + blog.blog_img}
+                    alt=""
+                  />
+                </div>
+                <div className="col-lg-7 p-3">
+                  <p>{blog.blog}</p>
+                  <Link to="/lern">Learn more...</Link>
+                  <br />
+                  <div className="blog_react mt-4">
+                    <div>
+                      <Link to="/love">
+                        <img src={love} alt="" />
+                      </Link>
+                    </div>
+                    <div className="mid_border mx-3"></div>
+                    <div>
+                      <Link to="/love">
+                        <img src={share} alt="" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
+                <div className="gray_border container my-3"></div>
               </div>
-              <div className="gray_border container my-3"></div>
-            </div>
-          ))
+            ))
           : null}
       </div>
 
