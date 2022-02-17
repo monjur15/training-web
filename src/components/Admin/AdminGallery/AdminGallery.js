@@ -17,13 +17,13 @@ const AdminGallery = () => {
     const galleryImg = eventGalleryImg.target.value;
     setGalleryImg(galleryImg);
     console.log(galleryImg);
-  }
+  };
   const [galleryDes, setGalleryDes] = useState("");
   let getGalleryDes = (eventGalleryDes) => {
     const galleryDes = eventGalleryDes.target.value;
     setGalleryDes(galleryDes);
     console.log(galleryDes);
-  }
+  };
 
   const [photo, setPhoto] = useState(0);
 
@@ -34,7 +34,13 @@ const AdminGallery = () => {
 
         <form>
           <label for="img">Select image:</label>
-          <input type="file" id="img" name="img" accept="image/*" onChange={getGalleryImg}></input>
+          <input
+            type="file"
+            id="img"
+            name="img"
+            accept="image/*"
+            onChange={getGalleryImg}
+          ></input>
 
           <div className="w-90">
             <textarea

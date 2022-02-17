@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { } from "./Gallery.css";
+import {} from "./Gallery.css";
 import lap from "../../images/lapjpg.jpg";
 import { fetchPhotos } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
@@ -16,7 +16,7 @@ const Gallery = () => {
   return (
     <div>
       <div className="container gallery py-5">
-        <h1>Gallery</h1>
+        <h1 className="text-red-500">Gallery</h1>
         <div className="down_border mb-lg-5"></div>
         <div className="row p-3">
           {/* <div className="aws zoom  mt-lg-4 col-lg-4">
@@ -42,16 +42,16 @@ const Gallery = () => {
           </div> */}
           {photos && photos.length
             ? photos.map((photo) => (
-              <div
-                className="system zoom mt-lg-4 col-lg-4 mb-5"
-                key={photo.img_id}
-              >
-                <h2>{photo.img_desc}</h2>
-                <div className="gallery_img bg-danger">
-                  <img className="img-fluid" src={url + photo.image} alt="" />
+                <div
+                  className="system zoom mt-lg-4 col-lg-4 mb-5"
+                  key={photo.img_id}
+                >
+                  <h2>{photo.img_desc}</h2>
+                  <div className="gallery_img bg-danger">
+                    <img className="img-fluid" src={url + photo.image} alt="" />
+                  </div>
                 </div>
-              </div>
-            ))
+              ))
             : null}
         </div>
       </div>
