@@ -6,67 +6,46 @@ const AdminReview = () => {
   function myFunction() {
     alert("Done!");
   }
-  const [reviewer, setReviewer] = useState("");
-  let getReviewer = (eventReviewer) => {
-    const reviewer = eventReviewer.target.value;
-    setReviewer(reviewer);
-    console.log(reviewer);
-  };
-  const [revieDesig, setRevieDesig] = useState("");
-  let getRevieDesig = (eventReviewDesig) => {
-    const revieDesig = eventReviewDesig.target.value;
-    setRevieDesig(revieDesig);
-    console.log(revieDesig);
-  };
-  const [revieDescrip, setRevieDescrip] = useState("");
-  let getRevieDescrip = (eventReviewDescrip) => {
-    const revieDescrip = eventReviewDescrip.target.value;
-    setRevieDescrip(revieDescrip);
-    console.log(revieDescrip);
-  };
-  const [reviewImg, setReviewImg] = useState("");
-  let getReviewImg = (eventReviewImg) => {
-    const reviewImg = eventReviewImg.target.value;
-    setReviewImg(reviewImg);
-    console.log(reviewImg);
-  };
+  const [name, setName] = useState("");
+  const [designation, setDesignation] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+
   return (
     <div>
       <div className="container py-5">
         <h1 className="my-5">Review</h1>
         <form action="">
-          <label for="fname">Name:</label>
+          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            onChange={getReviewer}
+            onChange={(e) => setName(e.target.value)}
+            value={name}
           ></input>
           <br />
           <br />
-          <label for="fname">Designation:</label>
+          <label htmlFor="designation">Designation:</label>
           <input
             type="text"
-            id="desig"
-            name="desig"
-            onChange={getRevieDesig}
+            id="designation"
+            name="designation"
+            onChange={(e) => setDesignation(e.target.value)}
+            value={designation}
           ></input>
           <div className="w-90">
             <textarea
-              class="contact-form-text"
+              className="contact-form-text"
               placeholder="Description"
-              onChange={getRevieDescrip}
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
             ></textarea>
           </div>
 
-          <label for="img">Select image:</label>
-          <input
-            type="file"
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={getReviewImg}
-          ></input>
+          <label htmlFor="image">Select image:</label>
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+
           <div className="admin_btn mt-3">
             <Button onClick={() => myFunction()} variant="primary">
               Post

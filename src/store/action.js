@@ -35,13 +35,6 @@ export const fetchCoursesFail = (error) => {
 
 export const createInstructor = (instructor) => {
   return (dispatch) => {
-    // Axios.post("api/instructors", instructor)
-    //   .then((response) => {
-    //     console.log(response);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
     try {
       Axios({
         method: "post",
@@ -56,6 +49,8 @@ export const createInstructor = (instructor) => {
     }
   };
 };
+
+// api/blogs
 
 export const fetchInstructors = () => {
   return (dispatch) => {

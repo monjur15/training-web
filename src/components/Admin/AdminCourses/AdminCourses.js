@@ -6,76 +6,46 @@ const AdminCourses = () => {
   function myFunction() {
     alert("Done!");
   }
-  const [courseinput, setCourseinput] = useState();
-  let getCoursetitle = (eventcoursetitle) => {
-    const courseinput = eventcoursetitle.target.value;
-    setCourseinput(courseinput);
-    console.log(courseinput);
-  };
-  const [courseDes, setCourseDes] = useState();
-  let getCourseDes = (eventcourdes) => {
-    const courseDes = eventcourdes.target.value;
-    setCourseDes(courseDes);
-    console.log(courseDes);
-  };
+  const [title, setTitle] = useState();
+  const [description, setDescription] = useState();
   const [courseIns, setCourseIns] = useState();
   let getCourseIns = (eventcourseIns) => {
     const courseIns = eventcourseIns.target.value;
     setCourseIns(courseIns);
     console.log(courseIns);
   };
-  /* const [courseCategory, setCourseCategory = useState();
-    let getCourseIns = (eventcourseCategory) => {
-        const courseCategory = eventcourseCategory.target.value;
-        setCourseCategory(courseCategory);
-        console.log(courseCategory);
-    }
- */
 
-  const [courseFee, setCourseFee] = useState();
-  let getCourseFee = (eventcourseFee) => {
-    const courseFee = eventcourseFee.target.value;
-    setCourseFee(courseFee);
-    console.log(courseFee);
-  };
+  const [fee, setFee] = useState();
 
-  const [courseClasses, setCourseClasses] = useState();
-  let getCourseClassess = (eventcourseClasses) => {
-    const courseClasses = eventcourseClasses.target.value;
-    setCourseClasses(courseClasses);
-    console.log(courseClasses);
-  };
-  const [courseImg, setCourseImg] = useState("");
-  let getBlogimg = (eventCourseImg) => {
-    const courseImg = eventCourseImg.target.value;
-    setCourseImg(courseImg);
-    console.log(courseImg);
-  };
+  const [classes, setClasses] = useState();
+  const [image, setImage] = useState("");
   return (
     <div>
       <div className="container ad py-5">
         <h1 className="my-5 ">Admin Courses</h1>
 
         <form>
-          <label for="fname">Course Title:</label>
+          <label htmlFor="title">Course Title:</label>
           <input
             type="text"
             id="title"
             name="title"
-            onChange={getCoursetitle}
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
           ></input>
 
           <div className="w-90">
             <textarea
-              class="contact-form-text"
+              className="contact-form-text"
               placeholder="Course Description"
-              onChange={getCourseDes}
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
             ></textarea>
           </div>
           {/* <div className='admin_btn'><Button variant="primary">Post</Button>{' '}</div> */}
 
           <div className="" onChange={getCourseIns}>
-            <label for="DropdownButton">Instructor:</label>
+            <label htmlFor="DropdownButton">Instructor:</label>
 
             <DropdownButton
               variant="outline-secondary"
@@ -91,39 +61,35 @@ const AdminCourses = () => {
           </div>
 
           <br />
-          <label for="fname">Course Fee:</label>
+          <label htmlFor="fee">Course Fee:</label>
 
           <input
-            type="text"
+            type="number"
             id="fee"
             name="fee"
-            onChange={getCourseFee}
+            onChange={(e) => setFee(e.target.value)}
+            value={fee}
           ></input>
           <br />
           <br />
-          <label for="fname">Classes:</label>
+          <label htmlFor="classes">Classes:</label>
 
           <input
-            type="text"
+            type="number"
             id="classes"
             name="classes"
-            onChange={getCourseClassess}
+            onChange={(e) => setClasses(e.target.value)}
+            value={classes}
           ></input>
           <br />
           <br />
-          <label for="img">Select image:</label>
-          <input
-            type="file"
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={getBlogimg}
-          ></input>
+          <label htmlFor="image">Select image:</label>
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
 
           <br />
           <br />
           <div className="" onChange={getCourseIns}>
-            <label for="DropdownButton">Category:</label>
+            <label htmlFor="DropdownButton">Category:</label>
 
             <DropdownButton
               variant="outline-secondary"
