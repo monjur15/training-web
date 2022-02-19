@@ -12,20 +12,8 @@ const AdminGallery = () => {
     alert("Done!");
   }
 
-  const [galleryImg, setGalleryImg] = useState("");
-  let getGalleryImg = (eventGalleryImg) => {
-    const galleryImg = eventGalleryImg.target.value;
-    setGalleryImg(galleryImg);
-    console.log(galleryImg);
-  };
-  const [galleryDes, setGalleryDes] = useState("");
-  let getGalleryDes = (eventGalleryDes) => {
-    const galleryDes = eventGalleryDes.target.value;
-    setGalleryDes(galleryDes);
-    console.log(galleryDes);
-  };
-
-  const [photo, setPhoto] = useState(0);
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
 
   return (
     <div>
@@ -33,20 +21,15 @@ const AdminGallery = () => {
         <h1 className="my-5">Admin Gallery</h1>
 
         <form>
-          <label for="img">Select image:</label>
-          <input
-            type="file"
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={getGalleryImg}
-          ></input>
+          <label htmlFor="image">Select image:</label>
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
 
           <div className="w-90">
             <textarea
-              class="contact-form-text"
+              className="contact-form-text"
               placeholder="Description"
-              onChange={getGalleryDes}
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
             ></textarea>
           </div>
           <div className="admin_btn">

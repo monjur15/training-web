@@ -8,79 +8,59 @@ const AdminBlog = () => {
     alert("Done!");
   }
 
-  const [blogTitleValue, setblogTitleValue] = useState("");
-  let getData = (eventTitle) => {
-    const blogTitleValue = eventTitle.target.value;
-    setblogTitleValue(blogTitleValue);
-    console.log(blogTitleValue);
-  };
-
-  const [blogDes, setBlogDes] = useState("");
-  let getDes = (eventdes) => {
-    const blogDes = eventdes.target.value;
-    setBlogDes(blogDes);
-    console.log(blogDes);
-  };
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
-  let getAuthor = (eventauthor) => {
-    const author = eventauthor.target.value;
-    setAuthor(author);
-    console.log(author);
-  };
-  const [blogimage, setBlogimage] = useState("");
-  let getBlogimg = (eventblogimg) => {
-    const blogimage = eventblogimg.target.value;
-    setBlogimage(blogimage);
-    console.log(blogimage);
-  };
-
-  const [blogtime, setBlogtime] = useState("");
-  let getBlogtime = (eventTime) => {
-    const blogtime = eventTime.target.value;
-    setBlogtime(blogtime);
-    console.log(blogtime);
-  };
+  const [image, setImage] = useState("");
+  const [time, setTime] = useState("");
 
   return (
     <div>
       <div className="container py-5">
         <h1 className="py-5">Admin Blog</h1>
         <form action="">
-          <label for="fname">Blog Title:</label>
-          {/* <input type="text" id="title" name="title" onChange={getData}></input> */}
-          <input type="text" id="name" name="name" onChange={getData}></input>
+          <label htmlFor="title">Blog Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+          ></input>
 
           <div className="w-90">
             <textarea
-              class="contact-form-text"
+              className="contact-form-text"
               placeholder="Description"
-              onChange={getDes}
+              onChange={(e) => setBody(e.target.value)}
+              value={body}
             ></textarea>
           </div>
-          <label for="fname">Author:</label>
+          <label htmlFor="author">Author:</label>
           <input
             type="text"
             id="author"
             name="author"
-            onChange={getAuthor}
+            onChange={(e) => setAuthor(e.target.value)}
+            value={author}
           ></input>
           <br />
           <br />
 
-          <label for="img">Select image:</label>
+          <label htmlFor="image">Select image:</label>
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+
+          <br />
+          <br />
+
+          <label htmlFor="time">Publish Time:</label>
           <input
-            type="file"
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={getBlogimg}
+            type="date"
+            id="time"
+            name="time"
+            onChange={(e) => setTime(e.target.value)}
+            value={time}
           ></input>
-
-          <br />
-          <br />
-
-          <label for="fname">Publish Time:</label>
-          <input type="date" id="time" name="time" onChange={blogtime}></input>
           <div className="admin_btn mt-3">
             <Button onClick={() => myFunction()} variant="primary">
               Post
