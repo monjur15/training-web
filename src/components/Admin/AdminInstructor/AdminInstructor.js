@@ -6,58 +6,17 @@ import { useDispatch } from "react-redux";
 const AdminInstructor = () => {
   const dispatch = useDispatch();
 
-  function myFunction() {
-    alert("Done!");
-  }
-
-  const [adminstratorName, setAdminstratorName] = useState("");
-  let getAdminstratorName = (eventAdminName) => {
-    const adminstratorName = eventAdminName.target.value;
-    setAdminstratorName(adminstratorName);
-    console.log(adminstratorName);
-  };
-  const [adminstratorDesig, setAdminstratorDesig] = useState("");
-  let getAdminstratorDesig = (eventAdminDesig) => {
-    const adminstratorDesig = eventAdminDesig.target.value;
-    setAdminstratorDesig(adminstratorDesig);
-    console.log(adminstratorDesig);
-  };
-  const [adminstratorDescription, setAdminstratorDescription] = useState("");
-  let getAdminstratorDescription = (eventAdminDesig) => {
-    const adminstratorDescription = eventAdminDesig.target.value;
-    setAdminstratorDescription(adminstratorDescription);
-    console.log(adminstratorDescription);
-  };
-  //   const [adminstratorImg, setAdminstratorImg] = useState("");
-  //   let getAdminstratorImg = (eventAdminImg) => {
-  //     const adminstratorImg = eventAdminImg.target.value;
-  //     setAdminstratorImg(adminstratorImg);
-  //     console.log(adminstratorImg);
-  //   };
-
-  const [adminstratorImg, setAdminstratorImg] = useState(null);
-  const changeHandler = (event) => {
-    setAdminstratorImg(event.target.files[0]);
-    console.log(adminstratorImg);
-
-    // setIsSelected(true);
-  };
+  const [instName, setInstName] = useState("");
+  const [instDesig, setInstDesig] = useState("");
+  const [instDesc, setInstDesc] = useState("");
+  const [instImg, setInstImg] = useState(null);
 
   function onCreateInstructor() {
     const instructor = new FormData();
-    // formData.append("adminstratorImg", adminstratorImg);
-
-    // let instructor = {
-    //   inst_name: adminstratorName,
-    //   inst_designation: adminstratorDesig,
-    //   inst_description: adminstratorDescription,
-    //   inst_img: formData,
-    // };
-    instructor.append("inst_name", adminstratorName);
-    instructor.append("inst_designation", adminstratorDesig);
-    instructor.append("inst_description", adminstratorDescription);
-    instructor.append("inst_img", adminstratorImg);
-    console.log(instructor.inst_img);
+    instructor.append("inst_name", instName);
+    instructor.append("inst_designation", instDesig);
+    instructor.append("inst_description", instDesc);
+    instructor.append("inst_img", instImg);
 
     dispatch(createInstructor(instructor));
     alert("Done!");
@@ -67,43 +26,41 @@ const AdminInstructor = () => {
     <div>
       <div className="container py-5">
         <h1 className="my-5">Instructor</h1>
-        <form action="" method="post" enctype="multipart/form-data">
-          <label for="fname">Name:</label>
+        <form action="" method="post" encType="multipart/form-data">
+          <label htmlFor="fname">Name:</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            onChange={getAdminstratorName}
+            id="instName"
+            name="instName"
+            onChange={(e) => setInstName(e.target.value)}
+            value={instName}
           ></input>
           <br />
           <br />
-          <label for="fname">Designation:</label>
+
+          <label htmlFor="fname">Designation:</label>
           <input
             type="text"
-            id="desig"
-            name="desig"
-            onChange={getAdminstratorDesig}
+            id="instDesig"
+            name="instDesig"
+            onChange={(e) => setInstDesig(e.target.value)}
+            value={instDesig}
           ></input>
+
           <div className="w-90">
             <textarea
-              class="contact-form-text"
+              className="contact-form-text"
               placeholder="Description"
-              onChange={getAdminstratorDescription}
+              id="instDesc"
+              name="instDesc"
+              onChange={(e) => setInstDesc(e.target.value)}
+              value={instDesc}
             ></textarea>
           </div>
 
-          <label for="img">Select image:</label>
-          {/* <input
-            type="file"
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={getAdminstratorImg}
-          ></input> */}
-          <input
-            type="file"
-            onChange={(e) => setAdminstratorImg(e.target.files[0])}
-          />
+          <label htmlFor="img">Select image:</label>
+          <input type="file" onChange={(e) => setInstImg(e.target.files[0])} />
+
           <div className="admin_btn mt-3">
             <Button onClick={() => onCreateInstructor()} variant="primary">
               Post
