@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import {} from "./AdminBlog.css";
+import { createBlog } from "../../../store/action";
+import { useDispatch } from "react-redux";
 
 const AdminBlog = () => {
-  // Alert messeg function
-  function myFunction() {
-    alert("Done!");
-  }
+  const dispatch = useDispatch();
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
   const [image, setImage] = useState("");
   const [time, setTime] = useState("");
+
+  function onCreateBlog() {
+    const blog = new FormData();
+    blog.append("blog_title", title);
+    blog.append("blog", body);
+    blog.append("blog_author", author);
+    blog.append("blog_img", image);
+    blog.append("publish_date", time);
+
+    dispatch(createBlog(blog));
+    alert("Done!");
+  }
 
   return (
     <div>
@@ -62,7 +73,7 @@ const AdminBlog = () => {
             value={time}
           ></input>
           <div className="admin_btn mt-3">
-            <Button onClick={() => myFunction()} variant="primary">
+            <Button onClick={() => onCreateBlog()} variant="primary">
               Post
             </Button>{" "}
           </div>

@@ -50,6 +50,63 @@ export const createInstructor = (instructor) => {
   };
 };
 
+export const createBlog = (blog) => {
+  return (dispatch) => {
+    try {
+      Axios({
+        method: "post",
+        url: "api/blogs",
+        data: blog,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const addToGallery = (data) => {
+  return (dispatch) => {
+    try {
+      Axios({
+        method: "post",
+        url: "api/gallery",
+        data: data,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const addReview = (review) => {
+  return (dispatch) => {
+    try {
+      Axios({
+        method: "post",
+        url: "api/reviews",
+        data: review,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const createCategory = (category) => {
+  Axios.post("api/categories", category).then((res) => {
+    console.log(res.data);
+  });
+};
+
 // api/blogs
 
 export const fetchInstructors = () => {
