@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { createCategory } from "../../../store/action";
+import { useDispatch } from "react-redux";
 
 const AdminCategory = () => {
+  const dispatch = useDispatch();
+
   const [category, setCategory] = useState("");
+
+  function onCreateCategory() {
+    let category = {};
+    category = { category: category };
+    dispatch(createCategory(category));
+    alert("Done");
+  }
 
   return (
     <div>
@@ -16,6 +27,12 @@ const AdminCategory = () => {
           onChange={(e) => setCategory(e.target.value)}
           value={category}
         ></input>
+
+        <div className=" mt-8">
+          <Button onClick={() => onCreateCategory()} variant="primary">
+            Post
+          </Button>{" "}
+        </div>
       </div>
     </div>
   );

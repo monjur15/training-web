@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Dropdown,
-  DropdownButton,
-  FormControl,
-  InputGroup,
-} from "react-bootstrap";
+import { addToGallery } from "../../../store/action";
+import { useDispatch } from "react-redux";
+import { Button } from "react-bootstrap";
 
 const AdminGallery = () => {
-  function myFunction() {
-    alert("Done!");
-  }
+  const dispatch = useDispatch();
 
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
+
+  function onAddToGallery() {
+    let data = new FormData();
+
+    data.append("img_desc", description);
+    data.append("image", image);
+
+    dispatch(addToGallery(data));
+    alert("Done");
+  }
 
   return (
     <div>
@@ -33,7 +37,7 @@ const AdminGallery = () => {
             ></textarea>
           </div>
           <div className="admin_btn">
-            <Button onClick={() => myFunction()} variant="primary">
+            <Button onClick={() => onAddToGallery()} variant="primary">
               Post
             </Button>{" "}
           </div>
