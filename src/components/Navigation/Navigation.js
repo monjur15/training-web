@@ -1,22 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import {} from "./Navigation.css";
 
 const Navigation = () => {
-  const userIcon = <FontAwesomeIcon icon={faUser} />;
+  const userIcon = <FontAwesomeIcon className="text-white " icon={faUser} />;
   return (
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="/home">
             <img
-              className="me-lg-4 me-md-0"
+              className=" w-40 h-10"
               src="../../images/Training logo.svg"
-              width="100"
-              height="30"
               // className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
@@ -33,7 +30,11 @@ const Navigation = () => {
               <Nav.Link href="/gallery">Gallery</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link href="/blogs">Blogs</Nav.Link>
-              <Nav.Link href="/login">{userIcon}</Nav.Link>
+              <Nav.Link href="/login">
+                <div className="bg-NavItem w-8 h-8 rounded-full flex justify-center items-center">
+                  {userIcon}
+                </div>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

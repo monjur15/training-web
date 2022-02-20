@@ -16,6 +16,7 @@ import t3img from "../../images/t3.png";
 import review1 from "../../images/review1.jfif";
 import review2 from "../../images/review3.jpg";
 import review3 from "../../images/review3.webp";
+import Search from "../Search";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
 import {
   fetchCourses,
@@ -48,55 +49,9 @@ const Home = () => {
   return (
     <div>
       {/* slider carasoul  */}
-      <Carousel>
-        <Carousel.Item interval={5000}>
-          <div className="p-5 slider_main">
-            <div className="row slider1_div ">
-              <div className="col-lg-6 col-sm-12 slider1_img p-4">
-                <img className="img-fluid" src={slider1} alt="" />
-              </div>
-              <div className="col-lg-6 col-sm-12 slider1_content   mt-lg-4 p-4">
-                <h3>Are You Ready To</h3>
-                <h1 className="mb-lg-5">Lead The Way</h1>
-                <div className="input_field w-75 mb-sm-4">
-                  <input className="w-100 p-lg-2 " type="text"></input>
-                </div>
-                <span className="search">
-                  <Nav.Link href="/search">{searchIcon}</Nav.Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <Carousel.Caption>
-            {/* <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <div className="p-5 slider_main">
-            <div className="row slider1_div ">
-              <div className="col-lg-6 col-sm-12 slider1_img p-4">
-                <img className="img-fluid" src={slider1} alt="" />
-              </div>
-              <div className="col-lg-6 col-sm-12 slider1_content   mt-lg-4 p-4">
-                <h3>Are You Ready To</h3>
-                <h1 className="mb-lg-5">Lead The Way</h1>
-                <div className="input_field w-75 mb-sm-4">
-                  <input className="w-100 p-lg-2 " type="text"></input>
-                </div>
-                <span className="search">
-                  <Nav.Link href="/search">{searchIcon}</Nav.Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
+      {/* <Carousel>
         <Carousel.Item>
-          <div className="p-5 slider_main">
+          <div className="p-5 slider_main ">
             <div className="row slider1_div ">
               <div className="col-lg-6 col-sm-12 slider1_img p-4">
                 <img className="img-fluid" src={slider1} alt="" />
@@ -113,14 +68,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Carousel.Caption>
-            {/* <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-          </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
 
-      {/* Who we are section */}
+      <Search />
 
       <div className="container ">
         <div className="row we_div p-lg-5 ">
@@ -237,33 +188,6 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/*         <div className='container man_popular_div'>
-                <h1>Popular Cources</h1>
-                <div className='down_border2 mb-lg-4'></div>
-
-
-                <div className='row popular_cources'>
-                    <div className='col-3'>
-                        <img className='img-fluid' src={csharp} alt="" />
-
-                    </div>
-                    <div className='col-3'>
-                        <img className='img-fluid' src={network} alt="" />
-
-                    </div>
-                    <div className='col-3'>
-                        <img className='img-fluid' src={docker} alt="" />
-
-                    </div>
-                    <div className='col-3'>
-                        <img className='img-fluid' src={android} alt="" />
-
-                    </div>
-
-                </div>
-
-        </div> */}
-
       {/* Category section */}
 
       <div className="container ">
@@ -271,17 +195,6 @@ const Home = () => {
           <h1 className="mt-5">Category</h1>
           <div className="down_border mb-3"></div>
         </div>
-        {/*   {categories && categories.length
-                ? categories.map((category) => (
-                  <div className=" category col-6  " key={category.cat_id}>
-                    <div className="col-9 mt-5 cat_img">
-                      <Link to="/about">
-                        <h1>{category.category}</h1>
-                      </Link>
-                    </div>
-                  </div>
-                ))
-                : null} */}
 
         <div>
           <div className=" category_div py-3 ">
@@ -325,62 +238,6 @@ const Home = () => {
         </div>
         <div className="down_border2 mb-5"></div>
         <div className="mt-5">
-          {/* <div className="row instructor_main_div py-lg-5">
-            <div className="col-lg-4 col-md-12 mb-4 ins_card">
-              <Card className=" card_body" style={{ width: "100%" }}>
-                <div className="ins_img">
-                  <Card.Img variant="top" src={t1img} />
-                </div>
-                <Card.Body>
-                  <Card.Title>Instructor Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <div className="ins_btn_cls">
-                    <Button variant="primary">Go somewhere</Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-lg-4 col-md-12 mb-4 ins_card">
-              <Card className=" card_body" style={{ width: "100%" }}>
-                <div className="ins_img">
-                  <Card.Img variant="top" src={t2img} />
-                </div>
-                <Card.Body className="">
-                  <Card.Title>Instructor Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <div className="ins_btn_cls">
-                    <Button variant="primary">Go somewhere</Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-lg-4 col-md-12 mb-4 ins_card">
-              <Card className=" card_body" style={{ width: "100%" }}>
-                <div className="ins_img">
-                  {" "}
-                  <Card.Img variant="top" src={t3img} />
-                </div>
-                <Card.Body>
-                  <Card.Title>Instructor Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <div className="ins_btn_cls">
-                    <Button variant="primary">Go somewhere</Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-          </div> */}
-
           <div className="row instructor_main_div py-lg-5">
             {instructors && instructors.length
               ? instructors.map((instructor) => (
@@ -417,22 +274,6 @@ const Home = () => {
         <div className="down_border mb-5"></div>
 
         <Carousel fade>
-          {/* <div className="row review_main  py-5">
-              <div className=" review_div  py-5">
-                <Card className="card_review" style={{ width: "18rem" }}>
-                  <div className="review_img">
-                    <Card.Img variant="top" src={review1} />
-                  </div>
-                  <Card.Body className="">
-                    <Card.Title>Reviewer Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div> */}
           {reviews && reviews.length
             ? reviews.map((review) => (
                 <Carousel.Item key={review.id}>
@@ -455,46 +296,6 @@ const Home = () => {
                 </Carousel.Item>
               ))
             : null}
-          {/* <Carousel.Item>
-            <div className="row review_main  py-5">
-              <div className=" review_div  py-5">
-                <Card className="card_review" style={{ width: "18rem" }}>
-                  <div className="review_img">
-                    <Card.Img variant="top" src={review3} />
-                  </div>
-                  <Card.Body className="">
-                    <Card.Title>Reviewer Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
-
-            <Carousel.Caption></Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="row review_main  py-5">
-              <div className=" review_div  py-5">
-                <Card className="card_review" style={{ width: "18rem" }}>
-                  <div className="review_img">
-                    <Card.Img variant="top" src={review2} />
-                  </div>
-                  <Card.Body className="">
-                    <Card.Title>Reviewer Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
-
-            <Carousel.Caption></Carousel.Caption>
-          </Carousel.Item> */}
         </Carousel>
       </div>
     </div>
