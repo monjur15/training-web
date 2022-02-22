@@ -12,13 +12,13 @@ const Search = () => {
         </div>
         <div className="w-full lg:w-1/2 flex flex-col items-center mt-10">
           <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end">
-            <h1 className="text-white font-light text-2xl md:text-3xl">
+            <h1 className="text-white  font-poppins text-2xl md:text-3xl">
               Ever Asked <span className="text-blue-600">Yourself</span>
             </h1>
-            <h1 className="text-white text-2xl md:text-4xl">
+            <h1 className="text-white text-2xl md:text-4xl font-poppins font-semibold">
               Why Do You Want To Be
             </h1>
-            <h1 className="text-white font-bold text-4xl md:text-5xl">
+            <h1 className="text-white font-extrabold text-4xl md:text-5xl font-poppins">
               A <span className="text-blue-600">DevOps </span>Engineer
             </h1>
           </div>

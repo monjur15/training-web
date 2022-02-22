@@ -18,6 +18,7 @@ import review2 from "../../images/review3.jpg";
 import review3 from "../../images/review3.webp";
 import Search from "../Search";
 import PopularCourses from "../Courses/PopularCourses";
+import Categories from "../Categories";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
 import {
   fetchCourses,
@@ -52,12 +53,14 @@ const Home = () => {
       <Search />
 
       {/* Who we are */}
-      <div className="row  px-28 py-16 ">
+      <div className="row  px-28 py-16">
         {/* <div className="col-lg-7  mt-5 we_content p-5"> */}
         <div className="col-lg-7  mt-5 ">
-          <h1 className="text-SearchBg">Who We Are</h1>
+          <h1 className="text-SearchBg font-myriadProRegular text-5xl">
+            Who We Are
+          </h1>
           <div className="down_border mb-5"></div>
-          <p className="">
+          <p className="font-myriadProRegular">
             We are the fastest growing IT Training institute in Bangladesh. All
             our classes are currently online (Live Interactive) with students
             attending from all around the world. We are the first in Bangladesh
@@ -79,77 +82,11 @@ const Home = () => {
       {/* Who we are end */}
 
       <PopularCourses />
-
-      {/* Popular cources */}
-
-      {/* <Carousel fade>
-        <Carousel.Item>
-          <div className="container man_popular_div">
-            <div className="down_border3 mb-lg-4"></div>
-            <h1 className="mt-5 mb-3">Popular Cources</h1>
-            <div className="down_border2 mb-4"></div>
-
-            <div className="row popular_cources">
-            </div>
-            <div className="slide_1">
-              {courses && courses.length
-                ? courses.map((course) => (
-                    <div className="col-3 bg-danger" key={course.course_id}>
-                      <h1>{course.course_title}</h1>
-                      <img
-                        className="img-fluid"
-                        src={url + course.course_img}
-                        alt=""
-                      />
-                    </div>
-                  ))
-                : null}
-            </div>
-          </div>
-          <Carousel.Caption>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="container man_popular_div">
-            <div className="down_border3 mb-lg-4"></div>
-            <h1 className="mt-5 mb-3">Popular Cources</h1>
-            <div className="down_border2 mb-4"></div>
-
-            <div className="row popular_cources">
-              <div className="col-6">
-                <img className="img-fluid" src={csharp} alt="" />
-              </div>
-              <div className="col-6">
-                <img className="img-fluid" src={network} alt="" />
-              </div>
-            </div>
-          </div>
-          <Carousel.Caption>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="container man_popular_div">
-            <div className="down_border3 mb-lg-4"></div>
-            <h1 className="mt-5 mb-3">Popular Cources</h1>
-            <div className="down_border2 mb-4"></div>
-
-            <div className="row popular_cources">
-              <div className="col-6 ">
-                <img className="img-fluid" src={csharp} alt="" />
-              </div>
-              <div className="col-6">
-                <img className="img-fluid" src={network} alt="" />
-              </div>
-            </div>
-          </div>
-          <Carousel.Caption>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel> */}
+      <Categories />
 
       {/* Category section */}
 
-      <div className="container ">
+      {/* <div className="container ">
         <div className="py-lg-3 category_head">
           <h1 className="mt-5">Category</h1>
           <div className="down_border mb-3"></div>
@@ -187,7 +124,7 @@ const Home = () => {
             <div className="down_border3 mt-5"></div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Our Instructor Section  */}
 
