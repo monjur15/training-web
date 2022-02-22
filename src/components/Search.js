@@ -48,28 +48,6 @@ const Search = () => {
           </div>
           {/* Search Bar end */}
         </div>
-        {/* <div className="flex w-full max-w-xl relative justify-center">
-          <input
-            type="text"
-            className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-16 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder"
-            placeholder="Search for courses"
-          />
-
-          <span className="absolute right-20 top-5 text-lg text-transparent bg-clip-text bg-gradient-to-b from-HomeSearchIcon1 to-HomeSearchIcon2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-blue-800 hover:cursor-pointer"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </div> */}
       </div>
     </div>
   );
