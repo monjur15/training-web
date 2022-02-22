@@ -16,6 +16,10 @@ module.exports = {
         HomeBannerBg: "#6BE9FE",
         HomeBannerTop: "#1EADFF",
         SearchBg: "#73D6FB",
+        WhoWeBg: "#94E5FF",
+        PopularCoursesBg: "#E4F8FF",
+        PopularCourses: "#013161",
+        PopularCourseCard: "#87D3FF",
         LabBtn1: "#0077FF",
         LabBtn2: "#00A2FF",
         NavBg: "#F5F5F5",
@@ -86,6 +90,7 @@ module.exports = {
         500: "500px",
         600: "600px",
         400: "400px",
+        76: "19rem",
       },
       margin: {
         73: "18.2rem",
