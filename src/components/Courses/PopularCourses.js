@@ -38,7 +38,7 @@ const PopularCourses = () => {
       </div>
 
       <div className="flex items-center">
-        <div className="w-1/12">
+        <div className="md:w-2/12 lg:w-1/12">
           <button
             onClick={() => scroll_left()}
             class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition duration-300 focus:outline-none"
@@ -47,7 +47,7 @@ const PopularCourses = () => {
           </button>
         </div>
         <div
-          className="w-10/12 flex overflow-hidden scroll-smooth px-1 py-4 gap-80"
+          className="md:w-8/12 lg:w-10/12 flex overflow-hidden scroll-smooth px-1 py-4 gap-80"
           id="courses"
         >
           {array.map((arr) => (
@@ -55,9 +55,9 @@ const PopularCourses = () => {
               <div className="flex items-start justify-center w-76 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1">
                 <img
                   src={leetcodeImg}
-                  className="w-36 h-36 rounded-full bg-white absolute z-20 left-20  shadow-xl"
+                  className="w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl"
                 ></img>
-                <div class="text-uppercase text-white text-center   bg-blue-500 hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 bg-blue-200 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition duration-200">
+                <div class="text-uppercase text-white text-center   bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 bg-blue-200 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition duration-200">
                   <div className="flex flex-col gap-1 items-center justify-center px-5 pt-3">
                     <h5 className=" p-0 m-0 font-bold">
                       Cracking the coding interview with leetcode
@@ -76,7 +76,7 @@ const PopularCourses = () => {
             </div>
           ))}
         </div>
-        <div className="w-1/12">
+        <div className="md:w-2/12 lg:w-1/12">
           <button
             onClick={() => scroll_right()}
             class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition duration-300 focus:outline-none"
