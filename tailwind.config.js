@@ -19,7 +19,7 @@ module.exports = {
         WhoWeBg: "#94E5FF",
         PopularCoursesBg: "#E4F8FF",
         PopularCourses: "#013161",
-        PopularCourseCard: "#87D3FF",
+        PopularCourseCard: "#4B81F6",
         LabBtn1: "#0077FF",
         LabBtn2: "#00A2FF",
         NavBg: "#F5F5F5",
