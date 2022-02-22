@@ -31,7 +31,7 @@ const PopularCourses = () => {
         <div className="bg-HomeBannerTop w-1/3 h-3 rounded-full -top-1 absolute z-10"></div>
       </div>
       <div className="flex flex-col w-fit mb-16">
-        <h1 className="text-4xl font-poppins font-semibold text-PopularCourses">
+        <h1 className="text-5xl font-myriadProRegular text-PopularCourses">
           Popular Courses
         </h1>
         <div className="bg-PopularCourses h-1 w-1/4"></div>
@@ -41,7 +41,7 @@ const PopularCourses = () => {
         <div className="md:w-2/12 lg:w-1/12">
           <button
             onClick={() => scroll_left()}
-            class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition duration-300 focus:outline-none"
+            class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none"
           >
             <MdOutlineArrowBackIosNew />
           </button>
@@ -52,22 +52,24 @@ const PopularCourses = () => {
         >
           {array.map((arr) => (
             <div className="m-2 relative w-76 h-96 ">
-              <div className="flex items-start justify-center w-76 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1">
+              <div className="flex items-start justify-center w-76 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1  transition-all duration-300">
                 <img
                   src={leetcodeImg}
                   className="w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl"
                 ></img>
-                <div class="text-uppercase text-white text-center   bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 bg-blue-200 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition duration-200">
+                <div class="text-uppercase text-white text-center   bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 bg-blue-200 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200">
                   <div className="flex flex-col gap-1 items-center justify-center px-5 pt-3">
-                    <h5 className=" p-0 m-0 font-bold">
+                    <h5 className=" p-0 m-0 font-bold font-poppins">
                       Cracking the coding interview with leetcode
                       {/* AWS */}
                     </h5>
-                    <h6 className="p-0 m-0 font-light text-sm">
+                    <h6 className="p-0 m-0 font-poppins text-sm">
                       SHAHED MEHBUB
                     </h6>
-                    <p className="font-light p-0 m-0 text-white">8 | 16</p>
-                    <button className="mt-2  text-center px-14 py-2 text-HomeBannerTop bg-white rounded-full shadow-md hover:shadow-xl">
+                    <p className="font-light font-poppins p-0 m-0 text-white">
+                      8 | 16
+                    </p>
+                    <button className="mt-2  text-center px-14 py-2 text-HomeBannerTop bg-white rounded-full shadow-md hover:shadow-xl  transition-all duration-300">
                       <img src={sendImg} className="h-4 w-4"></img>
                     </button>
                   </div>

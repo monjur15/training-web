@@ -9,6 +9,12 @@ module.exports = {
   //     },
   //   },
   // },
+  purge: [
+    "./public/**/*.html",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+    "./src/**/*.tsx",
+  ],
   theme: {
     extend: {
       colors: {
@@ -20,6 +26,9 @@ module.exports = {
         PopularCoursesBg: "#E4F8FF",
         PopularCourses: "#013161",
         PopularCourseCard: "#4B81F6",
+        CategoryBg: "#CCF1FF",
+        CategoryCardBg: "#001933",
+        CategoryCardHover: "#7ADDF3",
         LabBtn1: "#0077FF",
         LabBtn2: "#00A2FF",
         NavBg: "#F5F5F5",
@@ -72,6 +81,7 @@ module.exports = {
       fontFamily: {
         segoeUI: "'Segoe UI'",
         poppins: "'poppins', sans-serif",
+        myriadProRegular: "'Myriad Pro Regular'",
       },
       borderRadius: {
         "4xl": "44px",
