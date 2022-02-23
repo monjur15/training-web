@@ -57,7 +57,7 @@ const PopularCourses = () => {
                   src={leetcodeImg}
                   className="w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl"
                 ></img>
-                <div class="text-uppercase text-white text-center   bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 bg-blue-200 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200">
+                <div class="text-uppercase text-white text-center bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200">
                   <div className="flex flex-col gap-1 items-center justify-center px-5 pt-3">
                     <h5 className=" p-0 m-0 font-bold font-poppins">
                       Cracking the coding interview with leetcode
