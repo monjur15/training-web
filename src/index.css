@@ -21,3 +21,15 @@ code {
   src: local("Myriad Pro Regular"),
     url(./fonts/MYRIADPRO-REGULAR.OTF) format("truetype");
 }
+
+@font-face {
+  font-family: "Great Vibes Regular";
+  src: local("Great Vibes Regular"),
+    url(./fonts/GreatVibes-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Imprint MT Shadow";
+  src: local("Imprint MT Shadow"),
+    url(./fonts/ImprintMTShadow.ttf) format("truetype");
+}

@@ -34,6 +34,9 @@ module.exports = {
         InstructorCardBorder1: "#3198FF",
         InstructorCardBorder2: "#9CF1FF",
         HomeInstructorBottomBorder: "#00183D",
+        ReviewBg1: "#DFFBFF",
+        ReviewBg2: "#82D9FF",
+        ReviewBg3: "#5ACCFF",
         // LabBtn1: "#0077FF",
         // LabBtn2: "#00A2FF",
         // NavBg: "#F5F5F5",
@@ -86,6 +89,8 @@ module.exports = {
         segoeUI: "'Segoe UI'",
         poppins: "'poppins', sans-serif",
         myriadProRegular: "'Myriad Pro Regular'",
+        greatVibesRegular: "Great Vibes Regular",
+        imprintMTShadow: "Imprint MT Shadow",
       },
       borderRadius: {
         "4xl": "44px",
