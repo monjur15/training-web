@@ -23,7 +23,7 @@ const Instructors = () => {
             <div className="flex flex-col items-start justify-center w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
               <img
                 src={instImg}
-                className="w-44 h-44 rounded-full bg-white absolute z-20 left-16 -top-16 shadow-xl"
+                className="w-40 h-40 rounded-full bg-white absolute z-20 left-16 -top-16 shadow-xl"
               ></img>
               <div className="flex flex-col gap-1 px-3 pt-3 text-black mt-8 absolute">
                 <div className="h-2 w-1/3 bg-gradient-to-r from-InstructorCardBorder1 via-InstructorCardBorder2 to-HomeInstructorCard"></div>

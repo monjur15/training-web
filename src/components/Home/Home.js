@@ -20,6 +20,7 @@ import Search from "../Search";
 import PopularCourses from "../Courses/PopularCourses";
 import Categories from "../Categories";
 import Instructors from "../Instructor/Instructors";
+import Reviews from "../Reviews/Reviews";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
 import {
   fetchCourses,
@@ -85,6 +86,7 @@ const Home = () => {
       <PopularCourses />
       <Categories />
       <Instructors />
+      <Reviews />
 
       {/* Our Instructor Section  */}
 
