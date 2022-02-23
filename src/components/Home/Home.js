@@ -19,6 +19,7 @@ import review3 from "../../images/review3.webp";
 import Search from "../Search";
 import PopularCourses from "../Courses/PopularCourses";
 import Categories from "../Categories";
+import Instructors from "../Instructor/Instructors";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
 import {
   fetchCourses,
@@ -83,52 +84,11 @@ const Home = () => {
 
       <PopularCourses />
       <Categories />
-
-      {/* Category section */}
-
-      {/* <div className="container ">
-        <div className="py-lg-3 category_head">
-          <h1 className="mt-5">Category</h1>
-          <div className="down_border mb-3"></div>
-        </div>
-
-        <div>
-          <div className=" category_div py-3 ">
-            <div className="row p-lg-4">
-              <div className=" category col-6  ">
-                <div className="col-9 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div>
-                <div className="col-9 mt-5 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className=" category col-6 ">
-                <div className="col-9 cat_img">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div>
-                <div className="col-9 cat_img mt-5">
-                  <Link to="/about">
-                    <img className="img-fluid" src={laptop} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="down_border3 mt-5"></div>
-          </div>
-        </div>
-      </div> */}
+      <Instructors />
 
       {/* Our Instructor Section  */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="mt-5 inst_h1">
           <h1>Our Instructors</h1>
         </div>
@@ -161,11 +121,11 @@ const Home = () => {
               : null}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Reviews Sections */}
 
-      <div className="container review_container">
+      {/* <div className="container review_container">
         <h1 className="category_head pt-lg-5">Reviews</h1>
         <div className="down_border mb-5"></div>
 
@@ -193,7 +153,7 @@ const Home = () => {
               ))
             : null}
         </Carousel>
-      </div>
+      </div> */}
     </div>
   );
 };
