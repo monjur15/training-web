@@ -88,43 +88,6 @@ const Home = () => {
       <Instructors />
       <Reviews />
 
-      {/* Our Instructor Section  */}
-
-      {/* <div className="container">
-        <div className="mt-5 inst_h1">
-          <h1>Our Instructors</h1>
-        </div>
-        <div className="down_border2 mb-5"></div>
-        <div className="mt-5">
-          <div className="row instructor_main_div py-lg-5">
-            {instructors && instructors.length
-              ? instructors.map((instructor) => (
-                  <div
-                    className="col-lg-4 col-md-12 mb-4 ins_card"
-                    key={instructor.inst_id}
-                  >
-                    <Card className=" card_body" style={{ width: "100%" }}>
-                      <div className="ins_img">
-                        <Card.Img
-                          variant="top"
-                          src={url + instructor.inst_img}
-                        />
-                      </div>
-                      <Card.Body>
-                        <Card.Title>{instructor.inst_name}</Card.Title>
-                        <Card.Text>{instructor.inst_designation}</Card.Text>
-                        <div className="ins_btn_cls">
-                          <Button variant="primary">Go somewhere</Button>
-                        </div>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                ))
-              : null}
-          </div>
-        </div>
-      </div> */}
-
       {/* Reviews Sections */}
 
       {/* <div className="container review_container">
