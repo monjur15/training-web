@@ -1,108 +1,96 @@
-body a{
-    list-style: none;
-    text-decoration: none;
+.course_img_bg {
+  background-image: linear-gradient(to bottom right, #c4efff, #24a0ff);
 }
-.courses_container{
+
+/* body a {
+  list-style: none;
+  text-decoration: none;
+}
+.courses_container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 50px;
+}
+.course {
+  color: #60d3ff;
+  font-weight: bold;
+}
+.course_number {
+  height: 100px;
+  width: 100px;
+  background-color: #88e3ff;
+  text-align: center;
+}
+.course_number h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 75px;
+}
+.course_cap {
+  display: flex;
+}
+.course_title h1 {
+  font-size: 170px;
+  color: #40d8ff;
+  background-color: blue;
+}
+.course_btn Button {
+  color: #00b1ff;
+  background-color: #b4f7ff !important;
+  font-weight: bold;
+  color: white;
+}
+.course_btn Button:hover {
+  background-color: white !important;
+  color: #00b1ff !important;
+}
+
+.btn {
+  padding: 0px 30px;
+  border-radius: 50px;
+  margin-left: 50px;
+}
+
+.course_img {
+  margin-top: 50px;
+
+}
+.course_img img {
+  border-radius: 50px;
+}
+.sub_title h5 {
+  color: #01a9d5;
+  font-weight: bolder;
+}
+.know a {
+  color: black;
+}
+
+.know button {
+  background-color: white;
+  font-weight: bold;
+}
+.know button:hover {
+  background-color: #40d8ff;
+  color: white;
+} */
+
+/* @media screen and (max-width: 600px) {
+  .courses_container {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 50px;
-}
-.course{
-    color: #60D3FF;
-    font-weight: bold;
+    padding: 20px;
+  }
+  .course_title h1 {
+    font-size: 85px;
+  }
+  .course_number {
+    height: 70px;
+    width: 70px;
 
-}
-.course_number{
-    height: 100px;
-    width: 100px;
-    background-color: #88E3FF;
     text-align: center;
-  
-}
-.course_number h1{
+  }
+  .course_number h1 {
     font-weight: bold;
-color: white;   
-    font-size: 75px;
-}
-.course_cap{
-    display: flex;
-}
-.course_title h1{
-    font-size: 170px;
-    color: #40D8FF;
-    /* background-color: blue; */
-   
-}
-.course_btn Button{
-    color: #00B1FF;
-    background-color: #B4F7FF !important;
-    font-weight: bold;
-    color: white;
-    
-}
-.course_btn Button:hover{
-    background-color: white !important;
-    color: #00B1FF !important;
-}
 
-.btn{
-    padding: 0px 30px;
-    border-radius: 50px;
-    margin-left: 50px;
-}
-
-.course_img{
-    margin-top: 50px;
-   
-
-    /* background-color: brown; */
-}
-.course_img img{
-    border-radius: 50px;
-}
-.sub_title h5{
-    color: #01A9D5;
-    font-weight: bolder;
-}
-.know a{
-    color: black;
-
-}
-
-.know button{
-    background-color: white;
-    font-weight: bold;
-}
-.know button:hover{
-    background-color: #40D8FF;
-    color: white;
-    
-}
-
-
-
-
-
-
-@media screen and (max-width : 600px){
-    .courses_container{
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        padding: 20px;
-    }
-    .course_title h1{
-        font-size: 85px;
-      
-    }
-    .course_number{
-        height: 70px;
-        width: 70px;
-       
-        text-align: center;
-      
-    }
-    .course_number h1{
-        font-weight: bold;
-       
-        font-size: 55px;
-    }
-
-}
+    font-size: 55px;
+  }
+}  */
