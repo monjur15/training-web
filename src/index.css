@@ -33,3 +33,9 @@ code {
   src: local("Imprint MT Shadow"),
     url(./fonts/ImprintMTShadow.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Pangram Regular";
+  src: local("Pangram Regular"),
+    url(./fonts/Pangram-Regular.otf) format("truetype");
+}
