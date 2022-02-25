@@ -99,6 +99,7 @@ module.exports = {
         myriadProRegular: "'Myriad Pro Regular'",
         greatVibesRegular: "Great Vibes Regular",
         imprintMTShadow: "Imprint MT Shadow",
+        pangramRegular: "Pangram Regular",
       },
       borderRadius: {
         "4xl": "44px",
@@ -112,18 +113,25 @@ module.exports = {
         605: "610px",
         650: "650px",
         850: "850px",
+        92: "21rem",
       },
       width: {
+        800: "700px",
         500: "500px",
         600: "600px",
         400: "400px",
         76: "19rem",
+        100: "25rem",
+        92: "21rem",
       },
       margin: {
         73: "18.2rem",
       },
       borderWidth: {
         10: "10px",
+      },
+      spacing: {
+        68: "275px",
       },
     },
   },

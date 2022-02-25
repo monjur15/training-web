@@ -32,14 +32,14 @@ const Courses = (props) => {
   // const history = useHistory();
   const navigate = useNavigate();
 
-  function scroll_left() {
+  function scroll_up() {
     let content = document.querySelector("#courses");
-    content.scrollTop -= 1000;
+    content.scrollTop -= 400;
   }
 
-  function scroll_right() {
+  function scroll_down() {
     let content = document.querySelector("#courses");
-    content.scrollTop += 1000;
+    content.scrollTop += 450;
   }
   const coursesArr = [
     {
@@ -68,57 +68,62 @@ const Courses = (props) => {
 
   return (
     <div className="pl-28 py-16 relative">
+      {/* Title */}
       <div className="flex flex-col w-fit mb-12">
         <h1 className="text-5xl font-myriadProRegular text-CourseHeader my-0">
           Courses
         </h1>
         <div className="bg-SearchBg h-1 w-1/2"></div>
       </div>
+      {/* Title end */}
 
-      <div className="w-full h-80 flex relative">
-        <div className="w-1/12">
-          {/* <div className="flex"> */}
-          <div className="w-1 h-80 relative flex flex-col items-center">
-            <div className="w-5 h-5 rounded-full bg-CoursesLeftBorder"></div>
-            <div className="w-1 h-48 bg-CoursesLeftBorder"></div>
-            <IoIosArrowDropup
-              onClick={() => scroll_left()}
-              className="w-12 h-12 text-CoursesLeftBorder bottom-16 absolute hover:text-CourseTitle transition-all duration-200"
-            />
-            <IoIosArrowDropdown
-              onClick={() => scroll_right()}
-              className="w-12 h-12 text-CoursesLeftBorder bottom-0 absolute hover:text-CourseTitle bottom-6 transition-all duration-200"
-            />
-          </div>
+      <div className="w-full h-96 flex relative">
+        {/* <div className="w-1/12"> */}
+        {/* <div className="flex"> */}
+        <div className="w-1 h-80 relative flex flex-col items-center">
+          <div className="w-5 h-5 rounded-full bg-CoursesLeftBorder"></div>
+          <div className="w-1 h-48 bg-CoursesLeftBorder"></div>
+          <IoIosArrowDropup
+            onClick={() => scroll_up()}
+            className="w-12 h-12 text-CoursesLeftBorder bottom-16 absolute hover:text-CourseTitle"
+          />
+          <IoIosArrowDropdown
+            onClick={() => scroll_down()}
+            className="w-12 h-12 text-CoursesLeftBorder bottom-0 absolute hover:text-CourseTitle bottom-6"
+          />
         </div>
+        {/* </div> */}
         {/* </div> */}
 
         {/* <div className="h-80 w-full">
           <div className="w-1/12"></div> */}
         {/* <div className="flex flex-col overflow-hidden scroll-smooth gap-96 h-80 w-10/12"> */}
+        {/* <div className=""> */}
         <div
-          className="flex flex-col w-full overflow-hidden scroll-smooth gap-80"
+          className="w-full flex flex-col h-96 overflow-hidden scroll-smooth gap-96 left-0 absolute"
           id="courses"
         >
-          {coursesArr.map((course) => (
-            <div className="flex w-7/12 h-80 relative">
-              <div className="flex w-7/12 left-1 absolute">
+          {coursesArr.map((course, index) => (
+            <div className="flex h-80 relative mb-5">
+              <div className="flex left-1 absolute">
                 <div className="relative w-20 h-20 mr-5">
                   <div className="w-20 h-20 bg-CourseNum top-7 absolute flex items-center justify-center">
                     <h1 className="text-white text-5xl font-myriadProRegular z-0">
-                      01
+                      0{index + 1}
                     </h1>
                   </div>
                 </div>
 
-                <div className="h-80 w-full">
-                  <h1 className="mt-16 font-myriadProRegular text-CourseTitle font-bold text-6xl">
-                    Cracking the Coding Interview with Leetcode
+                <div className="h-80">
+                  <h1 className="w-800 mt-16 font-myriadProRegular text-CourseTitle font-bold text-6xl">
+                    {/* Cracking the Coding Interview with Leetcode */}
+                    {course.title}
                   </h1>
                   <h4 className="font-myriadProRegular text-CourseShortDesc">
-                    docker & kubernetes
+                    {/* docker & kubernetes */}
+                    {course.desc}
                   </h4>
-                  <div className="mt-10 flex flex-col items-center w-4/12">
+                  <div className="mt-10 flex flex-col items-center w-64">
                     <button
                       onClick={(e) => navigateToCourseDetails()}
                       className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
@@ -132,21 +137,22 @@ const Courses = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="w-4/12 right-0 absolute">
+              <div className="w-500 right-0 absolute">
                 <div className=" h-80 relative">
-                  <div className="overflow-hidden h-96 w-96 border-2 rounded-full border-CoursesCircle bg-white -right-16 absolute -top-6"></div>
-                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-14 -top-6 absolute"></div>
-                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-14 -bottom-9 absolute"></div>
-                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-56 top-0 absolute"></div>
-                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-56 -bottom-4 absolute"></div>
-                  <div className="w-96 h-64 course_img_bg z-10 absolute top-10 -left-14 rounded-4xl flex items-center justify-center">
-                    <img src={python} className="h-3/4 w-1/2"></img>
+                  <div className="h-92 w-92 border-2 rounded-full border-CoursesCircle bg-white left-32 absolute -top-0"></div>
+                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 top-1 absolute"></div>
+                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 -bottom-3 absolute"></div>
+                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 top-1 absolute"></div>
+                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 -bottom-3 absolute"></div>
+                  <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
+                    <img src={course.img} className="h-3/4 w-1/2"></img>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        {/* </div> */}
         {/* <div className="w-1/12"></div>
         </div> */}
       </div>
