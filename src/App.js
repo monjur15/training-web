@@ -20,6 +20,7 @@ import AdminBlog from "./components/Admin/AdminBlog/AdminBlog";
 import AdminInstructor from "./components/Admin/AdminInstructor/AdminInstructor";
 import AdminReview from "./components/Admin/AdminReview/AdminReview";
 import Signup from "./components/Signup/Signup";
+import BlogDetails from "./components/Blogs/BlogDetails";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/blogs" element={<Blogs />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/blogDetails" element={<BlogDetails />} />
           <Route exact path="/admingallery" element={<AdminGallery />} />
           <Route exact path="/admincourses" element={<AdminCourses />} />
           <Route exact path="/admincategory" element={<AdminCategory />} />

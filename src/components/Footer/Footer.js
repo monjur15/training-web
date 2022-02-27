@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
 
               <div className="col">
-                <h5>Cources</h5>
+                <h5>Courses</h5>
                 <Nav.Link href="/linux">Linux</Nav.Link>
                 <Nav.Link href="/pythone">Python</Nav.Link>
                 <Nav.Link href="/node">Node.js</Nav.Link>

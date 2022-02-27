@@ -8,7 +8,7 @@ const Navigation = () => {
   const userIcon = <FontAwesomeIcon className="text-white " icon={faUser} />;
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="white" expand="lg">
         <Container>
           <Navbar.Brand href="/home">
             <img
