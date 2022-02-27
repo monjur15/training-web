@@ -21,6 +21,7 @@ import PopularCourses from "../Courses/PopularCourses";
 import Categories from "../Categories";
 import Instructors from "../Instructor/Instructors";
 import Reviews from "../Reviews/Reviews";
+import { useNavigate } from "react-router-dom";
 import { Button, Card, Carousel, Form, Nav } from "react-bootstrap";
 import {
   fetchCourses,
@@ -41,6 +42,7 @@ const Home = () => {
   const reviews = useSelector((state) => state.reviews);
   const photos = useSelector((state) => state.photos);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCourses());
@@ -49,6 +51,10 @@ const Home = () => {
     dispatch(fetchReviews());
     dispatch(fetchPhotos());
   }, []);
+
+  function navigateToBlogs() {
+    navigate("/blogs");
+  }
 
   return (
     <div>
@@ -74,7 +80,9 @@ const Home = () => {
             for the production environment.
           </p>
           <div className="btn_info ">
-            <Button variant="outline-info">Our Blogs</Button>{" "}
+            <Button onClick={() => navigateToBlogs()} variant="outline-info">
+              Our Blogs
+            </Button>{" "}
           </div>
         </div>
         <div className="col-lg-5 we_img  my-5">

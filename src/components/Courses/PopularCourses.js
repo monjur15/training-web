@@ -1,6 +1,7 @@
 import React from "react";
 import sendImg from "../../images/send.png";
 import leetcodeImg from "../../images/leetcode.png";
+import python from "../../images/python.png";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
@@ -43,7 +44,7 @@ const PopularCourses = () => {
             onClick={() => scroll_left()}
             class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none"
           >
-            <MdOutlineArrowBackIosNew />
+            <MdOutlineArrowBackIosNew className="text-PopularCourseCard hover:text-HomeBannerTop" />
           </button>
         </div>
         <div
@@ -53,10 +54,13 @@ const PopularCourses = () => {
           {array.map((arr) => (
             <div className="m-2 relative w-76 h-96 ">
               <div className="flex items-start justify-center w-76 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1  transition-all duration-300">
-                <img
-                  src={leetcodeImg}
-                  className="w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl"
-                ></img>
+                {/* <img
+                  src={python}
+                  className=" w-36 h-36 absolute z-20 left-20 top-4"
+                ></img> */}
+                <div className="flex items-center justify-center w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl">
+                  <img src={python} className="w-24 h-24"></img>
+                </div>
                 <div class="text-uppercase text-white text-center bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200">
                   <div className="flex flex-col gap-1 items-center justify-center px-5 pt-3">
                     <h5 className=" p-0 m-0 font-bold font-poppins">
@@ -83,7 +87,7 @@ const PopularCourses = () => {
             onClick={() => scroll_right()}
             class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition duration-300 focus:outline-none"
           >
-            <MdOutlineArrowForwardIos />
+            <MdOutlineArrowForwardIos className="text-PopularCourseCard hover:text-HomeBannerTop" />
           </button>
         </div>
       </div>
