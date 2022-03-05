@@ -9,6 +9,7 @@ const AdminInstructor = () => {
   const [instName, setInstName] = useState("");
   const [instDesig, setInstDesig] = useState("");
   const [instDesc, setInstDesc] = useState("");
+  const [instQuote, setInstQuote] = useState("");
   const [instImg, setInstImg] = useState(null);
 
   function onCreateInstructor() {
@@ -16,6 +17,7 @@ const AdminInstructor = () => {
     instructor.append("inst_name", instName);
     instructor.append("inst_designation", instDesig);
     instructor.append("inst_description", instDesc);
+    instructor.append("inst_quote", instQuote);
     instructor.append("inst_img", instImg);
 
     dispatch(createInstructor(instructor));
@@ -47,9 +49,21 @@ const AdminInstructor = () => {
             value={instDesig}
           ></input>
 
+          <br />
+          <br />
+
+          <label htmlFor="quote">Quote:</label>
+          <input
+            type="text"
+            id="instQuote"
+            name="instQuote"
+            onChange={(e) => setInstQuote(e.target.value)}
+            value={instQuote}
+          ></input>
+
           <div className="w-90">
             <textarea
-              className="contact-form-text"
+              className="contact-form-text shadow-none"
               placeholder="Description"
               id="instDesc"
               name="instDesc"
