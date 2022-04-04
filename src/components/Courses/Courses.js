@@ -16,6 +16,12 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import devops1 from "../../images/devops1.png";
 import python from "../../images/python-white.png";
 import linux from "../../images/linux.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+
+import { Mousewheel, Autoplay } from "swiper";
+import { useRef } from "react";
 
 const Courses = (props) => {
   // const rightArrow = <FontAwesomeIcon icon={faArrowCircleRight} />;
@@ -31,16 +37,8 @@ const Courses = (props) => {
   // }, []);
   // const history = useHistory();
   const navigate = useNavigate();
+  const swiperRef = useRef(null);
 
-  function scroll_up() {
-    let content = document.querySelector("#courses");
-    content.scrollTop -= 400;
-  }
-
-  function scroll_down() {
-    let content = document.querySelector("#courses");
-    content.scrollTop += 450;
-  }
   const coursesArr = [
     {
       id: 1,
@@ -78,83 +76,89 @@ const Courses = (props) => {
       {/* Title end */}
 
       <div className="w-full h-96 flex relative">
-        {/* <div className="w-1/12"> */}
-        {/* <div className="flex"> */}
         <div className="w-1 h-80 relative flex flex-col items-center">
           <div className="w-5 h-5 rounded-full bg-CoursesLeftBorder"></div>
           <div className="w-1 h-48 bg-CoursesLeftBorder"></div>
           <IoIosArrowDropup
-            onClick={() => scroll_up()}
+            id="previousButton"
+            onClick={() => swiperRef.current.swiper.slidePrev()}
             className="w-12 h-12 text-CoursesLeftBorder bottom-16 absolute hover:text-CourseTitle"
           />
           <IoIosArrowDropdown
-            onClick={() => scroll_down()}
+            id="nextButton"
+            onClick={() => swiperRef.current.swiper.slideNext()}
             className="w-12 h-12 text-CoursesLeftBorder bottom-0 absolute hover:text-CourseTitle bottom-6"
           />
         </div>
-        {/* </div> */}
-        {/* </div> */}
-
-        {/* <div className="h-80 w-full">
-          <div className="w-1/12"></div> */}
-        {/* <div className="flex flex-col overflow-hidden scroll-smooth gap-96 h-80 w-10/12"> */}
-        {/* <div className=""> */}
         <div
           className="w-full flex flex-col h-96 overflow-hidden scroll-smooth gap-96 left-0 absolute"
           id="courses"
         >
-          {coursesArr.map((course, index) => (
-            <div className="flex h-80 relative mb-5">
-              <div className="flex left-1 absolute">
-                <div className="relative w-20 h-20 mr-5">
-                  <div className="w-20 h-20 bg-CourseNum top-7 absolute flex items-center justify-center">
-                    <h1 className="text-white text-5xl font-myriadProRegular z-0">
-                      0{index + 1}
-                    </h1>
+          <Swiper
+            direction={"vertical"}
+            slidesPerView={1}
+            spaceBetween={30}
+            ref={swiperRef}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            mousewheel={true}
+            autoplay={true}
+            modules={[Mousewheel, Autoplay]}
+            className="mySwiper swiperjs"
+          >
+            {coursesArr.map((course, index) => (
+              <SwiperSlide
+                key={index}
+                className="swiper-slide1 flex h-80 relative"
+              >
+                <div className="flex left-1 absolute">
+                  <div className="relative w-20 h-20 mr-5">
+                    <div className="w-20 h-20 bg-CourseNum top-2 absolute flex items-center justify-center">
+                      <h1 className="text-white text-5xl font-myriadProRegular z-0">
+                        0{index + 1}
+                      </h1>
+                    </div>
                   </div>
-                </div>
 
-                <div className="h-80">
-                  <h1 className="w-800 mt-16 font-myriadProRegular text-CourseTitle font-bold text-6xl">
-                    {/* Cracking the Coding Interview with Leetcode */}
-                    {course.title}
-                  </h1>
-                  <h4 className="font-myriadProRegular text-CourseShortDesc">
-                    {/* docker & kubernetes */}
-                    {course.desc}
-                  </h4>
-                  <div className="mt-10 flex flex-col items-center w-64">
-                    <button
-                      onClick={(e) => navigateToCourseDetails()}
-                      className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
-                    >
-                      Course Outline
-                    </button>
-                    <div className="flex items-center relative mt-2">
-                      <h6>know more</h6>
-                      <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                  <div className="h-80">
+                    {/* <div className="flex flex-col items-start justify-start"> */}
+                    <h1 className="w-800 mt-10 font-myriadProRegular text-CourseTitle font-bold text-6xl">
+                      {course.title}
+                    </h1>
+                    <h4 className="font-myriadProRegular text-CourseShortDesc">
+                      {course.desc}
+                    </h4>
+                    {/* </div> */}
+                    <div className="mt-10 flex flex-col items-center w-64">
+                      <button
+                        onClick={(e) => navigateToCourseDetails()}
+                        className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
+                      >
+                        Course Outline
+                      </button>
+                      <div className="flex items-center relative mt-2">
+                        <h6>know more</h6>
+                        <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-500 right-0 absolute">
-                <div className=" h-80 relative">
-                  <div className="h-92 w-92 border-2 rounded-full border-CoursesCircle bg-white left-32 absolute -top-0"></div>
-                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 top-1 absolute"></div>
-                  <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 -bottom-3 absolute"></div>
-                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 top-1 absolute"></div>
-                  <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 -bottom-3 absolute"></div>
-                  <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
-                    <img src={course.img} className="h-3/4 w-1/2"></img>
+                <div className="w-500 right-0 top-3 absolute">
+                  <div className=" h-80 relative">
+                    <div className="h-92 w-92 border-2 rounded-full border-CoursesCircle bg-white left-32 absolute -top-0"></div>
+                    <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 top-1 absolute"></div>
+                    <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 -bottom-3 absolute"></div>
+                    <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 top-1 absolute"></div>
+                    <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 -bottom-3 absolute"></div>
+                    <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
+                      <img src={course.img} className="h-3/4 w-1/2"></img>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        {/* </div> */}
-        {/* <div className="w-1/12"></div>
-        </div> */}
       </div>
     </div>
 

@@ -68,7 +68,7 @@ const Home = () => {
             Who We Are
           </h1>
           <div className="down_border mb-5"></div>
-          <p className="font-myriadProRegular">
+          <p className="font-myriadProRegular text-lg">
             We are the fastest growing IT Training institute in Bangladesh. All
             our classes are currently online (Live Interactive) with students
             attending from all around the world. We are the first in Bangladesh

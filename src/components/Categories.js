@@ -17,8 +17,8 @@ const Categories = () => {
       <div className="bg-CategoryBg px-28 relative ">
         <div className="flex items-center ">
           <div className="w-1/2  flex flex-col items-center gap-16 mt-16 mb-44">
-            <div className="w-2/3 h-72 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200">
-              <div className="flex justify-center pt-10">
+            <div className="w-2/3 h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200">
+              <div className="flex justify-center pt-14">
                 <img src={pythonWhite} className="h-44 w-44"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
@@ -27,8 +27,8 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-CategoryCardBg w-2/3 h-72 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover">
-              <div className="flex justify-center pt-10">
+            <div className="bg-CategoryCardBg w-2/3 h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover">
+              <div className="flex justify-center pt-14">
                 <img src={js} className="h-44 w-44"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
@@ -40,8 +40,8 @@ const Categories = () => {
           </div>
 
           <div className="w-1/2  flex flex-col items-center gap-10 mt-16 mb-44 relative">
-            <div className="bg-CategoryCardBg w-2/3 h-72 -top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
-              <div className="flex justify-center pt-20">
+            <div className="bg-CategoryCardBg w-2/3 h-80 -top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
+              <div className="flex justify-center pt-24">
                 {/* <img src={aws} className="h-44 w-44"></img> */}
                 <h1 className="text-white font-bold text-9xl text-uppercase font-myriadProRegular">
                   aws
@@ -53,8 +53,8 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-CategoryCardBg w-2/3 h-72 top-32 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
-              <div className="flex justify-center pt-10">
+            <div className="bg-CategoryCardBg w-2/3 h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
+              <div className="flex justify-center pt-14">
                 <img src={linux} className="h-44 w-44"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">

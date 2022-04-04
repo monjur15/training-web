@@ -17,7 +17,7 @@ const Reviews = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {reviews.map((review) => (
           <div className="m-2 w-80 h-80 flex items-center mt-5">
-            <div className="hover:scale-125 flex flex-col relative items-center w-80 h-64 bg-white rounded-md shadow-md hover:shadow-xl transition-all duration-500">
+            <div className="scale-110 hover:scale-125 flex flex-col relative items-center w-80 h-64 bg-white rounded-md shadow-md hover:shadow-xl transition-all duration-500">
               <img
                 src={instImg}
                 className="w-40 h-40 rounded-full bg-white absolute z-20 left-20 -top-20 shadow-xl"

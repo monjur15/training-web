@@ -78,8 +78,8 @@ const AdminCourses = () => {
           <select
             className="w-100 ps-1 py-2 my-2 mt-2 form-bg"
             label="role"
-            {...register("role")}
-            onChange={(e) => handleRole(e)}
+            // {...register("role")}
+            // onChange={(e) => handleRole(e)}
             value={instructor}
           >
             {roles.map((role) => (

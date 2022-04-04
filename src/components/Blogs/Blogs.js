@@ -80,7 +80,7 @@ const Blogs = () => {
                 <div className="h-0.5 w-full bg-gray-300 "></div>
               </div>
             ) : (
-              <div className="flex flex-col gap-16">
+              <div className="flex flex-col gap-16 mb-20">
                 <div className="grid grid-cols-3">
                   <div className="col-span-2">
                     <p className="font-poppins w-5/6 mb-0">

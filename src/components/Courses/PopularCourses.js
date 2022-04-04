@@ -6,8 +6,26 @@ import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./PopularCourses.css";
+import "swiper/css/autoplay";
+
+import { Mousewheel, Autoplay } from "swiper";
+import { useRef } from "react";
+
+// SwiperCore.use([Navigation]);
 
 const PopularCourses = () => {
+  // const prevRef = useRef(null);
+  // const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+
   function scroll_left() {
     let content = document.querySelector("#courses");
     content.scrollLeft -= 1000;
@@ -24,6 +42,7 @@ const PopularCourses = () => {
     { id: 3, value: "Tennessee" },
     { id: 4, value: "Tennessee" },
     { id: 5, value: "Tennessee" },
+    { id: 6, value: "Tennessee" },
   ];
 
   return (
@@ -38,30 +57,42 @@ const PopularCourses = () => {
         <div className="bg-PopularCourses h-1 w-1/4"></div>
       </div>
 
-      <div className="flex items-center">
-        <div className="md:w-2/12 lg:w-1/12">
-          <button
-            onClick={() => scroll_left()}
-            class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none"
-          >
-            <MdOutlineArrowBackIosNew className="text-PopularCourseCard hover:text-HomeBannerTop" />
-          </button>
-        </div>
-        <div
-          className="md:w-8/12 lg:w-10/12 flex overflow-hidden scroll-smooth px-1 py-4 gap-80"
-          id="courses"
-        >
-          {array.map((arr) => (
-            <div className="m-2 relative w-76 h-96 ">
-              <div className="flex items-start justify-center w-76 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1  transition-all duration-300">
+      <div
+        id="previousButton"
+        onClick={() => swiperRef.current.swiper.slidePrev()}
+      >
+        <button className="absolute bottom-60 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
+          <MdOutlineArrowBackIosNew className="text-PopularCourseCard hover:text-HomeBannerTop" />
+        </button>
+      </div>
+      <div id="nextButton" onClick={() => swiperRef.current.swiper.slideNext()}>
+        <button class="absolute bottom-60 right-28 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
+          <MdOutlineArrowForwardIos className="text-PopularCourseCard hover:text-HomeBannerTop" />
+        </button>
+      </div>
+      <Swiper
+        ref={swiperRef}
+        slidesPerView={3}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        mousewheel={true}
+        autoplay={true}
+        modules={[Mousewheel, Autoplay]}
+        className="mySwiper mt-10"
+      >
+        {array.map((course, index) => (
+          <SwiperSlide className="swiper-slide" key={index}>
+            <div className="m-2 relative w-80 h-96 scale-105">
+              <div className="flex items-start justify-center w-80 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1  transition-all duration-300">
                 {/* <img
                   src={python}
                   className=" w-36 h-36 absolute z-20 left-20 top-4"
                 ></img> */}
-                <div className="flex items-center justify-center w-36 h-36 rounded-full bg-white absolute z-20 left-20 top-4  shadow-xl">
+                <div className="flex items-center justify-center w-36 h-36 rounded-full bg-white absolute z-20 left-22 top-4  shadow-xl">
                   <img src={python} className="w-24 h-24"></img>
                 </div>
-                <div class="text-uppercase text-white text-center bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200">
+                <div class="text-uppercase text-white text-center bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200 cursor-pointer">
                   <div className="flex flex-col gap-1 items-center justify-center px-5 pt-3">
                     <h5 className=" p-0 m-0 font-bold font-poppins">
                       Cracking the coding interview with leetcode
@@ -80,17 +111,9 @@ const PopularCourses = () => {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-        <div className="md:w-2/12 lg:w-1/12">
-          <button
-            onClick={() => scroll_right()}
-            class="w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition duration-300 focus:outline-none"
-          >
-            <MdOutlineArrowForwardIos className="text-PopularCourseCard hover:text-HomeBannerTop" />
-          </button>
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

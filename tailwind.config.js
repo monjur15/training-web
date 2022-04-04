@@ -135,6 +135,7 @@ module.exports = {
       },
       spacing: {
         68: "275px",
+        22: "88px",
       },
     },
   },

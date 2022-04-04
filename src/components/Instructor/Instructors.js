@@ -19,7 +19,7 @@ const Instructors = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {array.map((arr) => (
-          <div className="relative w-76 h-80 mt-20">
+          <div className="relative w-76 h-80 mt-20 scale-110">
             <div className="flex flex-col items-start justify-center w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
               <div className="flex items-center justify-center w-40 h-40 rounded-full bg-white absolute z-20 left-16 -top-16 shadow-xl">
                 <img src={instImg} className="w-40 h-40"></img>

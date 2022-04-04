@@ -1,9 +1,10 @@
 .course_card {
-  width: 500px;
+  width: 600px;
   background-image: linear-gradient(#b8f2fe, #60c5ff);
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 600px;
 }
 .course_img {
   text-align: center;
