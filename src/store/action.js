@@ -50,6 +50,23 @@ export const createInstructor = (instructor) => {
   };
 };
 
+export const createCourse = (course) => {
+  return (dispatch) => {
+    try {
+      Axios({
+        method: "post",
+        url: "api/courses",
+        data: course,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
 export const createBlog = (blog) => {
   return (dispatch) => {
     try {
@@ -102,9 +119,23 @@ export const addReview = (review) => {
 };
 
 export const createCategory = (category) => {
-  Axios.post("api/categories", category).then((res) => {
-    console.log(res.data);
-  });
+  // Axios.post("api/categories", category).then((res) => {
+  //   console.log(res.data);
+  // });
+  return (dispatch) => {
+    try {
+      Axios({
+        method: "post",
+        url: "api/categories",
+        data: category,
+        headers: { "Content-Type": "multipart/form-data" },
+      }).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 };
 
 // api/blogs

@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { Button, Carousel } from "react-bootstrap";
 // import { connect } from "react-redux";
 // import Axios from "axios";
-// import { fetchCourses } from "../../store/action";
-// import { useSelector, useDispatch } from "react-redux";
+import { fetchCourses } from "../../store/action";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import {} from "./Courses.css";
@@ -19,22 +18,23 @@ import linux from "../../images/linux.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Mousewheel, Autoplay } from "swiper";
 import { useRef } from "react";
 
 const Courses = (props) => {
   // const rightArrow = <FontAwesomeIcon icon={faArrowCircleRight} />;
-  // const url = "http://3.1.196.0";
+  const url = "http://3.1.196.0";
 
   // const [courses1, setCourses] = useState(0);
 
-  // const courses = useSelector((state) => state.courses);
-  // const dispatch = useDispatch();
+  const courses = useSelector((state) => state.courses);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchCourses());
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchCourses());
+  }, []);
   // const history = useHistory();
   const navigate = useNavigate();
   const swiperRef = useRef(null);
@@ -106,57 +106,63 @@ const Courses = (props) => {
             modules={[Mousewheel, Autoplay]}
             className="mySwiper swiperjs"
           >
-            {coursesArr.map((course, index) => (
-              <SwiperSlide
-                key={index}
-                className="swiper-slide1 flex h-80 relative"
-              >
-                <div className="flex left-1 absolute">
-                  <div className="relative w-20 h-20 mr-5">
-                    <div className="w-20 h-20 bg-CourseNum top-2 absolute flex items-center justify-center">
-                      <h1 className="text-white text-5xl font-myriadProRegular z-0">
-                        0{index + 1}
-                      </h1>
-                    </div>
-                  </div>
+            {/* {coursesArr.map((course, index) => ( */}
+            {courses && courses.length
+              ? courses.map((course, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className="swiper-slide1 flex h-80 relative"
+                  >
+                    <div className="flex left-1 absolute">
+                      <div className="relative w-20 h-20 mr-5">
+                        <div className="w-20 h-20 bg-CourseNum top-2 absolute flex items-center justify-center">
+                          <h1 className="text-white text-5xl font-myriadProRegular z-0">
+                            0{index + 1}
+                          </h1>
+                        </div>
+                      </div>
 
-                  <div className="h-80">
-                    {/* <div className="flex flex-col items-start justify-start"> */}
-                    <h1 className="w-800 mt-10 font-myriadProRegular text-CourseTitle font-bold text-6xl">
-                      {course.title}
-                    </h1>
-                    <h4 className="font-myriadProRegular text-CourseShortDesc">
-                      {course.desc}
-                    </h4>
-                    {/* </div> */}
-                    <div className="mt-10 flex flex-col items-center w-64">
-                      <button
-                        onClick={(e) => navigateToCourseDetails()}
-                        className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
-                      >
-                        Course Outline
-                      </button>
-                      <div className="flex items-center relative mt-2">
-                        <h6>know more</h6>
-                        <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                      <div className="h-80">
+                        {/* <div className="flex flex-col items-start justify-start"> */}
+                        <h1 className="w-900 mt-10 font-myriadProRegular text-CourseTitle font-bold text-6xl">
+                          {course.course_title}
+                        </h1>
+                        <h4 className="font-myriadProRegular text-CourseShortDesc">
+                          {course.course_content}
+                        </h4>
+                        {/* </div> */}
+                        <div className="mt-10 flex flex-col items-center w-64">
+                          <button
+                            onClick={(e) => navigateToCourseDetails()}
+                            className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
+                          >
+                            Course Outline
+                          </button>
+                          <div className="flex items-center relative mt-2">
+                            <h6>know more</h6>
+                            <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="w-500 right-0 top-3 absolute">
-                  <div className=" h-80 relative">
-                    <div className="h-92 w-92 border-2 rounded-full border-CoursesCircle bg-white left-32 absolute -top-0"></div>
-                    <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 top-1 absolute"></div>
-                    <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 -bottom-3 absolute"></div>
-                    <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 top-1 absolute"></div>
-                    <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 -bottom-3 absolute"></div>
-                    <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
-                      <img src={course.img} className="h-3/4 w-1/2"></img>
+                    <div className="w-500 right-28 top-3 absolute">
+                      <div className=" h-80 relative">
+                        <div className="h-92 w-92 border-2 rounded-full border-CoursesCircle bg-white left-32 absolute -top-0"></div>
+                        <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 top-1 absolute"></div>
+                        <div className="w-5 h-5 rounded-full bg-CoursesCircle right-32 -bottom-3 absolute"></div>
+                        <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 top-1 absolute"></div>
+                        <div className="w-4 h-4 rounded-full bg-CoursesCircle right-64 -bottom-3 absolute"></div>
+                        <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
+                          <img
+                            src={url + course.course_img}
+                            className="h-2/3 w-2/3"
+                          ></img>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                  </SwiperSlide>
+                ))
+              : null}
           </Swiper>
         </div>
       </div>
