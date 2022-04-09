@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "bootstrap";
 import { fetchBlogs } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
-import blog61 from "../../images/blog61.png";
+// import blog61 from "../../images/blog61.png";
 import { BsFillHeartFill } from "react-icons/bs";
 import { FaShareSquare } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -23,10 +23,10 @@ const Blogs = () => {
     dispatch(fetchBlogs());
   }, []);
 
-  const blogsArr = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+  // const blogsArr = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
-  function navigateToBlogDetails() {
-    navigate("/blogDetails");
+  function navigateToBlogDetails(blogId) {
+    navigate("/blogDetails", { state: { blogId: blogId } });
   }
 
   return (
@@ -43,13 +43,16 @@ const Blogs = () => {
           {blogs && blogs.length
             ? blogs.map((blog, index) =>
                 index % 2 == 0 ? (
-                  <div className="flex flex-col gap-16 mb-20" key={blog.id}>
+                  <div
+                    className="flex flex-col gap-16 mb-20"
+                    key={blog.blog_id}
+                  >
                     <div className="grid grid-cols-3">
                       <div className="col-span-1">
                         <img
                           src={url + blog.blog_img}
                           className="w-92 h-400 cursor-pointer"
-                          onClick={() => navigateToBlogDetails()}
+                          onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>
                       <div className="col-span-2">
@@ -69,10 +72,10 @@ const Blogs = () => {
                         </p> */}
                         {/* <article></article> */}
                         <article className="font-poppins w-5/6 mb-0">
-                          {blog.blog}
+                          {blog.blog.substring(0, 700)}
                         </article>
                         <p
-                          onClick={() => navigateToBlogDetails()}
+                          onClick={() => navigateToBlogDetails(blog.blog_id)}
                           className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-5"
                         >
                           See more...
@@ -87,14 +90,17 @@ const Blogs = () => {
                     <div className="h-0.5 w-full bg-gray-300 "></div>
                   </div>
                 ) : (
-                  <div className="flex flex-col gap-16 mb-20">
+                  <div
+                    className="flex flex-col gap-16 mb-20"
+                    key={blog.blog_id}
+                  >
                     <div className="grid grid-cols-3">
                       <div className="col-span-2">
                         <article className="font-poppins w-5/6 mb-0">
-                          {blog.blog}
+                          {blog.blog.substring(0, 700)}
                         </article>
                         <p
-                          onClick={() => navigateToBlogDetails()}
+                          onClick={() => navigateToBlogDetails(blog.blog_id)}
                           className="cursor-pointer font-poppins text-gray-500 hover:text-gray-600 hover:cursor-pointer mb-5"
                         >
                           See more...
@@ -109,7 +115,7 @@ const Blogs = () => {
                         <img
                           src={url + blog.blog_img}
                           className="w-92 h-400 cursor-pointer"
-                          onClick={() => navigateToBlogDetails()}
+                          onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>
                     </div>

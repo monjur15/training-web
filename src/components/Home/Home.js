@@ -44,13 +44,13 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(fetchCourses());
-    dispatch(fetchInstructors());
-    dispatch(fetchCategories());
-    dispatch(fetchReviews());
-    dispatch(fetchPhotos());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchCourses());
+  //   dispatch(fetchInstructors());
+  //   dispatch(fetchCategories());
+  //   dispatch(fetchReviews());
+  //   dispatch(fetchPhotos());
+  // }, []);
 
   function navigateToBlogs() {
     navigate("/blogs");

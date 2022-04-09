@@ -19,8 +19,9 @@ import "swiper/css/autoplay";
 
 import { Mousewheel, Autoplay } from "swiper";
 import { useRef } from "react";
-import { fetchCourses } from "../../store/action";
+import { fetchPopularCourses } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 // SwiperCore.use([Navigation]);
 
@@ -28,13 +29,18 @@ const PopularCourses = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
   const url = "http://3.1.196.0";
-  const courses = useSelector((state) => state.courses);
+  const popularCourses = useSelector((state) => state.popularCourses);
   const swiperRef = useRef(null);
   let dispatch = useDispatch();
+  let navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(fetchCourses());
+    dispatch(fetchPopularCourses());
   }, []);
+
+  function navigateToCourseDetails(courseId) {
+    navigate("/coursesDetail", { state: { courseId: courseId } });
+  }
 
   // function scroll_left() {
   //   let content = document.querySelector("#courses");
@@ -92,9 +98,9 @@ const PopularCourses = () => {
         className="mySwiper mt-10"
       >
         {/* {array.map((course, index) => ( */}
-        {courses && courses.length
-          ? courses.slice(0, 6).map((course, index) => (
-              <SwiperSlide className="swiper-slide" key={index}>
+        {popularCourses && popularCourses.length
+          ? popularCourses.map((course, index) => (
+              <SwiperSlide className="swiper-slide" key={course.course_id}>
                 <div className="m-2 relative w-92 h-96 scale-105">
                   <div className="flex items-start justify-center w-92 h-96 bg-white rounded-2xl absolute z-10  shadow-md hover:shadow-xl  hover:border-HomeCoursesBg1  transition-all duration-300">
                     {/* <img
@@ -103,7 +109,7 @@ const PopularCourses = () => {
                 ></img> */}
                     <div className="flex items-center justify-center w-36 h-36 rounded-full bg-PopularCourseCard absolute z-20 left-22 top-4  shadow-xl">
                       <img
-                        src={url + course.course_img}
+                        src={url + "/media/" + course.course_img}
                         className="w-24 h-24"
                       ></img>
                     </div>
@@ -117,12 +123,18 @@ const PopularCourses = () => {
                           </h5>
                         </div>
                         <h6 className="p-0 m-0 font-poppins text-sm">
-                          SHAHED MEHBUB
+                          {/* SHAHED MEHBUB */}
+                          {course.inst_name}
                         </h6>
                         <p className="font-light font-poppins p-0 m-0 text-white">
                           {course.course_classes} | {course.course_credit}
                         </p>
-                        <button className="absolute bottom-2 text-center px-14 py-2 text-HomeBannerTop bg-white rounded-full shadow-md hover:shadow-xl  transition-all duration-300">
+                        <button
+                          onClick={() =>
+                            navigateToCourseDetails(course.course_id)
+                          }
+                          className="absolute bottom-2 text-center px-14 py-2 text-HomeBannerTop bg-white rounded-full shadow-md hover:shadow-xl  transition-all duration-300"
+                        >
                           <img src={sendImg} className="h-4 w-4"></img>
                         </button>
                       </div>

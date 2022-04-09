@@ -39,29 +39,29 @@ const Courses = (props) => {
   const navigate = useNavigate();
   const swiperRef = useRef(null);
 
-  const coursesArr = [
-    {
-      id: 1,
-      title: "Cracking the Coding Interview with Leetcode",
-      desc: "docker & kubernetes",
-      img: devops1,
-    },
-    {
-      id: 1,
-      title: "Design Patterns with Python",
-      desc: "best practices",
-      img: python,
-    },
-    {
-      id: 1,
-      title: "Linux Basics",
-      desc: "filesystem and commands",
-      img: linux,
-    },
-  ];
+  // const coursesArr = [
+  //   {
+  //     id: 1,
+  //     title: "Cracking the Coding Interview with Leetcode",
+  //     desc: "docker & kubernetes",
+  //     img: devops1,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Design Patterns with Python",
+  //     desc: "best practices",
+  //     img: python,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Linux Basics",
+  //     desc: "filesystem and commands",
+  //     img: linux,
+  //   },
+  // ];
 
-  function navigateToCourseDetails() {
-    navigate("/coursesDetail");
+  function navigateToCourseDetails(courseId) {
+    navigate("/coursesDetail", { state: { courseId: courseId } });
   }
 
   return (
@@ -110,7 +110,7 @@ const Courses = (props) => {
             {courses && courses.length
               ? courses.map((course, index) => (
                   <SwiperSlide
-                    key={index}
+                    key={course.course_id}
                     className="swiper-slide1 flex h-80 relative"
                   >
                     <div className="flex left-1 absolute">
@@ -133,7 +133,9 @@ const Courses = (props) => {
                         {/* </div> */}
                         <div className="mt-10 flex flex-col items-center w-64">
                           <button
-                            onClick={(e) => navigateToCourseDetails()}
+                            onClick={(e) =>
+                              navigateToCourseDetails(course.course_id)
+                            }
                             className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
                           >
                             Course Outline
@@ -155,7 +157,7 @@ const Courses = (props) => {
                         <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
                           <img
                             src={url + course.course_img}
-                            className="h-2/3 w-2/3"
+                            className="h-48 w-48"
                           ></img>
                         </div>
                       </div>

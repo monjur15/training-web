@@ -19,6 +19,52 @@ export const fetchCourses = () => {
   };
 };
 
+export const fetchSingleCourse = (courseId) => {
+  return (dispatch) => {
+    Axios.get("api/single-course/" + courseId)
+      .then((response) => {
+        console.log(response.data);
+        dispatch(fetchSingleCourseSuccess(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch(fetchSingleCourseFail(error));
+      });
+  };
+};
+
+export const fetchSingleBlog = (blogId) => {
+  return (dispatch) => {
+    Axios.get("api/single-blog/" + blogId)
+      .then((response) => {
+        console.log(response.data);
+        dispatch(fetchSingleBlogSuccess(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch(fetchSingleBlogFail(error));
+      });
+  };
+};
+
+export const fetchPopularCourses = () => {
+  return (dispatch) => {
+    let fetchedCourses = [];
+    Axios.get("api/popular-courses")
+      .then((response) => {
+        for (let key in response.data) {
+          fetchedCourses.push({ ...response.data[key] });
+        }
+        console.log(fetchedCourses);
+        dispatch(fetchPopularCoursesSuccess(fetchedCourses));
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch(fetchPopularCoursesFail(error));
+      });
+  };
+};
+
 export const fetchCoursesSuccess = (courses) => {
   return {
     type: actionTypes.FETCH_COURSES_SUCCESS,
@@ -29,6 +75,48 @@ export const fetchCoursesSuccess = (courses) => {
 export const fetchCoursesFail = (error) => {
   return {
     type: actionTypes.FETCH_COURSES_FAIL,
+    error: error,
+  };
+};
+
+export const fetchSingleCourseSuccess = (singleCourse) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_COURSE_SUCCESS,
+    singleCourse: singleCourse,
+  };
+};
+
+export const fetchSingleCourseFail = (error) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_COURSE_FAIL,
+    error: error,
+  };
+};
+
+export const fetchSingleBlogSuccess = (singleBlog) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_BLOG_SUCCESS,
+    singleBlog: singleBlog,
+  };
+};
+
+export const fetchSingleBlogFail = (error) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_BLOG_FAIL,
+    error: error,
+  };
+};
+
+export const fetchPopularCoursesSuccess = (popularCourses) => {
+  return {
+    type: actionTypes.FETCH_POPULAR_COURSES_SUCCESS,
+    popularCourses: popularCourses,
+  };
+};
+
+export const fetchPopularCoursesFail = (error) => {
+  return {
+    type: actionTypes.FETCH_POPULAR_COURSES_FAIL,
     error: error,
   };
 };

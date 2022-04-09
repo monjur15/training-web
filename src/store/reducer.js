@@ -3,11 +3,14 @@ import { updateObject } from "./utility";
 
 const initialState = {
   courses: [],
+  popularCourses: [],
   instructors: [],
   categories: [],
   reviews: [],
   photos: [],
   blogs: [],
+  singleBlog: {},
+  singleCourse: {},
   loading: true,
   error: null,
 };
@@ -20,6 +23,28 @@ const fetchCoursesSuccess = (state, action) => {
 };
 
 const fetchCoursesFail = (state, action) => {
+  return updateObject(state, { error: action.error });
+};
+
+const fetchSingleCourseSuccess = (state, action) => {
+  return updateObject(state, {
+    singleCourse: action.singleCourse,
+    error: null,
+  });
+};
+
+const fetchSingleCourseFail = (state, action) => {
+  return updateObject(state, { error: action.error });
+};
+
+const fetchPopularCoursesSuccess = (state, action) => {
+  return updateObject(state, {
+    popularCourses: action.popularCourses,
+    error: null,
+  });
+};
+
+const fetchPopularCoursesFail = (state, action) => {
   return updateObject(state, { error: action.error });
 };
 
@@ -78,12 +103,31 @@ const fetchBlogsFail = (state, action) => {
   return updateObject(state, { error: action.error });
 };
 
+const fetchSingleBlogSuccess = (state, action) => {
+  return updateObject(state, {
+    singleBlog: action.singleBlog,
+    error: null,
+  });
+};
+
+const fetchSingleBlogFail = (state, action) => {
+  return updateObject(state, { error: action.error });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_COURSES_SUCCESS:
       return fetchCoursesSuccess(state, action);
     case actionTypes.FETCH_COURSES_FAIL:
       return fetchCoursesFail(state, action);
+    case actionTypes.FETCH_SINGLE_COURSE_SUCCESS:
+      return fetchSingleCourseSuccess(state, action);
+    case actionTypes.FETCH_SINGLE_COURSE_FAIL:
+      return fetchSingleCourseFail(state, action);
+    case actionTypes.FETCH_POPULAR_COURSES_SUCCESS:
+      return fetchPopularCoursesSuccess(state, action);
+    case actionTypes.FETCH_POPULAR_COURSES_FAIL:
+      return fetchPopularCoursesFail(state, action);
     case actionTypes.FETCH_INSTRUCTORS_SUCCESS:
       return fetchInstructorsSuccess(state, action);
     case actionTypes.FETCH_INSTRUCTORS_FAIL:
@@ -104,6 +148,10 @@ const reducer = (state = initialState, action) => {
       return fetchBlogsSuccess(state, action);
     case actionTypes.FETCH_BLOGS_FAIL:
       return fetchBlogsFail(state, action);
+    case actionTypes.FETCH_SINGLE_BLOG_SUCCESS:
+      return fetchSingleBlogSuccess(state, action);
+    case actionTypes.FETCH_SINGLE_BLOG_FAIL:
+      return fetchSingleBlogFail(state, action);
 
     default:
       return state;
