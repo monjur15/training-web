@@ -22,6 +22,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { Mousewheel, Autoplay } from "swiper";
 import { useRef } from "react";
+import classNames from "classnames";
 
 const Courses = (props) => {
   // const rightArrow = <FontAwesomeIcon icon={faArrowCircleRight} />;
@@ -157,8 +158,38 @@ const Courses = (props) => {
                         <div className="w-92 h-64 course_img_bg z-10 absolute top-10 -left-8 rounded-4xl flex items-center justify-center">
                           <img
                             src={url + course.course_img}
-                            className="h-48 w-48"
+                            className={classNames({
+                              "h-44 w-56":
+                                course.course_title ===
+                                "Learn AWS: Beginner to Solutions Architect - Associate",
+                              "h-44 w-60":
+                                course.course_title ===
+                                "DevOps (Docker to Kubernetes)",
+                              "w-48 h-48":
+                                course.course_title !==
+                                  "Learn AWS: Beginner to Solutions Architect - Associate" &&
+                                course.course_title !==
+                                  "DevOps (Docker to Kubernetes)",
+                            })}
                           ></img>
+                          {/* {course.course_title ===
+                          "Learn AWS: Beginner to Solutions Architect - Associate" ? (
+                            <img
+                              src={url + course.course_img}
+                              className="h-44 w-56"
+                            ></img>
+                          ) : course.course_title ===
+                            "DevOps (Docker to Kubernetes)" ? (
+                            <img
+                              src={url + course.course_img}
+                              className="h-44 w-60"
+                            ></img>
+                          ) : (
+                            <img
+                              src={url + course.course_img}
+                              className="h-48 w-48"
+                            ></img>
+                          )} */}
                         </div>
                       </div>
                     </div>

@@ -6,6 +6,7 @@ import { Button, Carousel } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { fetchSingleCourse } from "../../store/action";
+import classNames from "classnames";
 
 const CourseDetail = () => {
   function myFunction() {
@@ -41,7 +42,20 @@ const CourseDetail = () => {
                   <img
                     src={url + "/media/" + singleCourse[0].course_img}
                     alt="img"
-                    className="w-64 h-48"
+                    // className="w-48 h-48"
+                    className={classNames({
+                      "w-56 h-44":
+                        singleCourse[0].course_title ===
+                        "Learn AWS: Beginner to Solutions Architect - Associate",
+                      "w-60 h-44":
+                        singleCourse[0].course_title ===
+                        "DevOps (Docker to Kubernetes)",
+                      "w-48 h-48":
+                        singleCourse[0].course_title !==
+                          "Learn AWS: Beginner to Solutions Architect - Associate" &&
+                        singleCourse[0].course_title !==
+                          "DevOps (Docker to Kubernetes)",
+                    })}
                   />
                 ) : null}
               </div>

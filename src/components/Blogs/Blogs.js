@@ -51,7 +51,7 @@ const Blogs = () => {
                       <div className="col-span-1">
                         <img
                           src={url + blog.blog_img}
-                          className="w-92 h-400 cursor-pointer"
+                          className="w-96 h-96 cursor-pointer"
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>
@@ -114,7 +114,7 @@ const Blogs = () => {
                       <div className="col-span-1">
                         <img
                           src={url + blog.blog_img}
-                          className="w-92 h-400 cursor-pointer"
+                          className="w-96 h-96 cursor-pointer"
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>

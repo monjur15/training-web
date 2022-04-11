@@ -22,6 +22,7 @@ import { useRef } from "react";
 import { fetchPopularCourses } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import classNames from "classnames";
 
 // SwiperCore.use([Navigation]);
 
@@ -110,7 +111,19 @@ const PopularCourses = () => {
                     <div className="flex items-center justify-center w-36 h-36 rounded-full bg-PopularCourseCard absolute z-20 left-22 top-4  shadow-xl">
                       <img
                         src={url + "/media/" + course.course_img}
-                        className="w-24 h-24"
+                        className={classNames({
+                          "w-28 h-20":
+                            course.course_title ===
+                            "DevOps (Docker to Kubernetes)",
+                          "w-24 h-20":
+                            course.course_title ===
+                            "Learn AWS: Beginner to Solutions Architect - Associate",
+                          "w-24 h-24":
+                            course.course_title !==
+                              "Learn AWS: Beginner to Solutions Architect - Associate" &&
+                            course.course_title !==
+                              "DevOps (Docker to Kubernetes)",
+                        })}
                       ></img>
                     </div>
                     <div class="text-uppercase text-white text-center bg-PopularCourseCard hover:bg-HomeBannerTop  items-start justify-center w-full  h-1/2 absolute z-20 bottom-0 rounded-b-2xl rounded-tl-5xl transition-all duration-200 cursor-pointer">

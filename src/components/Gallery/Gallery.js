@@ -15,8 +15,9 @@ const Gallery = () => {
 
   return (
     <div>
-      <div className="container gallery py-5">
-        <h1 className="text-red-500">Gallery</h1>
+      {/* <div className="container gallery py-5"> */}
+      <div className=" py-5">
+        <h1 className="text-blue-500">Gallery</h1>
         <div className="down_border mb-lg-5"></div>
         <div className="row p-3">
           {/* <div className="aws zoom  mt-lg-4 col-lg-4">
