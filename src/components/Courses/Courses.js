@@ -13,7 +13,6 @@ import {} from "./Courses.css";
 import { IoIosArrowDropup, IoIosArrowDropdown } from "react-icons/io";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import devops1 from "../../images/devops1.png";
-import python from "../../images/python-white.png";
 import linux from "../../images/linux.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -106,6 +105,7 @@ const Courses = (props) => {
             autoplay={true}
             modules={[Mousewheel, Autoplay]}
             className="mySwiper swiperjs"
+            initialSlide={1}
           >
             {/* {coursesArr.map((course, index) => ( */}
             {courses && courses.length

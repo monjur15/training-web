@@ -11,20 +11,20 @@ const Search = () => {
           <img className="img-fluid" src={slider1} alt="" />
         </div>
         <div className="w-full lg:w-1/2 flex flex-col items-center mt-28">
-          <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end gap-2">
-            <h1 className="text-white  font-poppins text-3xl">
+          <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end lg:gap-2">
+            <h1 className="text-white m-0 p-0 font-poppins text-lg md:text-xl 2xl:text-3xl">
               Ever Asked <span className="text-blue-600">Yourself</span>
             </h1>
-            <h1 className="text-white text-5xl font-poppins font-semibold">
+            <h1 className="m-0 p-0 text-white text-xl md:text-3xl 2xl:text-5xl font-poppins font-semibold">
               Why Do You Want To Be
             </h1>
-            <h1 className="text-white font-extrabold text-7xl font-poppins">
+            <h1 className="m-0 p-0 text-white font-extrabold text-3xl md:text-5xl 2xl:text-7xl font-poppins">
               A <span className="text-blue-600">DevOps </span>Engineer
             </h1>
           </div>
 
           {/* Search Bar */}
-          <div className="flex w-8/12 max-w-xl relative items-center mt-3">
+          <div className="flex w-full sm:w-8/12 max-w-xl relative items-center mt-3">
             <input
               type="text"
               className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-14 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder text-SeachCoursePlaceholder"

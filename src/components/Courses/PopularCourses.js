@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import sendImg from "../../images/send.png";
 import leetcodeImg from "../../images/leetcode.png";
-import python from "../../images/python.png";
-import python_white from "../../images/python-white.png";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
@@ -88,6 +86,7 @@ const PopularCourses = () => {
         </button>
       </div>
       <Swiper
+        initialSlide={3}
         ref={swiperRef}
         slidesPerView={3}
         slidesPerGroup={3}

@@ -61,13 +61,15 @@ const Home = () => {
       <Search />
 
       {/* Who we are */}
-      <div className="row  px-28 py-16">
+      <div className="row px-12 md:px-28 py-6 md:py-16">
         {/* <div className="col-lg-7  mt-5 we_content p-5"> */}
         <div className="col-lg-7  mt-5 ">
-          <h1 className="text-SearchBg font-myriadProRegular text-5xl">
-            Who We Are
-          </h1>
-          <div className="down_border mb-5"></div>
+          <div className="flex  flex-col justify-center items-center lg:justify-start lg:items-start">
+            <h1 className="text-SearchBg font-myriadProRegular text-5xl">
+              Who We Are
+            </h1>
+            <div className="down_border w-2/3 mb-5"></div>
+          </div>
           <p className="font-myriadProRegular text-lg">
             We are the fastest growing IT Training institute in Bangladesh. All
             our classes are currently online (Live Interactive) with students

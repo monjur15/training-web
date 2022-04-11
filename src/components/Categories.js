@@ -1,10 +1,18 @@
 import React from "react";
-import pythonWhite from "../images/python-white.png";
-import js from "../images/js.png";
-import linux from "../images/linux.png";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import js from "../images/js.png";
+import devops from "../images/devops_white.png";
+import aws from "../images/aws_white.png";
+import python from "../images/python_white.png";
 
 const Categories = () => {
+  let navigate = useNavigate();
+
+  function navigateToCourseDetails(courseId) {
+    navigate("/coursesDetail", { state: { courseId: courseId } });
+  }
+
   return (
     <div>
       <div className="flex flex-col w-fit px-28 pt-16 pb-5">
@@ -17,22 +25,34 @@ const Categories = () => {
       <div className="bg-CategoryBg px-28 relative ">
         <div className="flex items-center ">
           <div className="w-1/2  flex flex-col items-center gap-16 mt-16 mb-44">
-            <div className="w-2/3 h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200">
+            <div
+              onClick={() => navigateToCourseDetails(4)}
+              className="w-2/3 h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200"
+            >
               <div className="flex justify-center pt-14">
-                <img src={pythonWhite} className="h-44 w-44"></img>
+                <img src={python} className="h-44 w-44"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
-                <button class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none">
+                <button
+                  onClick={() => navigateToCourseDetails(4)}
+                  className="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
+                >
                   <MdOutlineArrowForwardIos className="w-5 h-5" />
                 </button>
               </div>
             </div>
-            <div className="bg-CategoryCardBg w-2/3 h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover">
+            <div
+              onClick={() => navigateToCourseDetails(5)}
+              className="bg-CategoryCardBg w-2/3 h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover"
+            >
               <div className="flex justify-center pt-14">
                 <img src={js} className="h-44 w-44"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
-                <button class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none">
+                <button
+                  onClick={() => navigateToCourseDetails(5)}
+                  class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
+                >
                   <MdOutlineArrowForwardIos className="w-5 h-5" />
                 </button>
               </div>
@@ -40,25 +60,35 @@ const Categories = () => {
           </div>
 
           <div className="w-1/2  flex flex-col items-center gap-10 mt-16 mb-44 relative">
-            <div className="bg-CategoryCardBg w-2/3 h-80 -top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
+            <div
+              onClick={() => navigateToCourseDetails(3)}
+              className="bg-CategoryCardBg w-2/3 h-80 -top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
+            >
               <div className="flex justify-center pt-24">
                 {/* <img src={aws} className="h-44 w-44"></img> */}
-                <h1 className="text-white font-bold text-9xl text-uppercase font-myriadProRegular">
-                  aws
-                </h1>
+                <img src={aws} className="h-40 w-52"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
-                <button class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none">
+                <button
+                  onClick={() => navigateToCourseDetails(3)}
+                  class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
+                >
                   <MdOutlineArrowForwardIos className="w-5 h-5" />
                 </button>
               </div>
             </div>
-            <div className="bg-CategoryCardBg w-2/3 h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover">
+            <div
+              onClick={() => navigateToCourseDetails(7)}
+              className="bg-CategoryCardBg w-2/3 h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
+            >
               <div className="flex justify-center pt-14">
-                <img src={linux} className="h-44 w-44"></img>
+                <img src={devops} className="h-44 w-56"></img>
               </div>
               <div className="flex justify-end pt-3 pr-5">
-                <button class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none">
+                <button
+                  onClick={() => navigateToCourseDetails(7)}
+                  class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
+                >
                   <MdOutlineArrowForwardIos className="w-5 h-5" />
                 </button>
               </div>

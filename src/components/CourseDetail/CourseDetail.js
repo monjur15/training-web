@@ -5,7 +5,7 @@ import keyboard from "../../images/keyboard.jpg";
 import { Button, Carousel } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { fetchSingleCourse } from "../../store/action";
+import { fetchSingleCourse, fetchPopularCourses } from "../../store/action";
 import classNames from "classnames";
 
 const CourseDetail = () => {
@@ -16,10 +16,12 @@ const CourseDetail = () => {
   let location = useLocation();
   let dispatch = useDispatch();
   let singleCourse = useSelector((state) => state.singleCourse);
+  let popularCourses = useSelector((state) => state.popularCourses);
   let url = "http://3.1.196.0";
 
   useEffect(() => {
     dispatch(fetchSingleCourse(location.state.courseId));
+    dispatch(fetchPopularCourses());
   }, []);
 
   const relatedCourses = [
@@ -90,37 +92,53 @@ const CourseDetail = () => {
               </div>
               <div className="wrapper ">
                 {/* <div className="py-0"> */}
-                {relatedCourses.map((course) => (
-                  <div
-                    className="p-3 my-4 bg-blue-300 rounded-2xl r_courses_card"
-                    key={course.id}
-                  >
-                    <div className="flex gap-5">
-                      <img
-                        className="w-28 h-28 ml-5 rounded-full shadow-lg"
-                        src={keyboard}
-                      ></img>
-                      <div>
-                        <h3 className="py-2 font-myriadProRegular text- font-bold text-uppercase text-white m-0">
-                          {course.title}
-                        </h3>
-                        <button className="bg-white text-blue-300 font-pangramRegular px-8 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
-                          Buy
-                        </button>
+                {/* {relatedCourses.map((course) => ( */}
+                {popularCourses && popularCourses.length
+                  ? popularCourses.map((course) => (
+                      <div
+                        className="p-3 my-4 bg-blue-300 rounded-2xl r_courses_card "
+                        key={course.course_id}
+                      >
+                        <div className="flex gap-5">
+                          {/* <div className="w-28 h-28 ml-5 rounded-full shadow-lg flex items-center justify-center"> */}
+                          <img
+                            className={classNames("ml-5", {
+                              "w-28 h-20 my-auto":
+                                course.course_title ===
+                                  "Learn AWS: Beginner to Solutions Architect - Associate" ||
+                                course.course_title ===
+                                  "DevOps (Docker to Kubernetes)",
+                              "w-28 h-28 my-auto":
+                                course.course_title !==
+                                  "Learn AWS: Beginner to Solutions Architect - Associate" &&
+                                course.course_title !==
+                                  "DevOps (Docker to Kubernetes)",
+                            })}
+                            src={url + "/media/" + course.course_img}
+                          ></img>
+                          {/* </div> */}
+                          <div>
+                            <h3 className="py-2 font-myriadProRegular text- font-bold text-uppercase text-white m-0">
+                              {course.course_title}
+                            </h3>
+                            <button className="bg-white text-blue-300 font-pangramRegular px-8 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+                              Buy
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  // <div className="r_courses_card  my-4 p-3 row" key={course.id}>
-                  //   <div className="col-4 ">
-                  //     <img className="img-fluid" src={keyboard} alt="" />
-                  //   </div>
-                  //   <div className="course_title col-8 ">
-                  //     <h5>KUBERNETES</h5>
+                      // <div className="r_courses_card  my-4 p-3 row" key={course.id}>
+                      //   <div className="col-4 ">
+                      //     <img className="img-fluid" src={keyboard} alt="" />
+                      //   </div>
+                      //   <div className="course_title col-8 ">
+                      //     <h5>KUBERNETES</h5>
 
-                  //     <Button variant="light">Buy</Button>
-                  //   </div>
-                  // </div>
-                ))}
+                      //     <Button variant="light">Buy</Button>
+                      //   </div>
+                      // </div>
+                    ))
+                  : null}
               </div>
             </div>
           </div>
