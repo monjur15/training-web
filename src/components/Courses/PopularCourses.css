@@ -60,3 +60,13 @@ body {
     height: 400px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .swiper-slide {
+    /* background-position: center;
+    background-size: cover; */
+    /* background-color: blue; */
+    width: 400px;
+    height: 470px;
+  }
+}

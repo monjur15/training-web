@@ -17,7 +17,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: { xs: "400px" },
+      screens: { xss: "400px", xs: "500px", tabl: "900px" },
       colors: {
         NavItem: "#00d4ff",
         HomeBannerBg: "#6BE9FE",

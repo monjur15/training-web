@@ -29,7 +29,7 @@ const Instructors = () => {
   return (
     <div className="px-12 py-8 md:px-28 md:py-16 relative">
       <div className="flex flex-col w-fit mb-20">
-        <h1 className="text-5xl font-myriadProRegular text-PopularCourses">
+        <h1 className="text-4xl sm:text-5xl font-myriadProRegular text-PopularCourses">
           Our Instructors
         </h1>
         <div className="bg-PopularCourses h-1 w-1/4"></div>
@@ -41,7 +41,7 @@ const Instructors = () => {
         slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
-        autoplay={true}
+        // autoplay={true}
         mousewheel={true}
         modules={[Autoplay, Mousewheel]}
         className="mySwiper swiperjs2"
@@ -74,9 +74,9 @@ const Instructors = () => {
                 key={instructor.inst_id}
                 className="swiper-slide2 relative"
               >
-                <div className="relative w-76 h-80 mt-20 md:scale-110">
-                  <div className="flex flex-col items-start justify-center w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
-                    <div className="flex items-center justify-center w-40 h-40 rounded-full bg-white absolute z-20 left-16 -top-16 shadow-xl">
+                <div className="relative w-64 xss:w-76 h-80 mt-20 md:scale-110">
+                  <div className="flex flex-col items-start justify-center w-64 xss:w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
+                    <div className="flex items-center justify-center w-40 h-40 rounded-full bg-white absolute z-20 left-12 xss:left-16 -top-16 shadow-xl">
                       <img
                         // src={url + instructor.inst_img}
                         src={instImg}

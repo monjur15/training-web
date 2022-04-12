@@ -36,7 +36,7 @@ const Categories = () => {
   return (
     <div>
       <div className="flex flex-col w-fit px-12 xl:px-28 pt-4 xl:pt-16 pb-5">
-        <h1 className="text-5xl font-myriadProRegular text-SearchBg">
+        <h1 className="text-4xl sm:text-5xl font-myriadProRegular text-SearchBg">
           Categories
         </h1>
         <div className="bg-SearchBg h-1 w-1/3"></div>

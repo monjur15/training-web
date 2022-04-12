@@ -68,7 +68,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border mb-3 mb-md-2"> </div>
         <div className="row copyright p-2">
           <small>Tecognize Training | All rights reserved</small>
         </div>

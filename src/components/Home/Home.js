@@ -65,7 +65,7 @@ const Home = () => {
         {/* <div className="col-lg-7  mt-5 we_content p-5"> */}
         <div className="col-lg-7  mt-5 ">
           <div className="flex  flex-col justify-center items-center lg:justify-start lg:items-start">
-            <h1 className="text-SearchBg font-myriadProRegular text-5xl">
+            <h1 className="text-SearchBg font-myriadProRegular text-4xl sm:text-5xl">
               Who We Are
             </h1>
             <div className="down_border w-2/3 sm:w-1/3 lg:w-1/6 mb-5"></div>

@@ -30,7 +30,8 @@
   .swiper-slide2 {
     /* background-position: center;
     background-size: cover; */
+    /* background-color: blue; */
     width: 400px;
-    height: 400px;
+    height: 410px;
   }
 }

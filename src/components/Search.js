@@ -24,7 +24,7 @@ const Search = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="flex w-full sm:w-8/12 max-w-xl relative items-center mt-3">
+          <div className="flex w-full xs:w-8/12 max-w-xl relative items-center mt-3">
             <input
               type="text"
               className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-14 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder text-SeachCoursePlaceholder"
