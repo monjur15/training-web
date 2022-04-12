@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {} from "./Blogs.css";
 import blog3 from "../../images/blog 3.jpg";
 import blog4 from "../../images/blog 4.jpg";
@@ -19,9 +19,29 @@ const Blogs = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
+  });
+
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    });
+  };
+
   useEffect(() => {
     dispatch(fetchBlogs());
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", setDimension);
+
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, [screenSize]);
 
   // const blogsArr = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
@@ -31,14 +51,14 @@ const Blogs = () => {
 
   return (
     <div>
-      <div className="flex flex-col w-fit px-28 pt-5 pb-3">
-        <h1 className="text-6xl font-myriadProRegular text-CourseHeader my-0">
+      <div className="flex flex-col w-fit px-16 2xl:px-28 pt-5 pb-3">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-myriadProRegular text-CourseHeader my-0">
           Blogs
         </h1>
         <div className="bg-SearchBg h-1 w-3/5"></div>
       </div>
       <div className="w-full blogs_bg">
-        <div className="px-28 py-20">
+        <div className="px-16 2xl:px-28 py-12 md:py-20">
           {/* {blogsArr.map((blog, index) => */}
           {blogs && blogs.length
             ? blogs.map((blog, index) =>
@@ -47,15 +67,15 @@ const Blogs = () => {
                     className="flex flex-col gap-16 mb-20"
                     key={blog.blog_id}
                   >
-                    <div className="grid grid-cols-3">
+                    <div className="flex sm:grid sm:grid-cols-3">
                       <div className="col-span-1">
                         <img
                           src={url + blog.blog_img}
-                          className="w-96 h-96 cursor-pointer"
+                          className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>
-                      <div className="col-span-2">
+                      <div className="col-span-2 mt-3 ml-10 sm:ml-0">
                         {/* <p className="font-poppins w-5/6 mb-0">
                           একজন Software Engineer এর জন্য "Capacity Estimation
                           and Constraints" জানা কেন প্রয়োজন এবং এই বিষয়গুলো
@@ -71,19 +91,27 @@ const Blogs = () => {
                           Design এর ক্ষেত্রে ব্যাপকভাবে সহায়তা করে।
                         </p> */}
                         {/* <article></article> */}
-                        <article className="font-poppins w-5/6 mb-0">
-                          {blog.blog.substring(0, 700)}
+                        <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
+                          {screenSize.dynamicWidth > 1536
+                            ? blog.blog.substring(0, 700)
+                            : screenSize.dynamicWidth > 1280
+                            ? blog.blog.substring(0, 400)
+                            : screenSize.dynamicWidth > 1024
+                            ? blog.blog.substring(0, 200)
+                            : screenSize.dynamicWidth > 768
+                            ? blog.blog.substring(0, 100)
+                            : blog.blog.substring(0, 50)}
                         </article>
                         <p
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
-                          className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-5"
+                          className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
                         >
                           See more...
                         </p>
                         <div className="flex w-fit gap-3">
-                          <BsFillHeartFill className="text-BlogIconsColour w-7 h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
-                          <div className="w-0.5 h-7 bg-gray-300"></div>
-                          <FaShareSquare className="text-BlogIconsColour w-7 h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
+                          <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
                         </div>
                       </div>
                     </div>
@@ -94,27 +122,35 @@ const Blogs = () => {
                     className="flex flex-col gap-16 mb-20"
                     key={blog.blog_id}
                   >
-                    <div className="grid grid-cols-3">
-                      <div className="col-span-2">
-                        <article className="font-poppins w-5/6 mb-0">
-                          {blog.blog.substring(0, 700)}
+                    <div className="flex sm:grid sm:grid-cols-3">
+                      <div className="col-span-2 mt-3">
+                        <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
+                          {screenSize.dynamicWidth > 1536
+                            ? blog.blog.substring(0, 700)
+                            : screenSize.dynamicWidth > 1280
+                            ? blog.blog.substring(0, 400)
+                            : screenSize.dynamicWidth > 1024
+                            ? blog.blog.substring(0, 200)
+                            : screenSize.dynamicWidth > 768
+                            ? blog.blog.substring(0, 100)
+                            : blog.blog.substring(0, 50)}
                         </article>
                         <p
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
-                          className="cursor-pointer font-poppins text-gray-500 hover:text-gray-600 hover:cursor-pointer mb-5"
+                          className="cursor-pointer font-poppins text-gray-500 hover:text-gray-600 hover:cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
                         >
                           See more...
                         </p>
                         <div className="flex w-fit gap-3">
-                          <BsFillHeartFill className="text-BlogIconsColour w-7 h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
-                          <div className="w-0.5 h-7 bg-gray-300"></div>
-                          <FaShareSquare className="text-BlogIconsColour w-7 h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
+                          <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
                         </div>
                       </div>
                       <div className="col-span-1">
                         <img
                           src={url + blog.blog_img}
-                          className="w-96 h-96 cursor-pointer"
+                          className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
                           onClick={() => navigateToBlogDetails(blog.blog_id)}
                         ></img>
                       </div>

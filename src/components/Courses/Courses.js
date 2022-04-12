@@ -127,7 +127,7 @@ const Courses = (props) => {
                 loop={true}
                 loopFillGroupWithBlank={true}
                 mousewheel={true}
-                // autoplay={true}
+                autoplay={true}
                 modules={[Mousewheel, Autoplay]}
                 className="mySwiper swiperjs"
                 initialSlide={1}
@@ -233,7 +233,7 @@ const Courses = (props) => {
                 loop={true}
                 loopFillGroupWithBlank={true}
                 mousewheel={true}
-                // autoplay={true}
+                autoplay={true}
                 modules={[Mousewheel, Autoplay]}
                 className="mySwiper swiperjs4"
                 initialSlide={1}
