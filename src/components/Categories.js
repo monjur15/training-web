@@ -47,7 +47,7 @@ const Categories = () => {
           <div className="w-1/2  flex flex-col items-center gap-16 mt-16 mb-44">
             <div
               onClick={() => navigateToCourseDetails(4)}
-              className="w-2/3 h-48 sm:h-68 md:h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200"
+              className="w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200"
             >
               <div className="flex justify-center pt-12 sm:pt-14">
                 <img
@@ -68,7 +68,7 @@ const Categories = () => {
             </div>
             <div
               onClick={() => navigateToCourseDetails(5)}
-              className="bg-CategoryCardBg w-2/3 h-48 sm:h-68 md:h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover"
+              className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-12 sm:pt-14">
                 <img
@@ -89,10 +89,10 @@ const Categories = () => {
             </div>
           </div>
 
-          <div className="w-1/2  flex flex-col items-center gap-10 mt-16 mb-44 relative">
+          <div className="w-1/2 flex flex-col items-center gap-10 mt-16 mb-44 relative">
             <div
               onClick={() => navigateToCourseDetails(3)}
-              className="bg-CategoryCardBg w-2/3 h-48 sm:h-68 md:h-80 -bottom-20 sm:-top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
+              className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 -bottom-20 sm:-top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-14 sm:pt-20 md:pt-24">
                 {/* <img src={aws} className="h-44 w-44"></img> */}
@@ -114,7 +114,7 @@ const Categories = () => {
             </div>
             <div
               onClick={() => navigateToCourseDetails(7)}
-              className="bg-CategoryCardBg w-2/3 h-48 sm:h-68 md:h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
+              className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-14">
                 <img

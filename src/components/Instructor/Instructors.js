@@ -41,7 +41,7 @@ const Instructors = () => {
         slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
-        // autoplay={true}
+        autoplay={true}
         mousewheel={true}
         modules={[Autoplay, Mousewheel]}
         className="mySwiper swiperjs2"
