@@ -53,7 +53,7 @@ const Footer = () => {
                 Subscribe
               </Button>
             </InputGroup>
-            <div className="footer_link ">
+            <div className=" flex">
               <Nav.Link href="/facebook">
                 <FaFacebook />
               </Nav.Link>

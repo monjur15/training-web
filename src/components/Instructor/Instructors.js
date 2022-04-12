@@ -27,7 +27,7 @@ const Instructors = () => {
   }, []);
 
   return (
-    <div className="px-28 py-16 relative">
+    <div className="px-12 py-8 md:px-28 md:py-16 relative">
       <div className="flex flex-col w-fit mb-20">
         <h1 className="text-5xl font-myriadProRegular text-PopularCourses">
           Our Instructors
@@ -37,15 +37,36 @@ const Instructors = () => {
 
       {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center"> */}
       <Swiper
-        slidesPerView={3}
-        slidesPerGroup={3}
+        // slidesPerView={3}
+        slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
         autoplay={true}
         mousewheel={true}
         modules={[Autoplay, Mousewheel]}
         className="mySwiper swiperjs2"
-        initialSlide={4}
+        initialSlide={3}
+        breakpoints={{
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            // slidesPerGroup: 1,
+            // pagination: { clickable: true },
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1100: {
+            slidesPerView: 2,
+            // spaceBetween: 20,
+            // slidesPerGroup: 2,
+          },
+          1536: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            // slidesPerGroup: 1,
+          },
+        }}
       >
         {instructors && instructors.length
           ? instructors.map((instructor, index) => (
@@ -53,7 +74,7 @@ const Instructors = () => {
                 key={instructor.inst_id}
                 className="swiper-slide2 relative"
               >
-                <div className="relative w-76 h-80 mt-20 scale-110">
+                <div className="relative w-76 h-80 mt-20 md:scale-110">
                   <div className="flex flex-col items-start justify-center w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
                     <div className="flex items-center justify-center w-40 h-40 rounded-full bg-white absolute z-20 left-16 -top-16 shadow-xl">
                       <img

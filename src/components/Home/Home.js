@@ -68,7 +68,7 @@ const Home = () => {
             <h1 className="text-SearchBg font-myriadProRegular text-5xl">
               Who We Are
             </h1>
-            <div className="down_border w-2/3 mb-5"></div>
+            <div className="down_border w-2/3 sm:w-1/3 lg:w-1/6 mb-5"></div>
           </div>
           <p className="font-myriadProRegular text-lg">
             We are the fastest growing IT Training institute in Bangladesh. All

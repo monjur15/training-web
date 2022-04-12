@@ -6,7 +6,7 @@ const Reviews = () => {
   const reviews = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
   return (
-    <div className="px-28 py-16 relative review_container">
+    <div className="px-12 py-8 md:px-28 md:py-16 relative review_container">
       <div className="flex flex-col w-fit mb-20">
         <h1 className="text-5xl font-myriadProRegular text-SearchBg">
           Reviews
@@ -14,13 +14,17 @@ const Reviews = () => {
         <div className="bg-SearchBg h-1 w-1/2"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-        {reviews.map((review) => (
-          <div className="m-2 w-80 h-80 flex items-center mt-5">
-            <div className="scale-110 hover:scale-125 flex flex-col relative items-center w-80 h-64 bg-white rounded-md shadow-md hover:shadow-xl transition-all duration-500">
+      {/* <div className="flex justify-center items-center"> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center">
+        {reviews.map((review, index) => (
+          <div
+            className="m-2 w-full sm:w-80 h-80 flex items-center mt-5"
+            key={index}
+          >
+            <div className="2xl:scale-110 hover:scale-110 2xl:hover:scale-125 flex flex-col relative items-center w-60 h-72 lg:w-80 lg:h-64 bg-white rounded-md shadow-md hover:shadow-xl transition-all duration-500">
               <img
                 src={instImg}
-                className="w-40 h-40 rounded-full bg-white absolute z-20 left-20 -top-20 shadow-xl"
+                className="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-white absolute z-20  lg:left-20 -top-10 lg:-top-20 shadow-xl"
               ></img>
 
               <div className="w-2 h-4/5 left-0 top-5 absolute bg-blue-400"></div>
@@ -44,6 +48,7 @@ const Reviews = () => {
           </div>
         ))}
       </div>
+      {/* </div> */}
     </div>
   );
 };

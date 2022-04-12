@@ -25,3 +25,12 @@
   width: 600px;
   height: 400px;
 }
+
+@media only screen and (max-width: 500px) {
+  .swiper-slide2 {
+    /* background-position: center;
+    background-size: cover; */
+    width: 400px;
+    height: 400px;
+  }
+}
