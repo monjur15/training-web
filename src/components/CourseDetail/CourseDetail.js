@@ -39,8 +39,10 @@ const CourseDetail = () => {
   };
 
   useEffect(() => {
+    console.log(location.state.courseId);
     dispatch(fetchSingleCourse(location.state.courseId));
     dispatch(fetchPopularCourses());
+    // window.location.reload();
   }, []);
 
   useEffect(() => {
@@ -67,7 +69,7 @@ const CourseDetail = () => {
           <div className="col-lg-6 col-md-12  course_det  row relative">
             <div className="course_card p-3 my-5 flex flex-col items-center">
               <div className="course_img my-3">
-                {singleCourse ? (
+                {singleCourse && singleCourse.length ? (
                   <img
                     src={url + "/media/" + singleCourse[0].course_img}
                     alt="img"
@@ -134,44 +136,44 @@ const CourseDetail = () => {
                 {/* {relatedCourses.map((course) => ( */}
                 {popularCourses && popularCourses.length
                   ? popularCourses.map(
-                      (course) =>
-                        course.course_title ===
-                        singleCourse[0].course_title ? null : (
-                          <div
-                            className="p-3 my-4 h-52 xl:h-44 bg-blue-300 rounded-2xl r_courses_card relative"
-                            key={course.course_id}
-                          >
-                            <div className="flex gap-5">
-                              {/* <div className="w-28 h-28 ml-5 rounded-full shadow-lg flex items-center justify-center"> */}
-                              <img
-                                className={classNames("ml-5", {
-                                  "w-24 h-16 sm:w-28 sm:h-20 my-auto":
-                                    course.course_title ===
-                                      "Learn AWS: Beginner to Solutions Architect - Associate" ||
-                                    course.course_title ===
-                                      "DevOps (Docker to Kubernetes)",
-                                  "w-20 h-20 sm:w-28 sm:h-28 my-auto":
-                                    course.course_title !==
-                                      "Learn AWS: Beginner to Solutions Architect - Associate" &&
-                                    course.course_title !==
-                                      "DevOps (Docker to Kubernetes)",
-                                })}
-                                src={url + "/media/" + course.course_img}
-                              ></img>
-                              {/* </div> */}
-                              <div>
-                                <h4 className="text-lg sm:text-xl md:text-lg xl:text-xl 2xl:text-2xl py-2 font-myriadProRegular font-bold text-uppercase text-white m-0">
-                                  {course.course_title}
-                                </h4>
-                                {screenSize.dynamicWidth > 640 ? (
-                                  <button className="bg-white text-blue-300 font-pangramRegular px-8 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
-                                    Buy
-                                  </button>
-                                ) : null}
-                              </div>
+                      (course) => (
+                        // course.course_title ===
+                        // singleCourse[0].course_title ? null :
+                        <div
+                          className="p-3 my-4 h-52 xl:h-44 bg-blue-300 rounded-2xl r_courses_card relative"
+                          key={course.course_id}
+                        >
+                          <div className="flex gap-5">
+                            {/* <div className="w-28 h-28 ml-5 rounded-full shadow-lg flex items-center justify-center"> */}
+                            <img
+                              className={classNames("ml-5", {
+                                "w-24 h-16 sm:w-28 sm:h-20 my-auto":
+                                  course.course_title ===
+                                    "Learn AWS: Beginner to Solutions Architect - Associate" ||
+                                  course.course_title ===
+                                    "DevOps (Docker to Kubernetes)",
+                                "w-20 h-20 sm:w-28 sm:h-28 my-auto":
+                                  course.course_title !==
+                                    "Learn AWS: Beginner to Solutions Architect - Associate" &&
+                                  course.course_title !==
+                                    "DevOps (Docker to Kubernetes)",
+                              })}
+                              src={url + "/media/" + course.course_img}
+                            ></img>
+                            {/* </div> */}
+                            <div>
+                              <h4 className="text-lg sm:text-xl md:text-lg xl:text-xl 2xl:text-2xl py-2 font-myriadProRegular font-bold text-uppercase text-white m-0">
+                                {course.course_title}
+                              </h4>
+                              {screenSize.dynamicWidth > 640 ? (
+                                <button className="bg-white text-blue-300 font-pangramRegular px-8 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+                                  Buy
+                                </button>
+                              ) : null}
                             </div>
                           </div>
-                        )
+                        </div>
+                      )
                       // <div className="r_courses_card  my-4 p-3 row" key={course.id}>
                       //   <div className="col-4 ">
                       //     <img className="img-fluid" src={keyboard} alt="" />

@@ -59,6 +59,7 @@ const PopularCourses = () => {
   }, [screenSize]);
 
   function navigateToCourseDetails(courseId) {
+    console.log(courseId);
     navigate("/coursesDetail", { state: { courseId: courseId } });
   }
 
@@ -98,7 +99,7 @@ const PopularCourses = () => {
           id="previousButton"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
-          <button className="absolute bottom-60 left-14 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
+          <button className="absolute bottom-60 left-10 2xl:left-14 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
             <MdOutlineArrowBackIosNew className="text-PopularCourseCard hover:text-HomeBannerTop" />
           </button>
         </div>
@@ -109,7 +110,7 @@ const PopularCourses = () => {
           id="nextButton"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
-          <button class="absolute bottom-60 right-28 right-16 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
+          <button class="absolute bottom-60 right-28 right-10 2xl:right-16 w-10 h-10 rounded-full bg-white flex justify-center items-center drop-shadow-md hover:drop-shadow-xl text-SingleCourseOutlineBtn1 text-3xl transition-all duration-300 focus:outline-none">
             <MdOutlineArrowForwardIos className="text-PopularCourseCard hover:text-HomeBannerTop" />
           </button>
         </div>
