@@ -4,9 +4,10 @@ import slider1 from "../images/1.svg";
 const Search = () => {
   return (
     <div className="relative flex flex-col items-center ">
-      <div className="bg-HomeBannerTop w-1/3 h-3 rounded-full -top-1 absolute z-10"></div>
+      {/* <div className="bg-HomeBannerTop w-1/3 h-3 rounded-full -top-1 absolute z-10"></div> */}
 
-      <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative rounded-t-5xl px-10 pb-4 pt-20">
+      {/* <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative rounded-t-5xl px-10 pb-4 pt-20"> */}
+      <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative px-10 pb-4 pt-20">
         <div className=" lg:w-1/2">
           <img className="img-fluid" src={slider1} alt="" />
         </div>

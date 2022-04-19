@@ -21,15 +21,23 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto ms-lg-4 me-md-0">
-              <Nav.Link id="Active" href="/home">
+              <Nav.Link className="Active" href="/home">
                 Home
               </Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/courses">Courses</Nav.Link>
+              <Nav.Link className="Active" href="/about">
+                About
+              </Nav.Link>
+              <Nav.Link className="Active" href="/courses">
+                Courses
+              </Nav.Link>
 
               {/* <Nav.Link href="/gallery">Gallery</Nav.Link> */}
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/blogs">Blogs</Nav.Link>
+              <Nav.Link className="Active" href="/contact">
+                Contact
+              </Nav.Link>
+              <Nav.Link className="Active" href="/blogs">
+                Blogs
+              </Nav.Link>
               <Nav.Link href="/login">
                 <div className="bg-NavItem w-8 h-8 rounded-full flex justify-center items-center">
                   {userIcon}

@@ -8,7 +8,7 @@
   padding: 5px 20px !important;
   border-radius: 10px;
 }
-#Active {
+.Active:hover {
   background-image: linear-gradient(#8dffff, #00d4ff);
   color: white !important;
   height: 36px;
