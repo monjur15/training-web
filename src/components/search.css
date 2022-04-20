@@ -1,0 +1,9 @@
+.banner {
+  background-image: url(../images/searchbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  /* opacity: 60%; */
+}

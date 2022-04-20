@@ -5,6 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {} from "./Home.css";
 // import slider1 from "../../images/1.svg";
 import weimg from "../../images/agency.jpg";
+import whoweare from "../../images/who_we_are.png";
 // import csharp from "../../images/csharp.jpg";
 // import network from "../../images/network-engineering.jpg";
 // import docker from "../../images/docker.jpg";
@@ -88,7 +89,8 @@ const Home = () => {
           </div>
         </div>
         <div className="col-lg-5 we_img  my-5">
-          <img className="img-fluid w-90 p-3 mt-lg-5" src={weimg} alt="" />
+          <img className="img-fluid w-90 p-3 mt-lg-5" src={whoweare} alt="" />
+          {/* <img className="w-600 p-3 h-400 mt-5" src={whoweare} alt="" /> */}
         </div>
       </div>
       {/* Who we are end */}

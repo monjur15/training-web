@@ -1,15 +1,16 @@
 import React from "react";
 import slider1 from "../images/1.svg";
-
+import searchbg from "../images/searchbg.png";
+import "./search.css";
 const Search = () => {
   return (
     <div className="relative flex flex-col items-center ">
       {/* <div className="bg-HomeBannerTop w-1/3 h-3 rounded-full -top-1 absolute z-10"></div> */}
 
       {/* <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative rounded-t-5xl px-10 pb-4 pt-20"> */}
-      <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative px-10 pb-4 pt-20">
-        <div className=" lg:w-1/2">
-          <img className="img-fluid" src={slider1} alt="" />
+      <div className="banner w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative px-10 pb-4 pt-20">
+        <div className="invisible lg:w-1/2">
+          <img className="img-fluid" src={searchbg} alt="" />
         </div>
         <div className="w-full lg:w-1/2 flex flex-col items-center mt-28">
           <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end lg:gap-2">
