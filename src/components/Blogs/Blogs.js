@@ -60,105 +60,138 @@ const Blogs = () => {
       <div className="w-full blogs_bg">
         <div className="px-16 2xl:px-28 py-12 md:py-20">
           {/* {blogsArr.map((blog, index) => */}
-          {blogs && blogs.length
-            ? blogs.map((blog, index) =>
-                index % 2 == 0 ? (
-                  <div
-                    className="flex flex-col gap-16 mb-20"
-                    key={blog.blog_id}
-                  >
-                    <div className="flex sm:grid sm:grid-cols-3">
-                      <div className="col-span-1">
-                        <img
-                          src={url + blog.blog_img}
-                          className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
-                          onClick={() => navigateToBlogDetails(blog.blog_id)}
-                        ></img>
-                      </div>
-                      <div className="col-span-2 mt-3 ml-10 sm:ml-0">
-                        {/* <p className="font-poppins w-5/6 mb-0">
-                          একজন Software Engineer এর জন্য "Capacity Estimation
-                          and Constraints" জানা কেন প্রয়োজন এবং এই বিষয়গুলো
-                          System Design এর ক্ষেত্রে কিভাবে কাজ করে এটি
-                          গুরুত্বপূর্ণ আলোচ্য বিষয়। System Design এর ক্ষেত্রে
-                          Capacity Estimation and Planning অবশ্যম্ভাবী বিষয়। যে
-                          কোন System Design এর feasibility এবং System টিকে আরো
-                          ভালোভাবে design করতে Capacity Estimation সাহায্য করে!
-                          Capacity Estimation System design এর ক্ষেত্রে একটি
-                          function হিসেবে কাজ করে, যেটি থাকার ফলে এবং এই
-                          parameter এর considerable change আনা হলে System এর
-                          Relative scale এর আমূল পরিবর্তন হয় এবং এটি System
-                          Design এর ক্ষেত্রে ব্যাপকভাবে সহায়তা করে।
-                        </p> */}
-                        {/* <article></article> */}
-                        <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
-                          {screenSize.dynamicWidth > 1536
-                            ? blog.blog.substring(0, 700)
-                            : screenSize.dynamicWidth > 1280
-                            ? blog.blog.substring(0, 400)
-                            : screenSize.dynamicWidth > 1024
-                            ? blog.blog.substring(0, 200)
-                            : screenSize.dynamicWidth > 768
-                            ? blog.blog.substring(0, 100)
-                            : blog.blog.substring(0, 50)}
-                        </article>
-                        <p
-                          onClick={() => navigateToBlogDetails(blog.blog_id)}
-                          className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
-                        >
-                          See more...
-                        </p>
-                        <div className="flex w-fit gap-3">
-                          <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
-                          <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
-                          <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+          {screenSize.dynamicWidth > 640
+            ? blogs && blogs.length
+              ? blogs.map((blog, index) =>
+                  index % 2 == 0 ? (
+                    <div
+                      className="flex flex-col gap-16 mb-20"
+                      key={blog.blog_id}
+                    >
+                      <div className="flex sm:grid sm:grid-cols-3">
+                        <div className="col-span-1">
+                          <img
+                            src={url + blog.blog_img}
+                            className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
+                            onClick={() => navigateToBlogDetails(blog.blog_id)}
+                          ></img>
+                        </div>
+                        <div className="col-span-2 mt-3 ml-10 sm:ml-0">
+                          {/* <p className="font-poppins w-5/6 mb-0">
+                        একজন Software Engineer এর জন্য "Capacity Estimation
+                        and Constraints" জানা কেন প্রয়োজন এবং এই বিষয়গুলো
+                        System Design এর ক্ষেত্রে কিভাবে কাজ করে এটি
+                        গুরুত্বপূর্ণ আলোচ্য বিষয়। System Design এর ক্ষেত্রে
+                        Capacity Estimation and Planning অবশ্যম্ভাবী বিষয়। যে
+                        কোন System Design এর feasibility এবং System টিকে আরো
+                        ভালোভাবে design করতে Capacity Estimation সাহায্য করে!
+                        Capacity Estimation System design এর ক্ষেত্রে একটি
+                        function হিসেবে কাজ করে, যেটি থাকার ফলে এবং এই
+                        parameter এর considerable change আনা হলে System এর
+                        Relative scale এর আমূল পরিবর্তন হয় এবং এটি System
+                        Design এর ক্ষেত্রে ব্যাপকভাবে সহায়তা করে।
+                      </p> */}
+                          {/* <article></article> */}
+                          <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
+                            {screenSize.dynamicWidth > 1536
+                              ? blog.blog.substring(0, 700)
+                              : screenSize.dynamicWidth > 1280
+                              ? blog.blog.substring(0, 400)
+                              : screenSize.dynamicWidth > 1024
+                              ? blog.blog.substring(0, 200)
+                              : screenSize.dynamicWidth > 768
+                              ? blog.blog.substring(0, 100)
+                              : blog.blog.substring(0, 50)}
+                          </article>
+                          <p
+                            onClick={() => navigateToBlogDetails(blog.blog_id)}
+                            className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
+                          >
+                            See more...
+                          </p>
+                          <div className="flex w-fit gap-3">
+                            <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                            <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
+                            <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          </div>
                         </div>
                       </div>
+                      <div className="h-0.5 w-full bg-gray-300 "></div>
                     </div>
-                    <div className="h-0.5 w-full bg-gray-300 "></div>
-                  </div>
-                ) : (
-                  <div
-                    className="flex flex-col gap-16 mb-20"
-                    key={blog.blog_id}
-                  >
-                    <div className="flex sm:grid sm:grid-cols-3">
-                      <div className="col-span-2 mt-3">
-                        <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
-                          {screenSize.dynamicWidth > 1536
-                            ? blog.blog.substring(0, 700)
-                            : screenSize.dynamicWidth > 1280
-                            ? blog.blog.substring(0, 400)
-                            : screenSize.dynamicWidth > 1024
-                            ? blog.blog.substring(0, 200)
-                            : screenSize.dynamicWidth > 768
-                            ? blog.blog.substring(0, 100)
-                            : blog.blog.substring(0, 50)}
-                        </article>
-                        <p
-                          onClick={() => navigateToBlogDetails(blog.blog_id)}
-                          className="cursor-pointer font-poppins text-gray-500 hover:text-gray-600 hover:cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
-                        >
-                          See more...
-                        </p>
-                        <div className="flex w-fit gap-3">
-                          <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
-                          <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
-                          <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                  ) : (
+                    <div
+                      className="flex flex-col gap-16 mb-20"
+                      key={blog.blog_id}
+                    >
+                      <div className="flex sm:grid sm:grid-cols-3">
+                        <div className="col-span-2 mt-3">
+                          <article className="font-poppins w-5/6 mb-0 text-xs xs:text-sm sm:text-md">
+                            {screenSize.dynamicWidth > 1536
+                              ? blog.blog.substring(0, 700)
+                              : screenSize.dynamicWidth > 1280
+                              ? blog.blog.substring(0, 400)
+                              : screenSize.dynamicWidth > 1024
+                              ? blog.blog.substring(0, 200)
+                              : screenSize.dynamicWidth > 768
+                              ? blog.blog.substring(0, 100)
+                              : blog.blog.substring(0, 50)}
+                          </article>
+                          <p
+                            onClick={() => navigateToBlogDetails(blog.blog_id)}
+                            className="cursor-pointer font-poppins text-gray-500 hover:text-gray-600 hover:cursor-pointer mb-3 text-xs xs:text-sm sm:text-md"
+                          >
+                            See more...
+                          </p>
+                          <div className="flex w-fit gap-3">
+                            <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                            <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
+                            <FaShareSquare className="text-BlogIconsColour w-4 h-4 sm:w-7 sm:h-7 hover:text-BlogIconsColour1 transition-all duration-200" />
+                          </div>
+                        </div>
+                        <div className="col-span-1">
+                          <img
+                            src={url + blog.blog_img}
+                            className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
+                            onClick={() => navigateToBlogDetails(blog.blog_id)}
+                          ></img>
                         </div>
                       </div>
-                      <div className="col-span-1">
-                        <img
-                          src={url + blog.blog_img}
-                          className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-60 lg:h-60 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 cursor-pointer"
-                          onClick={() => navigateToBlogDetails(blog.blog_id)}
-                        ></img>
-                      </div>
+                      <div className="h-0.5 w-full bg-gray-300 "></div>
                     </div>
-                    <div className="h-0.5 w-full bg-gray-300 "></div>
-                  </div>
+                  )
                 )
-              )
+              : null
+            : blogs && blogs.length
+            ? blogs.map((blog, index) => (
+                <div className="flex flex-col gap-10 mb-10" key={blog.blog_id}>
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="">
+                      <img
+                        src={url + blog.blog_img}
+                        className="w-32 h-32 cursor-pointer mb-3  "
+                        onClick={() => navigateToBlogDetails(blog.blog_id)}
+                      ></img>
+                    </div>
+                    <div className="">
+                      <article className="font-poppins w-full mb-0 text-xs text-center">
+                        {blog.blog.substring(0, 200)}
+                      </article>
+                      <p
+                        onClick={() => navigateToBlogDetails(blog.blog_id)}
+                        className="font-poppins text-gray-500 hover:text-gray-600 cursor-pointer mb-3 text-xs text-center"
+                      >
+                        See more...
+                      </p>
+                      {/* <div className="flex w-fit gap-3">
+                        <BsFillHeartFill className="text-BlogIconsColour w-4 h-4 hover:text-BlogIconsColour1 transition-all duration-200" />
+                        <div className="w-0.5 h-5 sm:h-7 bg-gray-300"></div>
+                        <FaShareSquare className="text-BlogIconsColour w-4 h-4 hover:text-BlogIconsColour1 transition-all duration-200" />
+                      </div> */}
+                    </div>
+                  </div>
+                  <div className="h-0.5 w-full bg-gray-300 "></div>
+                </div>
+              ))
             : null}
 
           {/* <div className="flex flex-col gap-16">

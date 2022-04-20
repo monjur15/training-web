@@ -37,7 +37,10 @@ const BlogDetails = () => {
         ) : null}
       </div>
 
-      <article className="w-full px-10 lg:px-28 py-5 text-HomeTutorialh1">
+      <article
+        className="w-full px-10 lg:px-28 py-5 text-HomeTutorialh1 text-start"
+        style={{ whiteSpace: "pre-wrap" }}
+      >
         {/* Lorem Ipsum is simply dummy text of the printing and typesetting
         industry.Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and

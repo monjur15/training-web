@@ -1,56 +1,119 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import slider1 from "../images/1.svg";
 import searchbg from "../images/searchbg.png";
 import "./search.css";
 const Search = () => {
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
+  });
+
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", setDimension);
+
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, [screenSize]);
+
   return (
     <div className="relative flex flex-col items-center ">
       {/* <div className="bg-HomeBannerTop w-1/3 h-3 rounded-full -top-1 absolute z-10"></div> */}
 
       {/* <div className="w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative rounded-t-5xl px-10 pb-4 pt-20"> */}
-      <div className="banner w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative px-10 pb-4 pt-20">
-        <div className="invisible lg:w-1/2">
-          <img className="img-fluid" src={searchbg} alt="" />
-        </div>
-        <div className="w-full lg:w-1/2 flex flex-col items-center mt-28">
-          <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end lg:gap-2">
-            <h1 className="text-white m-0 p-0 font-poppins text-lg md:text-xl 2xl:text-3xl">
-              Ever Asked <span className="text-blue-600">Yourself</span>
-            </h1>
-            <h1 className="m-0 p-0 text-white text-xl md:text-3xl 2xl:text-5xl font-poppins font-semibold">
-              Why Do You Want To Be
-            </h1>
-            <h1 className="m-0 p-0 text-white font-extrabold text-3xl md:text-5xl 2xl:text-7xl font-poppins">
-              A <span className="text-blue-600">DevOps </span>Engineer
-            </h1>
+      {screenSize.dynamicWidth > 1024 ? (
+        <div className="banner w-full flex flex-col lg:flex-row  items-start bg-HomeBannerBg relative px-10 pb-4 pt-20">
+          <div className="invisible lg:w-1/2">
+            <img className="img-fluid" src={searchbg} alt="" />
           </div>
+          <div className="w-full lg:w-1/2 flex flex-col items-center mt-28">
+            <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end lg:gap-2">
+              <h1 className="text-white m-0 p-0 font-poppins text-lg md:text-xl 2xl:text-3xl">
+                Ever Asked <span className="text-blue-600">Yourself</span>
+              </h1>
+              <h1 className="m-0 p-0 text-white text-xl md:text-3xl 2xl:text-5xl font-poppins font-semibold">
+                Why Do You Want To Be
+              </h1>
+              <h1 className="m-0 p-0 text-white font-extrabold text-3xl md:text-5xl 2xl:text-7xl font-poppins">
+                A <span className="text-blue-600">DevOps </span>Engineer
+              </h1>
+            </div>
 
-          {/* Search Bar */}
-          <div className="flex w-full xs:w-8/12 max-w-xl relative items-center mt-3">
-            <input
-              type="text"
-              className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-14 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder text-SeachCoursePlaceholder"
-              placeholder="Search for courses"
-            />
+            {/* Search Bar */}
+            <div className="flex w-full xs:w-8/12 max-w-xl relative items-center mt-3">
+              <input
+                type="text"
+                className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-14 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder text-SeachCoursePlaceholder"
+                placeholder="Search for courses"
+              />
 
-            <span className="absolute right-12 top-4 text-lg text-transparent bg-clip-text bg-gradient-to-b from-HomeSearchIcon1 to-HomeSearchIcon2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-800 hover:cursor-pointer"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
+              <span className="absolute right-12 top-4 text-lg text-transparent bg-clip-text bg-gradient-to-b from-HomeSearchIcon1 to-HomeSearchIcon2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-blue-800 hover:cursor-pointer"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+            {/* Search Bar end */}
           </div>
-          {/* Search Bar end */}
         </div>
-      </div>
+      ) : (
+        <div className="banner w-full flex flex-col items-start bg-HomeBannerBg relative px-10 py-20">
+          <div className="w-full flex flex-col items-center">
+            <div className="mb-3 grid grid-rows-1 place-items-center lg:place-items-end lg:gap-2">
+              <h1 className="text-white m-0 p-0 font-poppins text-lg md:text-xl 2xl:text-3xl">
+                Ever Asked <span className="text-blue-600">Yourself</span>
+              </h1>
+              <h1 className="m-0 p-0 text-white text-xl md:text-3xl 2xl:text-5xl font-poppins font-semibold">
+                Why Do You Want To Be
+              </h1>
+              <h1 className="m-0 p-0 text-white font-extrabold text-3xl md:text-5xl 2xl:text-7xl font-poppins">
+                A <span className="text-blue-600">DevOps </span>Engineer
+              </h1>
+            </div>
+
+            {/* Search Bar */}
+            <div className="flex w-full xs:w-8/12 max-w-xl relative items-center mt-3">
+              <input
+                type="text"
+                className="bg-white w-100 border border-HomeSearchInputBorder px-8 py-1 lg:px-12 lg:py-3 h-14 rounded-4xl focus:outline-none focus:ring-2 placeholder-segoeUI placeholder-SeachCoursePlaceholder text-SeachCoursePlaceholder"
+                placeholder="Search for courses"
+              />
+
+              <span className="absolute right-12 top-4 text-lg text-transparent bg-clip-text bg-gradient-to-b from-HomeSearchIcon1 to-HomeSearchIcon2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-blue-800 hover:cursor-pointer"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+            {/* Search Bar end */}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
