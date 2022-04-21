@@ -55,7 +55,7 @@ const Login = () => {
             </div>
 
             <div className=" login_icons">
-              <div className="sub_icon">
+              <div className="sub_icon flex items-center justify-center">
                 <a className=" me-1" href="">
                   <FaGoogle />
                 </a>

@@ -119,7 +119,7 @@ const Categories = () => {
               <div className="flex justify-center pt-14">
                 <img
                   src={devops}
-                  className="h-20 w-24 sm:h-36 sm:w-44 md:h-44 md:w-56"
+                  className="h-20 w-24 sm:h-36 sm:w-44 md:h-40 md:w-56"
                 ></img>
               </div>
               {screenSize.dynamicWidth > 640 ? (

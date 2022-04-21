@@ -80,8 +80,8 @@ const Instructors = () => {
                     <div className="flex flex-col items-start justify-center w-64 xss:w-76 h-80 bg-HomeInstructorCard rounded-tl-4xl rounded-br-4xl shadow-md hover:shadow-xl  transition-all duration-200">
                       <div className="flex items-center justify-center w-40 h-40 rounded-full bg-white absolute z-20 left-12 xss:left-16 -top-16 shadow-xl">
                         <img
-                          // src={url + instructor.inst_img}
-                          src={instImg}
+                          src={url + instructor.inst_img}
+                          // src={instImg}
                           className="w-40 h-40 rounded-full"
                         ></img>
                       </div>

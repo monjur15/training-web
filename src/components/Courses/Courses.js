@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { Button, Carousel } from "react-bootstrap";
 // import { connect } from "react-redux";
 // import Axios from "axios";
-import { fetchCourses } from "../../store/action";
+import { fetchCourses, fetchPopularCourses } from "../../store/action";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import {} from "./Courses.css";
@@ -29,7 +29,8 @@ const Courses = (props) => {
 
   // const [courses1, setCourses] = useState(0);
 
-  const courses = useSelector((state) => state.courses);
+  // const courses = useSelector((state) => state.courses);
+  const courses = useSelector((state) => state.popularCourses);
   const dispatch = useDispatch();
 
   const [screenSize, getDimension] = useState({
@@ -53,7 +54,8 @@ const Courses = (props) => {
   }, [screenSize]);
 
   useEffect(() => {
-    dispatch(fetchCourses());
+    // dispatch(fetchCourses());
+    dispatch(fetchPopularCourses());
   }, []);
   // const history = useHistory();
   const navigate = useNavigate();
@@ -155,7 +157,7 @@ const Courses = (props) => {
                               {course.course_title}
                             </h1>
                             <h4 className="font-myriadProRegular text-CourseShortDesc">
-                              {course.course_content}
+                              {course.inst_name}
                             </h4>
                             {/* </div> */}
                             <div className="mt-10 flex flex-col items-center w-64">
@@ -184,7 +186,7 @@ const Courses = (props) => {
                             <div className="w-4 h-4 rounded-full bg-CoursesCircle right-44 2xl:right-64 -bottom-3 absolute"></div>
                             <div className="w-72 2xl:w-92 h-56 2xl:h-64 course_img_bg z-10 absolute top-14 2xl:top-10 -left-8 rounded-4xl flex items-center justify-center">
                               <img
-                                src={url + course.course_img}
+                                src={url + "/media/" + course.course_img}
                                 className={classNames({
                                   "h-32 w-48 2xl:h-44 2xl:w-56":
                                     course.course_title ===
@@ -259,6 +261,9 @@ const Courses = (props) => {
                             <h1 className="w-2/3 mt-4 font-myriadProRegular text-CourseTitle font-bold text-3xl">
                               {course.course_title}
                             </h1>
+                            <h5 className="font-myriadProRegular text-CourseShortDesc">
+                              {course.inst_name}
+                            </h5>
                           </div>
                         </div>
                         {/* <div className="bg-red-300 w-400 2xl:w-500 right-36 2xl:right-28 top-3 absolute"> */}
@@ -286,7 +291,7 @@ const Courses = (props) => {
                               <div className="w-4 h-4 rounded-full bg-CoursesCircle left-20 bottom-8 absolute"></div>
                               <div className="w-48 h-36 course_img_bg z-10 absolute top-14 2xl:top-10 -left-8 rounded-4xl flex items-center justify-center">
                                 <img
-                                  src={url + course.course_img}
+                                  src={url + "/media/" + course.course_img}
                                   className={classNames({
                                     "h-20 w-32":
                                       course.course_title ===
@@ -333,6 +338,7 @@ const Courses = (props) => {
                     <h1 className="font-myriadProRegular w-4/5 text-CourseTitle font-bold text-2xl xs:text-3xl">
                       {course.course_title}
                     </h1>
+
                     <div className=" w-64 xs:w-400 relative">
                       <div className="h-64 relative xs:left-16">
                         <div className="w-44 h-44 xs:w-56 xs:h-56 border-2 rounded-full border-CoursesCircle bg-white left-14 xs:left-10 absolute top-3"></div>
@@ -342,7 +348,7 @@ const Courses = (props) => {
                         <div className="w-4 h-4 rounded-full bg-CoursesCircle left-20 xs:left-20 bottom-20 xs:bottom-8 absolute"></div>
                         <div className="w-32 h-24 xs:w-48 xs:h-36 course_img_bg z-10 absolute top-14 2xl:top-10 left-6 xs:-left-8 rounded-2xl xs:rounded-4xl flex items-center justify-center">
                           <img
-                            src={url + course.course_img}
+                            src={url + "/media/" + course.course_img}
                             className={classNames({
                               "w-20 h-14 xs:h-20 xs:w-32":
                                 course.course_title ===
@@ -362,6 +368,9 @@ const Courses = (props) => {
                     </div>
 
                     <div className="mt-10 flex flex-col items-center">
+                      <h6 className="font-myriadProRegular text-CourseShortDesc">
+                        {course.inst_name}
+                      </h6>
                       <button
                         onClick={(e) =>
                           navigateToCourseDetails(course.course_id)

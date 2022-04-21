@@ -7,6 +7,7 @@ import {
   faLock,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import signupbanner from "../../images/Training logo.png";
 
 const Signup = () => {
@@ -14,6 +15,12 @@ const Signup = () => {
   const emailIcon = <FontAwesomeIcon icon={faEnvelope} />;
   const passwordIcon = <FontAwesomeIcon icon={faLock} />;
   const phoneIcon = <FontAwesomeIcon icon={faPhone} />;
+  let navigate = useNavigate();
+
+  function navigateToLoginPage() {
+    navigate("/login");
+  }
+
   return (
     <div>
       <div className="container">
@@ -61,7 +68,7 @@ const Signup = () => {
               <div className="contact_btn py-3">
                 <button className="blue_btn">Sign Up</button>
               </div>
-              <a href="#">
+              <a href="#" onClick={() => navigateToLoginPage()}>
                 <h3>Login</h3>
               </a>
               <div className="bottom_bor"></div>
