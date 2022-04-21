@@ -38,11 +38,11 @@ const Navigation = () => {
               <Nav.Link className="Active" href="/blogs">
                 Blogs
               </Nav.Link>
-              <Nav.Link href="/login">
+              {/* <Nav.Link href="/login">
                 <div className="bg-NavItem w-8 h-8 rounded-full flex justify-center items-center">
                   {userIcon}
                 </div>
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

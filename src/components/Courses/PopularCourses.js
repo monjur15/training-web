@@ -193,7 +193,7 @@ const PopularCourses = () => {
                             {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins p-0 m-0 text-white">
-                            {course.course_classes} | {course.course_credit}
+                            {/* {course.course_classes} | {course.course_credit} */}
                           </p>
                           <button
                             onClick={() =>
@@ -242,7 +242,7 @@ const PopularCourses = () => {
                             {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins p-0 m-0 text-white">
-                            {course.course_classes} | {course.course_credit}
+                            {/* {course.course_classes} | {course.course_credit} */}
                           </p>
                           <button
                             onClick={() =>
@@ -291,7 +291,7 @@ const PopularCourses = () => {
                             {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins bottom-6 absolute text-white">
-                            {course.course_classes} | {course.course_credit}
+                            {/* {course.course_classes} | {course.course_credit} */}
                           </p>
                           <button
                             onClick={() =>
