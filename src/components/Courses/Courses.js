@@ -157,7 +157,7 @@ const Courses = (props) => {
                               {course.course_title}
                             </h1>
                             <h4 className="font-myriadProRegular text-CourseShortDesc">
-                              {course.inst_name}
+                              {/* {course.inst_name} */}
                             </h4>
                             {/* </div> */}
                             <div className="mt-10 flex flex-col items-center w-64">
@@ -167,11 +167,11 @@ const Courses = (props) => {
                                 }
                                 className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 py-2 rounded-full text-center transition-all duration-200"
                               >
-                                Course Outline
+                                Know more
                               </button>
                               <div className="flex items-center relative mt-2">
-                                <h6>know more</h6>
-                                <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                                <h6>Course Outline</h6>
+                                {/* <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" /> */}
                               </div>
                             </div>
                           </div>
@@ -262,7 +262,7 @@ const Courses = (props) => {
                               {course.course_title}
                             </h1>
                             <h5 className="font-myriadProRegular text-CourseShortDesc">
-                              {course.inst_name}
+                              {/* {course.inst_name} */}
                             </h5>
                           </div>
                         </div>
@@ -275,11 +275,11 @@ const Courses = (props) => {
                               }
                               className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-4 lg:px-12 py-2 rounded-full text-center transition-all duration-200"
                             >
-                              Course Outline
+                              Know more
                             </button>
                             <div className="flex items-center relative mt-2">
-                              <h6>know more</h6>
-                              <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                              <h6>Course Outline</h6>
+                              {/* <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" /> */}
                             </div>
                           </div>
                           <div className=" w-400 top-32 lg:top-24 right-0 lg:right-10 absolute">
@@ -369,7 +369,7 @@ const Courses = (props) => {
 
                     <div className="mt-10 flex flex-col items-center">
                       <h6 className="font-myriadProRegular text-CourseShortDesc">
-                        {course.inst_name}
+                        {/* {course.inst_name} */}
                       </h6>
                       <button
                         onClick={(e) =>
@@ -377,11 +377,11 @@ const Courses = (props) => {
                         }
                         className="shadow-md w-full bg-CourseOutlineButton text-CourseOutline hover:bg-CourseOutline hover:text-white hover:shadow-xl px-12 py-2 rounded-full text-center transition-all duration-200"
                       >
-                        Course Outline
+                        Know more
                       </button>
                       <div className="flex items-center relative mt-2">
-                        <h6>know more</h6>
-                        <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" />
+                        <h6>Course Outline</h6>
+                        {/* <HiOutlineArrowNarrowRight className="h-7 w-10 text-gray-300 bottom-0.5 left-20 absolute" /> */}
                       </div>
                     </div>
                   </div>
