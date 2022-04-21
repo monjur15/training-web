@@ -190,7 +190,7 @@ const PopularCourses = () => {
                           </div>
                           <h6 className="p-0 m-0 font-poppins text-sm">
                             {/* SHAHED MEHBUB */}
-                            {course.inst_name}
+                            {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins p-0 m-0 text-white">
                             {course.course_classes} | {course.course_credit}
@@ -239,7 +239,7 @@ const PopularCourses = () => {
                           </div>
                           <h6 className="p-0 m-0 font-poppins text-sm">
                             {/* SHAHED MEHBUB */}
-                            {course.inst_name}
+                            {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins p-0 m-0 text-white">
                             {course.course_classes} | {course.course_credit}
@@ -288,7 +288,7 @@ const PopularCourses = () => {
                           </div>
                           <h6 className=" font-poppins bottom-14 absolute text-sm">
                             {/* SHAHED MEHBUB */}
-                            {course.inst_name}
+                            {/* {course.inst_name} */}
                           </h6>
                           <p className="font-light font-poppins bottom-6 absolute text-white">
                             {course.course_classes} | {course.course_credit}
