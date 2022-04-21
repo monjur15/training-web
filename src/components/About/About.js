@@ -121,7 +121,7 @@ const About = () => {
         <div className=" my-5 vission_div">
           <div className="row">
             <div className="vission_des p-3 col-lg-6 col-md-12 ">
-              <h3>Our Vission</h3>
+              <h3>Our Vision</h3>
               <p>
                 We envision a world, where anyone can learn anything they want,
                 from anywhere, and use that learning to make their lives better.

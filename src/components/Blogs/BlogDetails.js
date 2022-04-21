@@ -38,7 +38,7 @@ const BlogDetails = () => {
       </div>
 
       <article
-        className="w-full px-10 lg:px-28 py-5 text-HomeTutorialh1 text-start"
+        className="w-full md:w-3/4 px-10 lg:px-28 py-5 text-HomeTutorialh1 text-start text-md lg:text-lg"
         style={{ whiteSpace: "pre-wrap" }}
       >
         {/* Lorem Ipsum is simply dummy text of the printing and typesetting
