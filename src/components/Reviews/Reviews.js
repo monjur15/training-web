@@ -12,7 +12,7 @@ const Reviews = () => {
     <div className="px-12 py-8 lg:px-28 lg:py-16 relative review_container">
       <div className="flex flex-col w-fit mb-20">
         <h1 className="text-4xl sm:text-5xl font-myriadProRegular text-SearchBg">
-          Reviews
+          Star Student
         </h1>
         <div className="bg-SearchBg h-1 w-1/2"></div>
       </div>
@@ -34,16 +34,20 @@ const Reviews = () => {
                   ''
                 </h4>
                 <h6 className="text-center p-0 m-0 font-greatVibesRegular font-medium text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
+                  {/* Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  specimen book. */}
+                  He was one of the most passionate participants in our DevOps
+                  (Batch 2106), frequently contributing to challenging
+                  discussions, demonstrating a strong interest in learning new
+                  things, and performing well on the exercises.
                 </h6>
               </div>
               <p className="absolute -bottom-3 right-1 text-black text-xs font-poppins font-light">
                 {/* Someone Else */}
-                Sharriar Islam Nady
+                Shahriar Ansar Islam
               </p>
             </div>
           </div>
@@ -64,15 +68,14 @@ const Reviews = () => {
                   ''
                 </h4>
                 <h6 className="text-center p-0 m-0 font-greatVibesRegular font-medium text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  Ashadujjaman Hiru is a versatile problem analyst who attended
+                  the Devops-2106 batch, where he was one of the preemptive
+                  students and stayed active, showed enactment of assessments,
+                  and gave his utmost dedication.
                 </h6>
               </div>
               <p className="absolute -bottom-3 right-1 text-black text-xs font-poppins font-light">
-                Assaduzzaman Hiru
+                Ashadujjaman Hiru
               </p>
             </div>
           </div>
@@ -93,11 +96,11 @@ const Reviews = () => {
                   ''
                 </h4>
                 <h6 className="text-center p-0 m-0 font-greatVibesRegular font-medium text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  Muntasir is a dedicated professional with a high level of
+                  technical knowledge. Mr. Sadman Amin, our mentor, admired his
+                  enthusiasm for Python from BE (Batch 2101). He is practicing
+                  his skills on software development and has a very good
+                  understanding of Data Structure & Algorithms.
                 </h6>
               </div>
               <p className="absolute -bottom-3 right-1 text-black text-xs font-poppins font-light">
