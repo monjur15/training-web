@@ -46,7 +46,7 @@ const Categories = () => {
         <div className="flex items-center">
           <div className="w-1/2  flex flex-col items-center gap-16 mt-16 mb-44">
             <div
-              onClick={() => navigateToCourseDetails(4)}
+              onClick={() => navigateToCourseDetails(14)}
               className="w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 bg-CategoryCardBg hover:bg-CategoryCardHover shadow-md hover:shadow-xl rounded-xl transition-all duration-200"
             >
               <div className="flex justify-center pt-12 sm:pt-14">
@@ -58,7 +58,7 @@ const Categories = () => {
               {screenSize.dynamicWidth > 640 ? (
                 <div className="flex justify-end pt-3 pr-5">
                   <button
-                    onClick={() => navigateToCourseDetails(4)}
+                    onClick={() => navigateToCourseDetails(14)}
                     className="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
                   >
                     <MdOutlineArrowForwardIos className="w-5 h-5" />
@@ -67,7 +67,7 @@ const Categories = () => {
               ) : null}
             </div>
             <div
-              onClick={() => navigateToCourseDetails(5)}
+              onClick={() => navigateToCourseDetails(17)}
               className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 shadow-md hover:shadow-xl rounded-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-12 sm:pt-14">
@@ -79,7 +79,7 @@ const Categories = () => {
               {screenSize.dynamicWidth > 640 ? (
                 <div className="flex justify-end pt-3 pr-5">
                   <button
-                    onClick={() => navigateToCourseDetails(5)}
+                    onClick={() => navigateToCourseDetails(17)}
                     class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
                   >
                     <MdOutlineArrowForwardIos className="w-5 h-5" />
@@ -91,7 +91,7 @@ const Categories = () => {
 
           <div className="w-1/2 flex flex-col items-center gap-10 mt-16 mb-44 relative">
             <div
-              onClick={() => navigateToCourseDetails(3)}
+              onClick={() => navigateToCourseDetails(16)}
               className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 -bottom-20 sm:-top-56 absolute  rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-14 sm:pt-20 md:pt-24">
@@ -104,7 +104,7 @@ const Categories = () => {
               {screenSize.dynamicWidth > 640 ? (
                 <div className="flex justify-end pt-3 pr-5">
                   <button
-                    onClick={() => navigateToCourseDetails(3)}
+                    onClick={() => navigateToCourseDetails(16)}
                     class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
                   >
                     <MdOutlineArrowForwardIos className="w-5 h-5" />
@@ -113,7 +113,7 @@ const Categories = () => {
               ) : null}
             </div>
             <div
-              onClick={() => navigateToCourseDetails(7)}
+              onClick={() => navigateToCourseDetails(15)}
               className="bg-CategoryCardBg w-2/3 2xl:w-3/5 h-48 sm:h-68 md:h-80 top-36 absolute rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:bg-CategoryCardHover"
             >
               <div className="flex justify-center pt-14">
@@ -125,7 +125,7 @@ const Categories = () => {
               {screenSize.dynamicWidth > 640 ? (
                 <div className="flex justify-end pt-3 pr-5">
                   <button
-                    onClick={() => navigateToCourseDetails(7)}
+                    onClick={() => navigateToCourseDetails(15)}
                     class="w-8 h-8 rounded-full bg-white flex justify-center items-center shadow-md hover:shadow-xl text-CategoryCardBg hover:text-CategoryCardHover text-3xl transition duration-300 focus:outline-none"
                   >
                     <MdOutlineArrowForwardIos className="w-5 h-5" />

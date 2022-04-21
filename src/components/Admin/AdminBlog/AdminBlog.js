@@ -29,9 +29,9 @@ const AdminBlog = () => {
       timer: 2000,
     });
 
-    // setTimeout(function () {
-    //   window.location.reload();
-    // }, 2000);
+    setTimeout(function () {
+      window.location.reload();
+    }, 2000);
   }
 
   return (
