@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sendImg from "../../images/send.png";
 import leetcodeImg from "../../images/leetcode.png";
+import axios from "axios";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
@@ -48,6 +49,21 @@ const PopularCourses = () => {
 
   useEffect(() => {
     dispatch(fetchPopularCourses());
+
+    // axios({
+    //   method: "get",
+    //   url: "api/",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => {
+    //     console.log(response.data);
+    //   })
+    //   .catch((error) => {
+    //     alert(error);
+    //     console.log(error);
+    //   });
   }, []);
 
   useEffect(() => {

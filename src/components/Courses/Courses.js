@@ -146,6 +146,7 @@ const Courses = (props) => {
                             <div className="w-20 h-20 bg-CourseNum top-2 absolute flex items-center justify-center">
                               <h1 className="text-white text-5xl font-myriadProRegular z-0">
                                 0{index + 1}
+                                {/* {index + 1 > 10 ? 0(index + 1) : index + 1} */}
                               </h1>
                             </div>
                           </div>

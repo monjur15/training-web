@@ -51,6 +51,7 @@ export const fetchPopularCourses = () => {
   return (dispatch) => {
     let fetchedCourses = [];
     Axios.get("api/popular-courses")
+      // Axios.get("api/")
       .then((response) => {
         for (let key in response.data) {
           fetchedCourses.push({ ...response.data[key] });
